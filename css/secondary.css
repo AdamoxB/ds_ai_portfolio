@@ -1,0 +1,70 @@
+/* Pozycjonowanie przycisku w prawym górnym rogu */
+.md-header__inner .md-toggle.secondary {
+  margin-left: auto;
+  display: flex;
+}
+
+
+
+/* 1️⃣  Import Google‑font „Press Start 2P” */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ------------------------------------------------------------------
+   Wszystkie style będą aktywne tylko wtedy, gdy toggle zostanie włączony
+   (klasa .custom-theme dodawana do <body> przez secondary.js)
+------------------------------------------------------------------- */
+
+/* ---------- 1. Niebiański tło ----------------- */
+body.custom-theme {
+    background: radial-gradient(circle at center, #ff00ff, #0000ff);
+    color: #ffffff;                     /* biały tekst na ciemnym tle */
+}
+
+/* ---------- 2. Duże i stylowe nagłówki ----------- */
+body.custom-theme h1,
+body.custom-theme h2,
+body.custom-theme h3,
+body.custom-theme .md-header__title {
+    font-family: 'Press Start 2P', cursive;   /* retro‑font z Google Fonts */
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255,204,0,.8);
+}
+
+/* ---------- 3. Animowane linki ------------------ */
+body.custom-theme a {
+    position: relative;
+    display: inline-block;
+    transition: all .3s ease;
+}
+body.custom-theme a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffcc00;
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+}
+body.custom-theme a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ---------- 4. Ekscytująca animacja na pasku ---- */
+body.custom-theme .md-header {
+    animation: slideDown 0.8s ease-in-out;
+}
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* ---------- 5. Dodatkowe ustawienia ----------- */
+body.custom-theme .md-content h4,
+body.custom-theme .md-content h5,
+body.custom-theme .md-content h6 {
+    color: #ff6666;
+}

@@ -1,0 +1,56 @@
+site_name: Moje portfolio projektów
+site_author: Adam Biela
+
+site_url: 
+site_description: >-
+    Portfolio moich projektów z Data Science i AI!
+
+repo_name: AdamoxB/ds_ai_portfolio
+repo_url: https://github.com/AdamoxB/ds_ai_portfolio
+
+theme:
+  name: material
+
+  # --- kolory i kontrast ---------------------------------------------
+  palette:
+    - scheme: default        # jasny tryb (domyślny)
+      primary: indigo       # główny kolor
+      accent: pink          # akcent
+      toggle:
+        icon: material/weather-night
+        name: Tryb ciemny
+    - scheme: slate         # ciemny tryb
+      primary: blue-grey
+      accent: light-blue
+      toggle:
+        icon: material/weather-sunny
+        name: Tryb jasny
+
+  # --- czcionki -------------------------------------------------------
+  font:
+    text: Roboto
+    code: Fira Code
+
+  # --- ikona i logo (opcjonalne) --------------------------------------
+  icon:
+    repo: material/github   # w zakładce „repo” pojawi się GitHub
+  logo: images/logo.png     # podaj własny plik PNG/JPG
+
+# --- dodatkowe zasoby -------------------------------------------------
+extra_css:
+  # - css/extra.css          # własne reguły CSS
+  - css/secondary.css          # styl przycisku i zmiany tematu
+extra_javascript:
+  # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
+  - js/secondary.js            # logika przełączania
+
+
+
+nav:
+  - Strona Domowa: index.md
+  - Obecny projekt:
+      - Titanic: titanic/index.md
+  - Poprzednie projekty:
+      - Iris: iris/index.md
+
+

@@ -1,7 +1,7 @@
 /* ---------- 1. Niebiański tło  ----------------- */
 body {
   /* background: radial-gradient(circle at center, #19cfc2, #14154a); */
-  background: radial-gradient(circle at center,rgb(1, 86, 86),rgb(2, 127, 127));
+  background: radial-gradient(circle at center,rgba(1, 34, 86, 1),rgb(2, 127, 127));
   color: #ffffff;                      /* biały tekst na ciemnym tle */
 }
 

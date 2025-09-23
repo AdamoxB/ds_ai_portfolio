@@ -16,7 +16,8 @@
 
 /* ---------- 1. Niebiański tło ----------------- */
 body.custom-theme {
-    background: radial-gradient(circle at center, #ff00ff, #0000ff);
+    /* background: radial-gradient(circle at center, #ff00ff, #0000ff); */
+    background: radial-gradient(circle at center,rgb(1, 86, 86),rgb(2, 127, 127));
     color: #ffffff;                     /* biały tekst na ciemnym tle */
 }
 

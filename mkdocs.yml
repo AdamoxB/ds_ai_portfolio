@@ -49,9 +49,8 @@ extra_javascript:
 nav:
   - Strona Domowa: index.md
   - Obecny projekt:
-      
-  - Poprzednie projekty:
       - Titanic: titanic/index.md
+  - Poprzednie projekty:
       - Iris: iris/index.md
 
 

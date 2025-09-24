@@ -14,6 +14,7 @@ theme:
   # Wybierz swój motyw (np. material, readthedocs …)
   name: material            # ← możesz zmienić na inny
   favicon: images/logo.png   # logo w zakładce przeglądarki  
+  favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
   
   # logo: images/logo.png        # opcjonalnie – logo w nagłówku
 
@@ -42,7 +43,8 @@ theme:
   # --- ikona i logo (opcjonalne) --------------------------------------
   icon:
     repo: material/github   # w zakładce „repo” pojawi się GitHub
-  logo: images/logo.png     # podaj własny plik PNG/JPG
+  logo: images/logo_portfolio.png
+  # logo: images/logo.png     # podaj własny plik PNG/JPG
 
 # --- dodatkowe zasoby -------------------------------------------------
 extra_css:

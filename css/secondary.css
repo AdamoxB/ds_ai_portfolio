@@ -55,7 +55,7 @@ body.custom-theme {
       #00f2fe);
        */
           background: linear-gradient(135deg,
-      lab(56.17% 13.91 -66.93), 
+      lab(16.17% 13.91 -66.93), 
       #00f2fe);
       
 
@@ -110,7 +110,7 @@ body.custom-theme a::after {
     transition: transform .25s ease-out;
 }
 body.custom-theme a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX();
     transform-origin: bottom left;
 }
 

@@ -14,6 +14,7 @@ Welcome to the page dedicated to projects in data analysis, machine learning, an
 
 Feel free to explore—hope you discover something interesting here!
 
+---
 ## My short story
 
 
@@ -23,11 +24,9 @@ Over the past three years, I worked as a designer of electrical networks using A
 
 In 2025 I was inspired by the data industry, the role of Data Scientist, and the rapidly evolving field of artificial intelligence. An opportunity arose to further develop these skills by creating AI agents—automation that is not deterministic but can adapt far better to various process‑automation tasks, thereby reducing verification time and increasing overall efficiency.
 
----
 
+---
 ## Contact
 Adam Biela<br>
 email: [bielaa3@gmail.com](mailto:bielaa3@gmail.com)<br>
 tel: +48 506 767 998
-
----

@@ -14,7 +14,7 @@ theme:
   # --- kolory i kontrast ---------------------------------------------
   palette:
     - scheme: default        # jasny tryb (domyślny)
-      primary: indigo       # główny kolor
+      primary: teal       # główny kolor
       accent: pink          # akcent
       toggle:
         icon: material/weather-night

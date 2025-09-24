@@ -8,7 +8,15 @@ site_description: >-
 repo_name: AdamoxB/ds_ai_portfolio
 repo_url: https://github.com/AdamoxB/ds_ai_portfolio
 
+
+# -- Theme ------------------------------------------------------------------
 theme:
+  # Wybierz swój motyw (np. material, readthedocs …)
+  name: material            # ← możesz zmienić na inny
+  favicon: images/logo.png   # logo w zakładce przeglądarki  
+  
+  # logo: images/logo.png        # opcjonalnie – logo w nagłówku
+
   name: material
 
   # --- kolory i kontrast ---------------------------------------------

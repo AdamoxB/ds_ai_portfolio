@@ -1,9 +1,9 @@
-site_name: Moje portfolio projektów
+site_name: My projects
 site_author: Adam Biela
 
 site_url: https://AdamoxB.github.io/ds_ai_portfolio/
 site_description: >-
-    Portfolio moich projektów z Data Science i AI!
+    My portfolio of Data Science and AI projects!
 
 repo_name: AdamoxB/ds_ai_portfolio
 repo_url: https://github.com/AdamoxB/ds_ai_portfolio

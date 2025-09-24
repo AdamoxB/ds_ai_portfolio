@@ -1,5 +1,5 @@
 # Projekt ze świata danych i sztucznej inteligencji
 
-Witaj na stronie poświęconej projektom z obszaru analizy danych, uczenia maszynowego oraz sztucznej inteligencji. Znajdziesz tutaj bogaty wybór moich realizacji, nad którymi pracowałem w ostatnim czasie.
+Welcome to the page dedicated to projects in data analysis, machine learning, and artificial intelligence. Here you’ll find projects I’ve been working on recently.
 
-Serdecznie zapraszam do lektury i mam nadzieję, że znajdziesz tu coś interesującego dla siebie.
+Feel free to explore—hope you discover something interesting here!

@@ -1,0 +1,49 @@
+/* ---------- kolory bazowe (nadpisywanie zmiennych Material) -------- */
+:root {
+    /* Główny kolor nagłówków i linków */
+    --md-primary-fg-color: #1e88e5;      /* indigo */
+    /* Akcent przy hoverach, buttonach itp. */
+    --md-accent-fg-color: #f50057;       /* pink */
+
+    /* Tło kodu (ciemne) – czytelność w trybie jasnym i ciemnym */
+    --md-code-bg-color: #fafafa;
+    --md-code-bg-color-dark: #2d2d2d;
+
+    /* Odstępy i maksymalna szerokość treści */
+    --md-max-width: 960px;                /* ogranicza rozciąganie na szerokich ekranach */
+}
+
+/* ---------- nagłówki ------------------------------------------------ */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+    color: var(--md-primary-fg-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- akapity i listy ---------------------------------------- */
+.md-typeset p,
+.md-typeset li {
+    line-height: 1.6;      /* lepsza czytelność tekstu */
+    font-size: 1.05rem;
+}
+
+/* ---------- kod ----------------------------------------------------- */
+.md-typeset code, .md-typeset pre > code {
+    background-color: var(--md-code-bg-color);
+    border-radius: 4px;
+    padding: 0.2rem 0.4rem;
+}
+@media (prefers-color-scheme: dark) {
+    .md-typeset code, .md-typeset pre > code {
+        background-color: var(--md-code-bg-color-dark);
+    }
+}
+
+/* ---------- przyciski i linki -------------------------------------- */
+.md-button,
+a:not(.md-nav__link):not(.md-tabs__link) {
+    color: var(--md-accent-fg-color);
+}
+

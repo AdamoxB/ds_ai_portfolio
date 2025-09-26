@@ -29,9 +29,9 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 - Supports both real-time recording and file upload workflows.
 
 ## Sample photos  
-![PIC](images/SemanticAudioNotes/img1.png) 
-![PIC](images/SemanticAudioNotes/img2.png)  
-images\SemanticAudioNotes\img1.png
+![PIC](../images/img1.png) 
+![PIC](../images/img2.png)  
+![PIC](../images/logo.png) 
 
 ...
 

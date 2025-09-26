@@ -8,6 +8,11 @@ site_description: >-
 repo_name: AdamoxB/ds_ai_portfolio
 repo_url: https://github.com/AdamoxB/ds_ai_portfolio
 
+markdown_extensions:
+  - attr_list        # → add HTML attributes to Markdown elements
+  - md_in_html       # → parse Markdown inside raw HTML blocks
+  - tables           # → GitHub‑style tables (and a few optional tweaks)
+
 
 # -- Theme ------------------------------------------------------------------
 theme:

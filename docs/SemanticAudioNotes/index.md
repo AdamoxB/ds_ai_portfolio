@@ -47,9 +47,9 @@ Application usage
 
 ---
 
-<a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a>
+<!-- <a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a> -->
 
-<iframe
+<!-- <iframe
     id="content"
     src="iris.html"
     width="100%"
@@ -68,4 +68,4 @@ window.addEventListener('resize', function() {
     var iframe = document.getElementById('content');
     resizeIframeToFitContent(iframe);
 });
-</script>
+</script> -->

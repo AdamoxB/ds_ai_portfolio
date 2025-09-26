@@ -66,7 +66,8 @@ nav:
   # - Obecny projekt:
   #     - titanic/index.md
   - My projects - soon available: 
+      - SemanticAudioNotes: SemanticAudioNotes/index.md
       - Iris: iris/index.md
       - Titanic: titanic/index.md
-      - SemanticAudioNotes: SemanticAudioNotes/index.md
+
 

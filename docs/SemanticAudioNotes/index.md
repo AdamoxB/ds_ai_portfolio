@@ -34,7 +34,7 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 
 ...
 
-Application usage
+## Application usage
 - Open the Streamlit app in a browser.  
 - Navigate to the “Dodaj notatkę” tab to record a new audio note or to the “Wczytaj nagranie z pliku mp3” tab to upload an existing MP3.  
 - Click **Transkrybuj** to convert the audio into text.  

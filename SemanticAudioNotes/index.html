@@ -463,6 +463,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Application usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-api-keys-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get API keys and addresses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configuration file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -557,6 +581,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Application usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-api-keys-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get API keys and addresses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configuration file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -623,6 +671,27 @@
 <li>Edit the transcribed text if needed, then click <strong>Wyślij notatkę do twojej bazy wektorowej QDRANT</strong> to store it.  </li>
 <li>Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.</li>
 </ul>
+<h3 id="where-to-get-api-keys-and-addresses"><span style='color: #00FF00;'>Where to get API keys and addresses?</span></h3>
+<ol>
+<li><strong>OpenAI API Key (openai_api_key):</strong>  </li>
+<li>Visit the <a href="https://platform.openai.com/account/api-keys">OpenAI API Keys page</a>.  </li>
+<li>Log in to your account or create a new one.  </li>
+<li>
+<p>Click "Create API key" and copy the key.</p>
+</li>
+<li>
+<p><strong>QuDanta keys and URL:</strong>  </p>
+</li>
+<li><strong>QDRANT_URL:</strong> The address of your QuDanta server, e.g., <code>https://your-qdrant-instance.com</code>.  </li>
+<li><strong>QDRANT_API_KEY:</strong> The QuDanta API key (if required).  </li>
+<li>More details can be found in the <a href="https://qdrant.tech/documentation/">QuDanta documentation</a>.</li>
+</ol>
+<h3 id="example-configuration-file"><span style='color: #00FF00;'>Example configuration file:</span></h3>
+<pre><code class="language-plaintext">OPENAI_API_KEY=your-openai-api-key
+QDRANT_URL=https://your-qdrant-instance.com
+QDRANT_API_KEY=your-qdrant-api-key
+Replace your-openai-api-key, https://your-qdrant-instance.com and your-qdrant-api-key with your own values.
+</code></pre>
 <hr />
 <p><a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Przejdź do aplikacji</a></p>
 <hr />

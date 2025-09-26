@@ -57,8 +57,10 @@ theme:
 
 plugins:
   - search                 # keep other plugins you already use
+  # pip install mkdocs-image-zoom   # or pipx, poetry, etc.#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # - image-zoom             # <— this plugin does the heavy lifting
 
+  
 # --- dodatkowe zasoby -------------------------------------------------
 extra_css:
   # - css/extra.css          # własne reguły CSS

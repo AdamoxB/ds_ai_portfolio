@@ -15,12 +15,19 @@ repo_url: https://github.com/AdamoxB/ds_ai_portfolio
 theme:
   # Wybierz swój motyw (np. material, readthedocs …)
   name: material            # ← możesz zmienić na inny
+  
   favicon: images/logo.png   # logo w zakładce przeglądarki  
   favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
 
-  # logo: images/logo.png        # opcjonalnie – logo w nagłówku
 
-  name: material
+  features:
+    - navigation.instant   # optional extras you already have
+    - search.highlight
+    - content.code.annotate
+    # ------------------------------------------------------------------
+    - image.zoom            # <-- this line turns on the zoom feature
+    # ------------------------------------------------------------------
+
 
   # --- kolory i kontrast ---------------------------------------------
   palette:
@@ -47,6 +54,10 @@ theme:
     repo: material/github   # w zakładce „repo” pojawi się GitHub
   logo: images/logo_portfolio.png
   # logo: images/logo.png     # podaj własny plik PNG/JPG
+
+plugins:
+  - search                 # keep other plugins you already use
+  # - image-zoom             # <— this plugin does the heavy lifting
 
 # --- dodatkowe zasoby -------------------------------------------------
 extra_css:

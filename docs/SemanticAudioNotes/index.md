@@ -31,12 +31,15 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 ## Sample photos  
 
 ![Alt text](../images/img1.png)
-![Alt text](../images/img2.png)
+<!-- ![Alt text](../images/img2.png) -->
+<div style="text-align: center;">
+<img src="../images/img2.png" alt="photo">
+</div>
 
 --- 
-<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
+<!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
 
----
+--- -->
 
 ## Application usage
 - Open the Streamlit app in a browser.  

@@ -29,10 +29,14 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 - Supports both real-time recording and file upload workflows.
 
 ## Sample photos  
-![PIC](../images/img1.png) 
-![PIC](../images/img2.png)  
 
+![Alt text](../images/img1.png)
+![Alt text](../images/img2.png)
 
+--- 
+<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
+
+---
 
 ## Application usage
 - Open the Streamlit app in a browser.  

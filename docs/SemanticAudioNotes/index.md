@@ -11,13 +11,15 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 - Download notes as MP3 or TXT files.
 
 ## Technologies & skills
-- Python
-- Streamlit
-- audiorecorder
-- OpenAI API (Whisper, Embeddings)
-- Qdrant vector database
-- dotenv for configuration management
-- st_paywall for authentication
+- Python  
+- Streamlit  
+- audiorecorder (web recording)  
+- OpenAI API (Whisper, Embeddings)  
+- Qdrant vector database  
+- dotenv for environment variables  
+- hashlib md5 for audio change detection  
+- st_paywall for authentication  
+- Custom modules: `my_package.tips`, `api_key_loader_zmiany`  
 
 ## Project Report
 - Utilizes Streamlit session state to persist audio and text across interactions.
@@ -27,8 +29,8 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 - Supports both real-time recording and file upload workflows.
 
 ## Sample photos  
-![alt text](docs/SemanticAudioNotes/images/img1.png)  
-![alt text](docs/SemanticAudioNotes/images/img2.png)  
+![PIC](images/SemanticAudioNotes/img1.png) 
+![PIC](images/SemanticAudioNotes/img2.png)  
 
 ...
 
@@ -39,13 +41,13 @@ Application usage
 - Edit the transcribed text if needed, then click **Wyślij notatkę do twojej bazy wektorowej QDRANT** to store it.  
 - Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.
 
-[Deployed app](https://semanticaudionotes.streamlit.app/)
 
 ---
 
-<a href="https://semanticaudionotes.streamlit.app/" class="md-button md-button--primary">Deployed app</a>
+<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Przejdź do aplikacji</a>
 
 ---
+
 
 <!-- <a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a> -->
 

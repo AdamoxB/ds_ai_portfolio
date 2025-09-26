@@ -66,7 +66,7 @@ Replace your-openai-api-key, https://your-qdrant-instance.com and your-qdrant-ap
 
 ---
 
-<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Przejdź do aplikacji</a>
+<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
 
 ---
 

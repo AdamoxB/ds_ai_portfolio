@@ -1,0 +1,131 @@
+/* Pozycjonowanie przycisku w prawym górnym rogu */
+.md-header__inner .md-toggle.secondary {
+  margin-left: auto;
+  display: flex;
+}
+
+
+
+/* 1️⃣  Import Google‑font „Press Start 2P” */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ------------------------------------------------------------------
+   Wszystkie style będą aktywne tylko wtedy, gdy toggle zostanie włączony
+   (klasa .custom-theme dodawana do <body> przez secondary.js)
+------------------------------------------------------------------- */
+
+/* ---------- 1. Niebiański tło ----------------- */
+
+@keyframes rainbow {
+  0%   {background-position: 0% 50%;}
+  50%  {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+body.custom-theme {
+
+  /* background: linear-gradient(270deg, #ff9a56, #f13e3e, #4facfe, #00f2fe);
+  background-size: 800% 800%;
+  animation: rainbow 15s ease infinite;
+ */
+
+
+    /* background: radial-gradient(circle at center, #ff00ff, #0000ff); */
+    /* background: radial-gradient(circle at center,rgb(35, 152, 216),rgb(80, 85, 223)); */
+    /* background: radial-gradient(circle at 20% 30%,
+        #ff9a9e 0%,
+        #fad0c4 40%,
+        #fbc2eb 80%,
+        #a1c4fd 100%); */
+
+          /* background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="%23e5e5e5"><rect width="100%" height="100%"/><circle cx="30" cy="30" r="10"/><circle cx="90" cy="90" r="15"/></svg>') repeat; */
+
+      /* background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
+
+      background: linear-gradient(135deg,
+      rgba(255,0,255,0.8),
+      rgba(0,0,255,0.6));
+  backdrop-filter: blur(5px); */
+
+
+  
+    /* background: linear-gradient(135deg,
+      #4facfe, 
+      #00f2fe);
+       */
+          background: linear-gradient(135deg,
+      lab(16.17% 13.91 -66.93), 
+      #00f2fe);
+      
+
+
+/* background:
+        linear-gradient(45deg,
+            #ff9a9e,
+            #fad0c4,
+            #fbc2eb,
+            #a1c4fd),
+        url('data:image/svg+xml;base64,\
+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIyNDAiIGhlaWdodD0iMzAiIGZpbGw9ImJsYWNrIiB2aWV3Qm94PSIwIDAgMTYgMCI+PC9yZWN0PjxwYXRoIGQ9Ik01LDVMMTQsN0wxOCw1IiBmaWxsPSJub25lIi8+PC9zdmc+');
+    background-size: cover; */
+
+
+
+
+
+
+
+
+
+    color: #ffffff;                     /* biały tekst na ciemnym tle */
+}
+
+/* ---------- 2. Duże i stylowe nagłówki ----------- */
+body.custom-theme h1,
+body.custom-theme h2,
+body.custom-theme h3,
+body.custom-theme .md-header__title {
+    font-family: 'Press Start 2P', cursive;   /* retro‑font z Google Fonts */
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255,204,0,.8);
+}
+
+/* ---------- 3. Animowane linki ------------------ */
+body.custom-theme a {
+    position: relative;
+    display: inline-block;
+    transition: all .3s ease;
+}
+body.custom-theme a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffcc00;
+    transform-origin: bottom right;
+    transition: transform .25s ease-out;
+}
+body.custom-theme a:hover::after {
+    transform: scaleX();
+    transform-origin: bottom left;
+}
+
+/* ---------- 4. Ekscytująca animacja na pasku ---- */
+body.custom-theme .md-header {
+    animation: slideDown 0.8s ease-in-out;
+}
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* ---------- 5. Dodatkowe ustawienia ----------- */
+body.custom-theme .md-content h4,
+body.custom-theme .md-content h5,
+body.custom-theme .md-content h6 {
+    color: #ff6666;
+}

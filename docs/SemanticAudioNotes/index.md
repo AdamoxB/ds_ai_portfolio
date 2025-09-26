@@ -31,7 +31,6 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 ## Sample photos  
 ![PIC](../images/img1.png) 
 ![PIC](../images/img2.png)  
-![PIC](../images/logo.png) 
 
 ...
 

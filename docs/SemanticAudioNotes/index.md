@@ -33,12 +33,35 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 ![PIC](../images/img2.png)  
 
 
+
 ## Application usage
 - Open the Streamlit app in a browser.  
 - Navigate to the “Dodaj notatkę” tab to record a new audio note or to the “Wczytaj nagranie z pliku mp3” tab to upload an existing MP3.  
 - Click **Transkrybuj** to convert the audio into text.  
 - Edit the transcribed text if needed, then click **Wyślij notatkę do twojej bazy wektorowej QDRANT** to store it.  
 - Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.
+
+
+### <span style='color: #00FF00;'>Where to get API keys and addresses?</span>
+
+1. **OpenAI API Key (openai_api_key):**  
+   - Visit the [OpenAI API Keys page](https://platform.openai.com/account/api-keys).  
+   - Log in to your account or create a new one.  
+   - Click "Create API key" and copy the key.
+
+2. **QuDanta keys and URL:**  
+   - **QDRANT_URL:** The address of your QuDanta server, e.g., `https://your-qdrant-instance.com`.  
+   - **QDRANT_API_KEY:** The QuDanta API key (if required).  
+   - More details can be found in the [QuDanta documentation](https://qdrant.tech/documentation/).
+
+### <span style='color: #00FF00;'>Example configuration file:</span>
+
+```plaintext
+OPENAI_API_KEY=your-openai-api-key
+QDRANT_URL=https://your-qdrant-instance.com
+QDRANT_API_KEY=your-qdrant-api-key
+Replace your-openai-api-key, https://your-qdrant-instance.com and your-qdrant-api-key with your own values.
+```
 
 
 ---

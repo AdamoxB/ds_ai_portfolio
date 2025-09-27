@@ -3,5 +3,5 @@ others
 QUICK_START/
 
 **/ignore/
-
+**/docs/*
 mkdocs.yml

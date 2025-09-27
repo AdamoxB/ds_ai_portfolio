@@ -31,7 +31,7 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 ## Sample photos  
 
 ![Alt text](../images/img1.png)
-<!-- ![Alt text](../images/img2.png) -->
+![Alt text](../images/img2.png)
 <!-- <div style="text-align: center;">
 <img src="../images/img2.png" alt="photo">
 </div> -->

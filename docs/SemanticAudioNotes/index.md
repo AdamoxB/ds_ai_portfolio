@@ -32,9 +32,9 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 
 ![Alt text](../images/img1.png)
 <!-- ![Alt text](../images/img2.png) -->
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
 <img src="../images/img2.png" alt="photo">
-</div>
+</div> -->
 
 --- 
 <!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>

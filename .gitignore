@@ -1,8 +1,7 @@
-# site
+site
 others
-**/docs/
 QUICK_START/
 
-
+**/ignore/
 
 

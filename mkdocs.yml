@@ -15,8 +15,6 @@ repo_url: https://github.com/AdamoxB/ds_ai_portfolio
 theme:
   # Wybierz swój motyw (np. material, readthedocs …)
   name: material            # ← możesz zmienić na inny
-  
-  favicon: images/logo.png   # logo w zakładce przeglądarki  
   favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
 
 
@@ -24,9 +22,7 @@ theme:
     - navigation.instant   # optional extras you already have
     - search.highlight
     - content.code.annotate
-    # ------------------------------------------------------------------
-    - image.zoom            # <-- this line turns on the zoom feature
-    # ------------------------------------------------------------------
+    - image.zoom          # Material’s built‑in zoom feature
 
 
   # --- kolory i kontrast ---------------------------------------------
@@ -43,6 +39,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Tryb jasny
+  
 
   # --- czcionki -------------------------------------------------------
   font:
@@ -52,15 +49,18 @@ theme:
   # --- ikona i logo (opcjonalne) --------------------------------------
   icon:
     repo: material/github   # w zakładce „repo” pojawi się GitHub
-  logo: images/logo_portfolio.png
-  # logo: images/logo.png     # podaj własny plik PNG/JPG
+  logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
+    
+
 
 plugins:
-  - search                 # keep other plugins you already use
+  - search                 # core search plugin
+  - glightbox
+
   # pip install mkdocs-image-zoom   # or pipx, poetry, etc.#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # - image-zoom             # <— this plugin does the heavy lifting
 
-  
+
 # --- dodatkowe zasoby -------------------------------------------------
 extra_css:
   # - css/extra.css          # własne reguły CSS
@@ -68,13 +68,13 @@ extra_css:
 extra_javascript:
   # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
   - js/secondary.js            # logika przełączania
+  - js/zoom.js
 
 
 
 nav:
   - Home Page: index.md
-  # - Obecny projekt:
-  #     - titanic/index.md
+
   - My projects - soon available: 
       - SemanticAudioNotes: SemanticAudioNotes/index.md
       - Iris: iris/index.md

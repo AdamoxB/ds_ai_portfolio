@@ -1,5 +1,8 @@
 // Po załadowaniu DOM
 document.addEventListener('DOMContentLoaded', () => {
+//     if (window.mediumZoom) {
+//     window.mediumZoom('.zoomable');
+//   }
   // Tworzymy przycisk
   const btn = document.createElement('button');
   btn.className = 'md-toggle secondary md-icon';

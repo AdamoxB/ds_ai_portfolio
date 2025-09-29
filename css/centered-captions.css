@@ -1,0 +1,21 @@
+/* css/centered-captions.css */
+
+/* 1. Wyśrodkowanie całej sekcji figure */
+figure {
+    text-align: center;          /* centrowanie treści wewnątrz figure */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. Opcjonalnie: styl samego podpisu */
+figcaption {
+    display: block;
+    margin-top: .5rem;           /* odległość od obrazu */
+    font-style: italic;          /* kursywa – opcjonalne */
+    color: #555;                 /* ciemniejszy tekst, by lepiej się wyróżniał */
+}
+
+/* 3. (opcjonalnie) centrowanie podpisu w light‑boxie glightbox */
+.glightbox-caption {
+    text-align: center;
+}

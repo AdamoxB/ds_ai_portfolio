@@ -49,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/style.cs">
     
       <link rel="stylesheet" href="../css/custom.css">
     
@@ -429,6 +429,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#application-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-api-keys-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get API keys and addresses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configuration file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -545,6 +578,84 @@
 <li>Supports both real-time recording and file upload workflows.</li>
 </ul>
 <h2 id="sample-photos">Sample photos</h2>
+<!-- <figure markdown>
+
+![Ładowanie pliku](../images/img1.png){ width="500px"}
+<figcaption>Ładowanie pliku</figcaption>
+
+![Transkrypcja](../images/img2.png){ width="500px"}{: .align-left}
+<!-- {: .align-left} -->
+<!-- ![Transkrypcja](../images/img2.png){ width="500px"} -->
+<!-- <figcaption>Transkrypcja</figcaption>
+</figure> -->
+<p>--&gt;</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/img1.png" data-title="Ładowanie pliku" data-desc-position="bottom"><img alt="Ładowanie pliku" src="../images/img1.png" width="620px"></a></p>
+<figcaption>Ładowanie pliku</figcaption>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/img2.png" data-title="Transkrypcja" data-desc-position="bottom"><img alt="Transkrypcja" src="../images/img2.png" width="620px"></a></p>
+<figcaption>Transkrypcja</figcaption>
+<!-- <div style="text-align: center;">
+<img src="../images/img2.png" alt="photo">
+</div> -->
+
+<!-- ---  -->
+<!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
+
+--- -->
+
+<h2 id="application-usage">Application usage</h2>
+<ul>
+<li>Open the Streamlit app in a browser.  </li>
+<li>Navigate to the “Dodaj notatkę” tab to record a new audio note or to the “Wczytaj nagranie z pliku mp3” tab to upload an existing MP3.  </li>
+<li>Click <strong>Transkrybuj</strong> to convert the audio into text.  </li>
+<li>Edit the transcribed text if needed, then click <strong>Wyślij notatkę do twojej bazy wektorowej QDRANT</strong> to store it.  </li>
+<li>Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.</li>
+</ul>
+<h3 id="where-to-get-api-keys-and-addresses"><span style="color: #00FF00;">Where to get API keys and addresses?</span></h3>
+<ol>
+<li><strong>OpenAI API Key (openai_api_key):</strong>  </li>
+<li>Visit the <a href="https://platform.openai.com/account/api-keys">OpenAI API Keys page</a>.  </li>
+<li>Log in to your account or create a new one.  </li>
+<li>
+<p>Click "Create API key" and copy the key.</p>
+</li>
+<li>
+<p><strong>QuDanta keys and URL:</strong>  </p>
+</li>
+<li><strong>QDRANT_URL:</strong> The address of your QuDanta server, e.g., <code>https://your-qdrant-instance.com</code>.  </li>
+<li><strong>QDRANT_API_KEY:</strong> The QuDanta API key (if required).  </li>
+<li>More details can be found in the <a href="https://qdrant.tech/documentation/">QuDanta documentation</a>.</li>
+</ol>
+<h3 id="example-configuration-file"><span style="color: #00FF00;">Example configuration file:</span></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OPENAI_API_KEY=your-openai-api-key
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>QDRANT_URL=https://your-qdrant-instance.com
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>QDRANT_API_KEY=your-qdrant-api-key
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Replace your-openai-api-key, https://your-qdrant-instance.com and your-qdrant-api-key with your own values.
+</code></pre></div>
+<hr>
+<p><a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a></p>
+<hr>
+<!-- <a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a> -->
+
+<!-- <iframe
+    id="content"
+    src="iris.html"
+    width="100%"
+    style="border:1px solid black;overflow:hidden;"
+></iframe>
+<script>
+function resizeIframeToFitContent(iframe) {
+    iframe.style.height = (iframe.contentWindow.document.documentElement.scrollHeight + 50) + "px";
+    iframe.contentDocument.body.style["overflow"] = 'hidden';
+}
+window.addEventListener('load', function() {
+    var iframe = document.getElementById('content');
+    resizeIframeToFitContent(iframe);
+});
+window.addEventListener('resize', function() {
+    var iframe = document.getElementById('content');
+    resizeIframeToFitContent(iframe);
+});
+</script> -->
 
 
 

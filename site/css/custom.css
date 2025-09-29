@@ -48,6 +48,7 @@ a:not(.md-nav__link):not(.md-tabs__link) {
 }
 
 /* wyrównuje całą figurę do lewej */
+
 figure.align-left {
     float: left;          /* usunie marginesy po prawej stronie */
     margin-right: 1rem;   /* opcjonalny odstęp od tekstu po prawej */

@@ -35,19 +35,23 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 ![Ładowanie pliku](../images/img1.png){ width="500px"}
 <figcaption>Ładowanie pliku</figcaption>
 
-![Transkrypcja](../images/img2.png){ width="500px"}{: .align-left}
-<!-- {: .align-left} -->
-<!-- ![Transkrypcja](../images/img2.png){ width="500px"} -->
-<!-- <figcaption>Transkrypcja</figcaption>
-</figure> --> -->
-
-![Ładowanie pliku](../images/img1.png){ width="620px"}
-<figcaption>Ładowanie pliku</figcaption>
-![Transkrypcja](../images/img2.png){ width="620px"}
+![Transkrypcja](../images/img2.png){ width="500px"}
 <figcaption>Transkrypcja</figcaption>
-<!-- <div style="text-align: center;">
-<img src="../images/img2.png" alt="photo">
-</div> -->
+
+</figure> -->
+
+
+<figure>
+    <img src="../images/img1.png" alt="<figcaption>Ładowanie pliku</figcaption>" width="600">
+    <figcaption>Ładowanie pliku</figcaption>
+</figure>
+
+<figure>
+    <img src="../images/img2.png" alt="<figcaption>Transkrypcja</figcaption>" width="600">
+    <figcaption>Transkrypcja</figcaption>
+</figure>
+
+
 
 <!-- ---  -->
 <!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>

@@ -47,3 +47,14 @@ a:not(.md-nav__link):not(.md-tabs__link) {
     color: var(--md-accent-fg-color);
 }
 
+/* wyrównuje całą figurę do lewej */
+figure.align-left {
+    float: left;          /* usunie marginesy po prawej stronie */
+    margin-right: 1rem;   /* opcjonalny odstęp od tekstu po prawej */
+}
+
+/* jeśli chcesz, żeby sam obraz był wyśrodkowany w figurze – usuń poniższy kod */
+figure.align-left img {
+    display: block;
+    margin: 0 auto;
+}

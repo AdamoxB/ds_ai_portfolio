@@ -78,6 +78,8 @@ plugins:
 # --- dodatkowe zasoby -------------------------------------------------
 extra_css:
   # - css/extra.css          # własne reguły CSS
+  - css/style.cs
+  - css/custom.css
   - css/secondary.css          # styl przycisku i zmiany tematu
   - css/centered-captions.css   # ścieżka względna od katalogu głównego projektu
 

@@ -30,17 +30,21 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 
 ## Sample photos  
 
-<figure markdown>
+<!-- <figure markdown>
 
-![Ładowanie pliku](../images/img1.png)
+![Ładowanie pliku](../images/img1.png){ width="500px"}
 <figcaption>Ładowanie pliku</figcaption>
 
-![Transkrypcja](../images/img2.png)
+![Transkrypcja](../images/img2.png){ width="500px"}{: .align-left}
+<!-- {: .align-left} -->
 <!-- ![Transkrypcja](../images/img2.png){ width="500px"} -->
+<!-- <figcaption>Transkrypcja</figcaption>
+</figure> --> -->
+
+![Ładowanie pliku](../images/img1.png){ width="620px"}
+<figcaption>Ładowanie pliku</figcaption>
+![Transkrypcja](../images/img2.png){ width="620px"}
 <figcaption>Transkrypcja</figcaption>
-</figure>
-
-
 <!-- <div style="text-align: center;">
 <img src="../images/img2.png" alt="photo">
 </div> -->

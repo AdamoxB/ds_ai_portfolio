@@ -31,7 +31,6 @@ theme:
     #     icon: material/brightness-auto
     #     name: Switch to light mode
 
-
     - scheme: default        # jasny tryb (domyślny)
       primary: teal       # główny kolor
       accent: pink          # akcent
@@ -45,8 +44,16 @@ theme:
         icon: material/weather-sunny
         name: Tryb jasny
 
+  # --- czcionki -------------------------------------------------------
+  font:
+    text: Roboto
+    code: Fira Code
 
-
+  # --- ikona i logo (opcjonalne) --------------------------------------
+  icon:
+    repo: material/github   # w zakładce „repo” pojawi się GitHub
+  logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
+    
 
 
 plugins:
@@ -102,16 +109,7 @@ markdown_extensions:
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 
 
-# --- czcionki -------------------------------------------------------
-font:
-  text: Roboto
-  code: Fira Code
 
-# --- ikona i logo (opcjonalne) --------------------------------------
-icon:
-  repo: material/github   # w zakładce „repo” pojawi się GitHub
-logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
-    
 
 nav:
   - Home Page: index.md

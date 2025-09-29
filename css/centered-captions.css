@@ -1,18 +1,26 @@
 /* css/centered-captions.css */
 
-/* 1. Wyśrodkowanie całej sekcji figure */
+/* 1. Nie centrować całej figure – zostaw ją w naturalnym przepływie */
 figure {
-    text-align: center;          /* centrowanie treści wewnątrz figure */
-    margin-left: auto;
-    margin-right: auto;
-}
+    display: inline-block;      /* figure ma taką szerokość, jak jej zawartość (obrazek) */
+    margin-bottom: 1rem;        /* opcjonalnie odstęp od kolejnego elementu */
 
+    /* text-align: center;          centrowanie treści wewnątrz figure */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    
+}
+/* 2. Obrazek – blokowy, żeby nie było odstępów pod spodem */
+img {
+    display: block;
+}
 /* 2. Opcjonalnie: styl samego podpisu */
 figcaption {
-    display: block;
+    /* display: block; */
     margin-top: .5rem;           /* odległość od obrazu */
     font-style: italic;          /* kursywa – opcjonalne */
     color: #555;                 /* ciemniejszy tekst, by lepiej się wyróżniał */
+    text-align: center;     /* centrowanie względem szerokości figure (czyli obrazka) */
 }
 
 /* 3. (opcjonalnie) centrowanie podpisu w light‑boxie glightbox */

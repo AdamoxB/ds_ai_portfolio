@@ -32,19 +32,20 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 
 <figure markdown>
 
-![Ładowanie pliku](../images/img1.png){ width="500px"}
+![Ładowanie pliku](../images/img1.png)
 <figcaption>Ładowanie pliku</figcaption>
 
-![Transkrypcja](../images/img2.png){ width="500px"}
+![Transkrypcja](../images/img2.png)
+<!-- ![Transkrypcja](../images/img2.png){ width="500px"} -->
 <figcaption>Transkrypcja</figcaption>
-
 </figure>
+
 
 <!-- <div style="text-align: center;">
 <img src="../images/img2.png" alt="photo">
 </div> -->
 
---- 
+<!-- ---  -->
 <!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>
 
 --- -->

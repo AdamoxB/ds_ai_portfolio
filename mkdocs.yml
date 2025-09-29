@@ -8,9 +8,6 @@ site_description: >-
 repo_name: AdamoxB/ds_ai_portfolio
 repo_url: https://github.com/AdamoxB/ds_ai_portfolio
 
-markdown_extensions:
-  - attr_list
-
 
 # -- Theme ------------------------------------------------------------------
 theme:
@@ -49,16 +46,7 @@ theme:
         name: Tryb jasny
 
 
-  # --- czcionki -------------------------------------------------------
-  font:
-    text: Roboto
-    code: Fira Code
 
-  # --- ikona i logo (opcjonalne) --------------------------------------
-  icon:
-    repo: material/github   # w zakładce „repo” pojawi się GitHub
-  logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
-    
 
 
 plugins:
@@ -66,6 +54,7 @@ plugins:
   - glightbox:
       touchNavigation: true
       loop: false
+      autoplay: false
       effect: zoom
       slide_effect: slide
       width: 100%
@@ -90,6 +79,8 @@ plugins:
 extra_css:
   # - css/extra.css          # własne reguły CSS
   - css/secondary.css          # styl przycisku i zmiany tematu
+  - css/centered-captions.css   # ścieżka względna od katalogu głównego projektu
+
 extra_javascript:
   # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
   - js/secondary.js            # logika przełączania
@@ -101,12 +92,24 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
-  - attr_list
+  # - pymdownx.blocks.caption  # optional, for captions
+  - attr_list        # → add HTML attributes to Markdown elements
   - meta
   - md_in_html
   - admonition
+  - tables           # → GitHub‑style tables (and a few optional tweaks)
 
 
+# --- czcionki -------------------------------------------------------
+font:
+  text: Roboto
+  code: Fira Code
+
+# --- ikona i logo (opcjonalne) --------------------------------------
+icon:
+  repo: material/github   # w zakładce „repo” pojawi się GitHub
+logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
+    
 
 nav:
   - Home Page: index.md
@@ -117,7 +120,3 @@ nav:
       - Titanic: titanic/index.md
 
 
-markdown_extensions:
-  - attr_list        # → add HTML attributes to Markdown elements
-  - md_in_html       # → parse Markdown inside raw HTML blocks
-  - tables           # → GitHub‑style tables (and a few optional tweaks)

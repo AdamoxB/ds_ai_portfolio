@@ -32,17 +32,17 @@ A Streamlit web application that provides an interactive chat interface with Ope
 ## Sample photos
 
 <figure>
-    <img src="../images/gpt1.png" alt="<figcaption>Pic_name</figcaption>" width="600">
-<figcaption>Pic_name</figcaption>
-    <img src="../images/gpt2.png" alt="<figcaption>Pic_name2</figcaption>" width="600">
-<figcaption>Pic_name2</figcaption>
-    <img src="../images/gpt3.png" alt="<figcaption>Pic_name3</figcaption>" width="600">
-<figcaption>Pic_name3</figcaption>
-    <img src="../images/gpt4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
-<figcaption>Pic_name5</figcaption>
+    <img src="../images/gpt1.png" alt="<figcaption>Two ways of entering API_KEY</figcaption>" width="600">
+<figcaption>Two ways of entering API_KEY</figcaption>
+    <img src="../images/gpt2.png" alt="<figcaption>Model_chose</figcaption>" width="600">
+<figcaption>Model_chose</figcaption>
+    <img src="../images/gpt3.png" alt="<figcaption>Chat_role</figcaption>" width="600">
+<figcaption>Chat_role</figcaption>
+    <img src="../images/gpt4.png" alt="<figcaption>Chat memory & Tips</figcaption>" width="600">
+<figcaption>Chat memory & Tips</figcaption>
 </figure>
 
-Application usage
+## Application usage
 - Open the Streamlit app in a browser.    
 - Configure conversation memory, model, and role in the sidebar.  
 - Enter prompts into the chat input to interact with GPT.  

@@ -3,8 +3,8 @@
 ## Overview
 A Streamlit web application that provides an interactive chat interface with OpenAI GPT models, supporting memory management, cost tracking, and persistent conversation storage.
 
-## Project architecture
-    in Excalidraw
+<!-- ## Project architecture
+    in Excalidraw -->
 
 ## Main functionalities
 - Interactive chat interface using Streamlit.  
@@ -33,17 +33,17 @@ A Streamlit web application that provides an interactive chat interface with Ope
 
 <figure>
     <img src="../images/gpt1.png" alt="<figcaption>Pic_name</figcaption>" width="600">
-<!-- <figcaption>Pic_name</figcaption> -->
+<figcaption>Pic_name</figcaption>
     <img src="../images/gpt2.png" alt="<figcaption>Pic_name2</figcaption>" width="600">
-<!-- <figcaption>Pic_name2</figcaption> -->
-    <!-- <img src="../images/gpt3.png" alt="<figcaption>Pic_name3</figcaption>" width="600">
+<figcaption>Pic_name2</figcaption>
+    <img src="../images/gpt3.png" alt="<figcaption>Pic_name3</figcaption>" width="600">
 <figcaption>Pic_name3</figcaption>
     <img src="../images/gpt4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
-<figcaption>Pic_name5</figcaption> -->
+<figcaption>Pic_name5</figcaption>
 </figure>
 
 Application usage
-- Launch the Streamlit app by running `streamlit run app.py`.  
+- Open the Streamlit app in a browser.    
 - Configure conversation memory, model, and role in the sidebar.  
 - Enter prompts into the chat input to interact with GPT.  
 - Monitor cost metrics (USD/PLN) on the sidebar.  

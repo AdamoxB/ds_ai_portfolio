@@ -66,7 +66,7 @@ A Streamlit web application that records or uploads audio notes, transcribes the
 - Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.
 
 
-### <span style='color: #00FF00;'>Where to get API keys and addresses?</span>
+### <span style='color: #00FF00;'>Where to get API key and addresses?</span>
 
 1. **OpenAI API Key (openai_api_key):**  
    - Visit the [OpenAI API Keys page](https://platform.openai.com/account/api-keys).  

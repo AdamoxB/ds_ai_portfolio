@@ -3,9 +3,8 @@
 ## Overview
 Interactive dashboard that visualizes the Gapminder dataset using Streamlit and Plotly Express.
 
-## Project architecture
-    in Excalidraw
-
+<!-- ## Project architecture
+    in Excalidraw -->
 ## Main functionalities
 - Year selector slider to choose the analysis year.
 - Continent multiselect filter for country selection.

@@ -36,8 +36,8 @@ Interactive dashboard that visualizes the Gapminder dataset using Streamlit and 
 <figcaption>Gapminder Line Chart</figcaption>
     <img src="../images/gap3.png" alt="<figcaption>Gapminder Bar Chart</figcaption>" width="600">
 <figcaption>Gapminder Bar Chart</figcaption>
-    <img src="../images/gap4.png" alt="<figcaption>Gapminder World Map</figcaption>" width="600">
-<figcaption>Gapminder World Map</figcaption>
+    <!-- <img src="../images/gap4.png" alt="<figcaption>Gapminder World Map</figcaption>" width="600">
+<figcaption>Gapminder World Map</figcaption> -->
 </figure>
 
 Application usage

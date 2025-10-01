@@ -32,18 +32,19 @@ theme:
     #     icon: material/brightness-auto
     #     name: Switch to light mode
 
-    - scheme: default        # jasny tryb (domyślny)
-      primary: teal       # główny kolor
-      accent: pink          # akcent
-      toggle:
-        icon: material/weather-night
-        name: Tryb ciemny
     - scheme: slate         # ciemny tryb
       primary: blue-grey
       accent: light-blue
       toggle:
         icon: material/weather-sunny
         name: Tryb jasny
+    - scheme: default        # jasny tryb (domyślny)
+      primary: teal       # główny kolor
+      accent: pink          # akcent
+      toggle:
+        icon: material/weather-night
+        name: Tryb ciemny
+
 
   # --- czcionki -------------------------------------------------------
   font:

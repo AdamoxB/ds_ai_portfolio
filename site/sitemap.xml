@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://AdamoxB.github.io/ds_ai_portfolio/Analiza_Kluczowych_Cech_w_Zbiorach_Danych/</loc>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://AdamoxB.github.io/ds_ai_portfolio/Data_Explorer%E2%80%93PyCaret/</loc>
+         <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/Gapmind_Data_Dashboard/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/My_Chat_GPT/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/SemanticAudioNotes/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
+    </url>
+    <url>
+         <loc>https://AdamoxB.github.io/ds_ai_portfolio/ds_toolbox/</loc>
+         <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/iris/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
     </url>
     <url>
          <loc>https://AdamoxB.github.io/ds_ai_portfolio/titanic/</loc>
-         <lastmod>2025-10-01</lastmod>
+         <lastmod>2025-10-02</lastmod>
     </url>
 </urlset>

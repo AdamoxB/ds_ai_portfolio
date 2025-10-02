@@ -120,7 +120,8 @@ nav:
       - My Chat GPT: My_Chat_GPT/index.md
       - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md
       - ds_toolbox: ds_toolbox/index.md
-      - Data_Explorer–PyCaret: Streamlit Data Explorer/index.md
+      - Data_Explorer–PyCaret: Data_Explorer–PyCaret/index.md
+      - Analysis_of_Key_Variables_in_Data_Sets: Analysis_of_Key_Variables_in_Data_Sets/index.md
       - Iris: iris/index.md
       - Titanic: titanic/index.md
 

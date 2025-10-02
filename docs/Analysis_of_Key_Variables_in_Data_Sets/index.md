@@ -1,4 +1,3 @@
-```markdown
 # Analysis_of_Key_Variables_in_Data_Sets
 
 ## Overview
@@ -49,4 +48,3 @@ Application usage
 - Run model comparison and view evaluation plots.
 
 <a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/">Go to the application</a>
-```

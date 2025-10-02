@@ -9,11 +9,13 @@
         <meta name="author" content="Adam Biela">
       
       
-        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/titanic/">
+        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/ds_toolbox/">
       
       
-        <link rel="prev" href="../iris/">
+        <link rel="prev" href="../Gapmind_Data_Dashboard/">
       
+      
+        <link rel="next" href="../iris/">
       
       
       <link rel="icon" href="../images/logo_portfolio.png">
@@ -21,7 +23,7 @@
     
     
       
-        <title>Titanic - My projects</title>
+        <title>ds_toolbox - My projects</title>
       
     
     
@@ -89,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analiza-danych-eda-tytanika-eksploracja-domenowa" class="md-skip">
+        <a href="#ds-toolbox" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Titanic
+              ds_toolbox
             
           </span>
         </div>
@@ -399,10 +401,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ds_toolbox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ds_toolbox
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -413,6 +437,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main functionalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies &amp; skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample photos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -468,19 +557,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../titanic/" class="md-nav__link">
         
   
   
@@ -491,7 +571,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -523,24 +602,58 @@
   
 
 
-<h1 id="analiza-danych-eda-tytanika-eksploracja-domenowa">Analiza Danych EDA Tytanika: Eksploracja Domenowa</h1>
+<h1 id="ds-toolbox">DS Toolbox</h1>
+<h2 id="overview">Overview</h2>
+<p>A Streamlit data‑science toolbox that lets users upload CSV/Excel files, clean missing values and outliers, visualize data with various plots, and train a regression model.</p>
+<!-- ## Project architecture
+    in Excalidraw -->
+
+<h2 id="main-functionalities">Main functionalities</h2>
+<ul>
+<li>Upload CSV/Excel file via the Streamlit uploader.  </li>
+<li>Data cleaning: impute missing values (mean, median, mode) and remove IQR outliers.  </li>
+<li>Interactive visualisation: histogram, boxplot, scatter plot, heatmap using Plotly.  </li>
+<li>Train a regression model with automatic evaluation metrics.</li>
+</ul>
+<h2 id="technologies-skills">Technologies &amp; skills</h2>
+<ul>
+<li>Python  </li>
+<li>Streamlit  </li>
+<li>Pandas  </li>
+<li>Plotly  </li>
+<li>Scikit‑learn  </li>
+</ul>
+<h2 id="project-report">Project Report</h2>
+<ul>
+<li>Modular component architecture (data_loader, data_cleaner, visualizer, model_trainer).  </li>
+<li>Data ingestion and preprocessing pipeline.  </li>
+<li>Interactive charts rendered with Plotly in Streamlit.  </li>
+<li>Simple regression training routine returning metrics.</li>
+</ul>
+<h2 id="sample-photos">Sample photos</h2>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/dstbox1.png" data-title="<figcaption>Pic_name</figcaption>" data-desc-position="bottom"><img src="../images/dstbox1.png" alt="<figcaption>Pic_name</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name</figcaption> -->
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/dstbox2.png" data-title="<figcaption>Pic_name2</figcaption>" data-desc-position="bottom"><img src="../images/dstbox2.png" alt="<figcaption>Pic_name2</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name2</figcaption> -->
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/dstbox3.png" data-title="<figcaption>Pic_name3</figcaption>" data-desc-position="bottom"><img src="../images/dstbox3.png" alt="<figcaption>Pic_name3</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name3</figcaption> -->
+
+</figure>
+
+<p>Application usage
+- Upload a CSV or Excel file.<br>
+- Use the “Data Cleaning” expander to impute missing values and remove outliers.<br>
+- Select visualisation type in the “Visualisation” section and view interactive charts.<br>
+- Choose target column in the “Modeling (Regression)” section, run training, and review metrics.</p>
+<p>Write an HTML anchor tag that:
+- uses class="md-button md-button--primary"<br>
+- has the text “Go to the application”<br>
+- keeps everything else exactly as shown below<br>
+- <strong>only</strong> replaces the href value with <url> from README.md. </url></p>
 <hr>
-<p><a href="titanic.ipynb" class="md-button md-button--primary">Pobierz Notebook</a></p>
-<p><iframe id="content" src="titanic.html" width="100%" style="border:1px solid black;overflow:hidden;"></iframe></p>
-<script>
-function resizeIframeToFitContent(iframe) {
-    iframe.style.height = (iframe.contentWindow.document.documentElement.scrollHeight + 50) + "px";
-    iframe.contentDocument.body.style["overflow"] = 'hidden';
-}
-window.addEventListener('load', function() {
-    var iframe = document.getElementById('content');
-    resizeIframeToFitContent(iframe);
-});
-window.addEventListener('resize', function() {
-    var iframe = document.getElementById('content');
-    resizeIframeToFitContent(iframe);
-});
-</script>
+<p><a class="md-button md-button--primary" href="https://adamob-ds-toolbox.streamlit.app/">Go to the application</a></p>
+<hr>
 
 
 

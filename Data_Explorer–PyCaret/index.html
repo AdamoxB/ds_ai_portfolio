@@ -9,10 +9,8 @@
         <meta name="author" content="Adam Biela">
       
       
-        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/titanic/">
+        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/Data_Explorer%E2%80%93PyCaret/">
       
-      
-        <link rel="prev" href="../iris/">
       
       
       
@@ -21,7 +19,7 @@
     
     
       
-        <title>Titanic - My projects</title>
+        <title>Streamlit Data Explorer – PyCaret + ydata‑profiling - My projects</title>
       
     
     
@@ -89,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analiza-danych-eda-tytanika-eksploracja-domenowa" class="md-skip">
+        <a href="#streamlit-data-explorer-pycaret-ydataprofiling" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Titanic
+              Streamlit Data Explorer – PyCaret + ydata‑profiling
             
           </span>
         </div>
@@ -290,20 +288,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -319,7 +315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             My projects - soon available
@@ -468,19 +464,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../titanic/" class="md-nav__link">
         
   
   
@@ -491,7 +478,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -523,24 +509,54 @@
   
 
 
-<h1 id="analiza-danych-eda-tytanika-eksploracja-domenowa">Analiza Danych EDA Tytanika: Eksploracja Domenowa</h1>
+<h1 id="streamlit-data-explorer-pycaret-ydataprofiling">Streamlit Data Explorer – PyCaret + ydata‑profiling</h1>
+<h2 id="overview">Overview</h2>
+<p>A lightweight Streamlit app that lets users load built-in or custom datasets and generate interactive data profiling reports using PyCaret and ydata‑profiling.</p>
+<!-- ## Project architecture
+    in Excalidraw -->
+
+<h2 id="main-functionalities">Main functionalities</h2>
+<ul>
+<li>Select a dataset from the list of built‑in PyCaret datasets via sidebar.</li>
+<li>Upload CSV / Excel files for analysis.</li>
+<li>Preview the first rows of the selected dataset.</li>
+<li>Generate an interactive profiling report with ydata‑profiling.</li>
+<li>Export the report as HTML or PDF (PDF conversion uses pdfkit/wkhtmltopdf).</li>
+<li>Dark themed UI and responsive layout.</li>
+</ul>
+<h2 id="technologies-skills">Technologies &amp; skills</h2>
+<ul>
+<li>Python</li>
+<li>Streamlit</li>
+<li>Pandas</li>
+<li>PyCaret datasets</li>
+<li>ydata‑profiling</li>
+<li>streamlit‑pandas‑profiling</li>
+<li>pdfkit / wkhtmltopdf (optional)</li>
+</ul>
+<h2 id="project-report">Project Report</h2>
+<ul>
+<li>Profiling report generation and export functionality.</li>
+<li>User-friendly interface for data exploration.</li>
+</ul>
+<h2 id="sample-photos">Sample photos</h2>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/ydata1.png" data-title="<figcaption>Pic_name</figcaption>" data-desc-position="bottom"><img src="../images/ydata1.png" alt="<figcaption>Pic_name</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name</figcaption> -->
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/ydata2.png" data-title="<figcaption>Pic_name2</figcaption>" data-desc-position="bottom"><img src="../images/ydata2.png" alt="<figcaption>Pic_name2</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name2</figcaption> -->
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/ydata3.png" data-title="<figcaption>Pic_name3</figcaption>" data-desc-position="bottom"><img src="../images/ydata3.png" alt="<figcaption>Pic_name3</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name3</figcaption> -->
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/ydata4.png" data-title="<figcaption>Pic_name4</figcaption>" data-desc-position="bottom"><img src="../images/ydata4.png" alt="<figcaption>Pic_name4</figcaption>" width="600"></a>
+<!-- <figcaption>Pic_name5</figcaption> -->
+</figure>
+
+<p>Application usage
+- Run the app locally with <code>streamlit run app.py</code>.
+- Use the sidebar to choose a dataset or upload your own file.
+- Click "Generate Profiling Report" to view and download the report.</p>
 <hr>
-<p><a href="titanic.ipynb" class="md-button md-button--primary">Pobierz Notebook</a></p>
-<p><iframe id="content" src="titanic.html" width="100%" style="border:1px solid black;overflow:hidden;"></iframe></p>
-<script>
-function resizeIframeToFitContent(iframe) {
-    iframe.style.height = (iframe.contentWindow.document.documentElement.scrollHeight + 50) + "px";
-    iframe.contentDocument.body.style["overflow"] = 'hidden';
-}
-window.addEventListener('load', function() {
-    var iframe = document.getElementById('content');
-    resizeIframeToFitContent(iframe);
-});
-window.addEventListener('resize', function() {
-    var iframe = document.getElementById('content');
-    resizeIframeToFitContent(iframe);
-});
-</script>
+<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/">Go to the application</a></h2>
 
 
 

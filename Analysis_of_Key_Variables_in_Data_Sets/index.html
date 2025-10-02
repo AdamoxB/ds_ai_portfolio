@@ -9,13 +9,13 @@
         <meta name="author" content="Adam Biela">
       
       
-        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/Gapmind_Data_Dashboard/">
+        <link rel="canonical" href="https://AdamoxB.github.io/ds_ai_portfolio/Analysis_of_Key_Variables_in_Data_Sets/">
       
       
-        <link rel="prev" href="../My_Chat_GPT/">
+        <link rel="prev" href="../Data_Explorer%E2%80%93PyCaret/">
       
       
-        <link rel="next" href="../ds_toolbox/">
+        <link rel="next" href="../iris/">
       
       
       <link rel="icon" href="../images/logo_portfolio.png">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Gapmind_Data_Dashboard - My projects</title>
+        <title>Analysis_of_Key_Variables_in_Data_Sets - My projects</title>
       
     
     
@@ -90,11 +90,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#gapmind-data-dashboard" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -126,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gapmind_Data_Dashboard
+              Analysis_of_Key_Variables_in_Data_Sets
             
           </span>
         </div>
@@ -378,32 +373,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Gapmind_Data_Dashboard
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Gapmind_Data_Dashboard/" class="md-nav__link">
         
   
   
@@ -414,80 +387,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#main-functionalities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main functionalities
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technologies-skills" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technologies &amp; skills
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-report" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project Report
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sample-photos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample photos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Application usage
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -543,10 +442,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Analysis_of_Key_Variables_in_Data_Sets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -557,6 +463,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -634,50 +541,59 @@
   
 
 
-<h1 id="gapmind-data-dashboard">Gapmind Data Dashboard</h1>
-<h2 id="overview">Overview</h2>
-<p>Interactive dashboard that visualizes the Gapminder dataset using Streamlit and Plotly Express.</p>
-<!-- ## Project architecture
-    in Excalidraw -->
-<h2 id="main-functionalities">Main functionalities</h2>
-<ul>
-<li>Year selector slider to choose the analysis year.</li>
-<li>Continent multiselect filter for country selection.</li>
-<li>X‑axis and Y‑axis metric selectors for scatter plots.</li>
-<li>Toggle for logarithmic scaling of the X‑axis.</li>
-<li>Country multiselect for time‑series line charts.</li>
-<li>Reset filters button to restore defaults.</li>
-<li>Scatter plot visualizing GDP per capita, life expectancy, or population across continents.</li>
-<li>Line chart showing selected metrics over time for chosen countries.</li>
-<li>Bar chart displaying top N countries by a chosen metric in the selected year.</li>
-<li>World choropleth map coloring countries by the selected metric.</li>
-<li>Data table view of the filtered dataset with CSV download capability.</li>
-</ul>
-<h2 id="technologies-skills">Technologies &amp; skills</h2>
-<ul>
-<li>Python</li>
-<li>Streamlit</li>
-<li>Plotly Express</li>
-<li>Pandas</li>
-</ul>
-<h2 id="project-report">Project Report</h2>
-<p>-</p>
-<h2 id="sample-photos">Sample photos</h2>
-<figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/gap1.png" data-title="<figcaption>Gapminder Scatter Plot</figcaption>" data-desc-position="bottom"><img src="../images/gap1.png" alt="<figcaption>Gapminder Scatter Plot</figcaption>" width="600"></a>
-<figcaption>Gapminder Scatter Plot</figcaption>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/gap2.png" data-title="<figcaption>Gapminder Line Chart</figcaption>" data-desc-position="bottom"><img src="../images/gap2.png" alt="<figcaption>Gapminder Line Chart</figcaption>" width="600"></a>
-<figcaption>Gapminder Line Chart</figcaption>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/gap3.png" data-title="<figcaption>Gapminder Bar Chart</figcaption>" data-desc-position="bottom"><img src="../images/gap3.png" alt="<figcaption>Gapminder Bar Chart</figcaption>" width="600"></a>
-<figcaption>Gapminder Bar Chart</figcaption>
-    <!-- <img src="../images/gap4.png" alt="<figcaption>Gapminder World Map</figcaption>" width="600">
-<figcaption>Gapminder World Map</figcaption> -->
-</figure>
+  <h1>Analysis_of_Key_Variables_in_Data_Sets</h1>
 
-<h2 id="application-usage">Application usage</h2>
-<hr>
-<p><a class="md-button md-button--primary" href="https://gapmind-data-dashboard.streamlit.app/">Przejdź do aplikacji</a></p>
-<hr>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Analysis_of_Key_Variables_in_Data_Sets</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Overview</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Interactive Streamlit app that loads a user‑supplied dataset, automatically detects whether the target column is for classification or regression, and runs PyCaret experiments to compare models, visualize feature importance, confusion matrices, and ROC curves.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;!-- 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gu">## Project architecture</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    in Excalidraw --&gt;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gu">## Main functionalities</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">-</span><span class="w"> </span>Upload CSV/JSON/XLSX files with custom separator selection.
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">-</span><span class="w"> </span>Random sampling of a user‑defined percentage of the dataframe for training.
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">-</span><span class="w"> </span>Automatic detection of problem type (classification vs regression).
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">-</span><span class="w"> </span>Interactive tabs: random rows, missing data analysis, and model setup.
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">-</span><span class="w"> </span>PyCaret <span class="sb">`ClassificationExperiment`</span> or <span class="sb">`RegressionExperiment`</span> setup with options to ignore columns, balance classes, normalize, and transform features.
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">-</span><span class="w"> </span>Model comparison (<span class="sb">`compare_models`</span>) with selectable model sets.
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">-</span><span class="w"> </span>Generation of feature importance plots, confusion matrices, and ROC curves.
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">-</span><span class="w"> </span>Save and load pre‑generated plot images for later use.
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="gu">## Technologies &amp; skills</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">-</span><span class="w"> </span>Python 3.x
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">-</span><span class="w"> </span>Streamlit
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">-</span><span class="w"> </span>Pandas, NumPy
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">-</span><span class="w"> </span>PyCaret (classification, regression)
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">-</span><span class="w"> </span>Matplotlib, Seaborn
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">-</span><span class="w"> </span>Scikit‑learn metrics
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="gu">## Project Report</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">-</span><span class="w"> </span>The app demonstrates end‑to‑end machine learning workflow: data ingestion → preprocessing → model training → evaluation.
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">-</span><span class="w"> </span>It is designed for non‑technical users to quickly assess which algorithm works best on their dataset.
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="gu">## Sample photos</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>&lt;figure&gt;
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    &lt;img src="../images/keyvar1.png" alt="&lt;figcaption&gt;Pic_name&lt;/figcaption&gt;" width="600"&gt;
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>&lt;figcaption&gt;Pic_name&lt;/figcaption&gt;
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    &lt;img src="../images/keyvar2.png" alt="&lt;figcaption&gt;Pic_name2&lt;/figcaption&gt;" width="600"&gt;
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>&lt;figcaption&gt;Pic_name2&lt;/figcaption&gt;
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    &lt;img src="../images/keyvar3.png" alt="&lt;figcaption&gt;Pic_name3&lt;/figcaption&gt;" width="600"&gt;
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>&lt;figcaption&gt;Pic_name3&lt;/figcaption&gt;
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    &lt;img src="../images/keyvar4.png" alt="&lt;figcaption&gt;Pic_name4&lt;/figcaption&gt;" width="600"&gt;
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>&lt;figcaption&gt;Pic_name5&lt;/figcaption&gt;
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>&lt;/figure&gt;
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>Application usage
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="k">-</span><span class="w"> </span>Upload a dataset.
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="k">-</span><span class="w"> </span>Choose separator and target column.
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="k">-</span><span class="w"> </span>Inspect random rows and missing data.
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="k">-</span><span class="w"> </span>Run model comparison and view evaluation plots.
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>&lt;a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/"&gt;Go to the application&lt;/a&gt;
+</code></pre></div>
 
 
 

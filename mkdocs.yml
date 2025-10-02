@@ -119,6 +119,8 @@ nav:
       - SemanticAudioNotes: SemanticAudioNotes/index.md
       - My Chat GPT: My_Chat_GPT/index.md
       - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md
+      - ds_toolbox: ds_toolbox/index.md
+      - Data_Explorer–PyCaret: Streamlit Data Explorer/index.md
       - Iris: iris/index.md
       - Titanic: titanic/index.md
 

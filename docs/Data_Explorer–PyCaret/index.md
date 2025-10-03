@@ -48,3 +48,4 @@ A lightweight Streamlit app that lets users load built-in or custom datasets and
 ---
 <a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/">Go to the application</a>
 ---
+<a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/" target="_blank">Go to the application</a>

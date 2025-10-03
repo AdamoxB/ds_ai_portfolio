@@ -63,5 +63,5 @@ OPENAI_API_KEY=your-openai-api-key
 ```
 
 ---
-<a class="md-button md-button--primary" href="https://chat-gpt-adambiela.streamlit.app/">Przejdź do aplikacji</a>
+<a class="md-button md-button--primary" href="https://chat-gpt-adambiela.streamlit.app/">Go to the application</a>
 ---

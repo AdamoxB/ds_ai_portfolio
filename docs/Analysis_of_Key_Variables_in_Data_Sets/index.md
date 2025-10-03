@@ -41,10 +41,12 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 <figcaption>Pic_name5</figcaption>
 </figure>
 
-Application usage
+## Application usage
 - Upload a dataset.
 - Choose separator and target column.
 - Inspect random rows and missing data.
 - Run model comparison and view evaluation plots.
 
+---
 <a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/">Go to the application</a>
+---

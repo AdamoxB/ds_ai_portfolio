@@ -40,8 +40,8 @@ A lightweight Streamlit app that lets users load built-in or custom datasets and
 <!-- <figcaption>Pic_name5</figcaption> -->
 </figure>
 
-Application usage
-- Run the app locally with `streamlit run app.py`.
+## Application usage
+<!-- - Run the app locally with `streamlit run app.py`. -->
 - Use the sidebar to choose a dataset or upload your own file.
 - Click "Generate Profiling Report" to view and download the report.
 

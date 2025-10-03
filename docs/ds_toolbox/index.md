@@ -37,7 +37,7 @@ A Streamlit data‑science toolbox that lets users upload CSV/Excel files, clean
 
 </figure>
 
-Application usage
+## Application usage
 - Upload a CSV or Excel file.  
 - Use the “Data Cleaning” expander to impute missing values and remove outliers.  
 - Select visualisation type in the “Visualisation” section and view interactive charts.  
@@ -50,7 +50,5 @@ Write an HTML anchor tag that:
 - **only** replaces the href value with <URL> from README.md. 
 
 ---
-
 <a class="md-button md-button--primary" href="https://adamob-ds-toolbox.streamlit.app/">Go to the application</a>
-
 ---

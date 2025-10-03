@@ -48,5 +48,5 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 - Run model comparison and view evaluation plots.
 
 ---
-<a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/">Go to the application</a>
+<a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/" target="_blank">Go to the application</a>
 ---

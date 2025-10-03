@@ -46,6 +46,4 @@ A lightweight Streamlit app that lets users load built-in or custom datasets and
 - Click "Generate Profiling Report" to view and download the report.
 
 ---
-<a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/">Go to the application</a>
----
 <a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/" target="_blank">Go to the application</a>

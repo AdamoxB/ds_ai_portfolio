@@ -50,5 +50,5 @@ Write an HTML anchor tag that:
 - **only** replaces the href value with <URL> from README.md. 
 
 ---
-<a class="md-button md-button--primary" href="https://adamob-ds-toolbox.streamlit.app/">Go to the application</a>
+<a class="md-button md-button--primary" href="https://adamob-ds-toolbox.streamlit.app/" target="_blank">Go to the application</a>
 ---

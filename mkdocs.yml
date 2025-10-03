@@ -115,7 +115,7 @@ markdown_extensions:
 nav:
   - Home Page: index.md
 
-  - My projects - soon available: 
+  - My projects: 
       - SemanticAudioNotes: SemanticAudioNotes/index.md
       - My Chat GPT: My_Chat_GPT/index.md
       - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md

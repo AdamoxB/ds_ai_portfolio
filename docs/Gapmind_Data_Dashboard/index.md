@@ -23,9 +23,9 @@ Interactive dashboard that visualizes the Gapminder dataset using Streamlit and 
 - Streamlit
 - Plotly Express
 - Pandas
-
+<!-- 
 ## Project Report
--
+- -->
 
 ## Sample photos
 

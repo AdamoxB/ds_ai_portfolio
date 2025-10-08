@@ -40,8 +40,8 @@ Interactive dashboard that visualizes the Gapminder dataset using Streamlit and 
 <figcaption>Gapminder World Map</figcaption> -->
 </figure>
 
-## Application usage
--
+<!-- ## Application usage
+- -->
 
 --- 
 <a class="md-button md-button--primary" href="https://gapmind-data-dashboard.streamlit.app/" target="_blank">Go to the application</a>

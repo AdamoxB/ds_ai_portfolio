@@ -11,8 +11,8 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 - Random sampling of a user‑defined percentage of the dataframe for training.
 - Automatic detection of problem type (classification vs regression).
 - Interactive tabs: random rows, missing data analysis, and model setup.
-- PyCaret `ClassificationExperiment` or `RegressionExperiment` setup with options to ignore columns, balance classes, normalize, and transform features.
-- Model comparison (`compare_models`) with selectable model sets.
+- PyCaret **ClassificationExperiment** or **RegressionExperiment** setup with options to ignore columns, balance classes, normalize, and transform features.
+- Model comparison (**compare_models**) with selectable model sets.
 - Generation of feature importance plots, confusion matrices, and ROC curves.
 - Save and load pre‑generated plot images for later use.
 

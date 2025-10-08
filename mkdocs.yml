@@ -18,11 +18,20 @@ theme:
 
 
   features:
+
+    - toc.follow
+    # - toc.integrate 
+    - navigation.top
+
+    - navigation.tabs
+    - navigation.tabs.sticky
+
     - navigation.instant   # optional extras you already have
     - search.highlight
     - content.code.annotate
     - image.zoom          # Material’s built‑in zoom feature
-    - toc.integrate
+
+
 
   # --- kolory i kontrast ---------------------------------------------
   palette:
@@ -96,6 +105,8 @@ extra_javascript:
   - js/secondary.js            # logika przełączania
   - js/zoom.js
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite

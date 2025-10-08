@@ -105,7 +105,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="My projects" class="md-header__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -219,13 +219,63 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SemanticAudioNotes/" class="md-tabs__link">
+          
+  
+  
+  My projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -239,10 +289,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="My projects" class="md-nav__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -300,15 +350,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -631,6 +687,95 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main functionalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies &amp; skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample photos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go to the application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -643,25 +788,25 @@
   
 
 
-<h1 id="analysis_of_key_variables_in_data_sets">Analysis_of_Key_Variables_in_Data_Sets</h1>
-<h2 id="overview">Overview</h2>
+<h1 id="analysis_of_key_variables_in_data_sets">Analysis_of_Key_Variables_in_Data_Sets<a class="headerlink" href="#analysis_of_key_variables_in_data_sets" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>Interactive Streamlit app that loads a user‑supplied dataset, automatically detects whether the target column is for classification or regression, and runs PyCaret experiments to compare models, visualize feature importance, confusion matrices, and ROC curves.</p>
 <!-- 
 ## Project architecture
     in Excalidraw -->
 
-<h2 id="main-functionalities">Main functionalities</h2>
+<h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>
 <li>Upload CSV/JSON/XLSX files with custom separator selection.</li>
 <li>Random sampling of a user‑defined percentage of the dataframe for training.</li>
 <li>Automatic detection of problem type (classification vs regression).</li>
 <li>Interactive tabs: random rows, missing data analysis, and model setup.</li>
-<li>PyCaret <code>ClassificationExperiment</code> or <code>RegressionExperiment</code> setup with options to ignore columns, balance classes, normalize, and transform features.</li>
-<li>Model comparison (<code>compare_models</code>) with selectable model sets.</li>
+<li>PyCaret <strong>ClassificationExperiment</strong> or <strong>RegressionExperiment</strong> setup with options to ignore columns, balance classes, normalize, and transform features.</li>
+<li>Model comparison (<strong>compare_models</strong>) with selectable model sets.</li>
 <li>Generation of feature importance plots, confusion matrices, and ROC curves.</li>
 <li>Save and load pre‑generated plot images for later use.</li>
 </ul>
-<h2 id="technologies-skills">Technologies &amp; skills</h2>
+<h2 id="technologies-skills">Technologies &amp; skills<a class="headerlink" href="#technologies-skills" title="Permanent link">¶</a></h2>
 <ul>
 <li>Python 3.x</li>
 <li>Streamlit</li>
@@ -670,12 +815,12 @@
 <li>Matplotlib, Seaborn</li>
 <li>Scikit‑learn metrics</li>
 </ul>
-<h2 id="project-report">Project Report</h2>
+<h2 id="project-report">Project Report<a class="headerlink" href="#project-report" title="Permanent link">¶</a></h2>
 <ul>
 <li>The app demonstrates end‑to‑end machine learning workflow: data ingestion → preprocessing → model training → evaluation.</li>
 <li>It is designed for non‑technical users to quickly assess which algorithm works best on their dataset.</li>
 </ul>
-<h2 id="sample-photos">Sample photos</h2>
+<h2 id="sample-photos">Sample photos<a class="headerlink" href="#sample-photos" title="Permanent link">¶</a></h2>
 <figure>
     <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/keyvar1.png" data-title="<figcaption>Pic_name</figcaption>" data-desc-position="bottom"><img src="../images/keyvar1.png" alt="<figcaption>Pic_name</figcaption>" width="600"></a>
 <figcaption>Pic_name</figcaption>
@@ -687,7 +832,7 @@
 <figcaption>Pic_name5</figcaption>
 </figure>
 
-<h2 id="application-usage">Application usage</h2>
+<h2 id="application-usage">Application usage<a class="headerlink" href="#application-usage" title="Permanent link">¶</a></h2>
 <ul>
 <li>Upload a dataset.</li>
 <li>Choose separator and target column.</li>
@@ -695,7 +840,7 @@
 <li>Run model comparison and view evaluation plots.</li>
 </ul>
 <hr>
-<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/" target="_blank">Go to the application</a></h2>
+<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/" target="_blank">Go to the application</a><a class="headerlink" href="#go-to-the-application" title="Permanent link">¶</a></h2>
 
 
 
@@ -715,6 +860,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -744,7 +895,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.annotate", "image.zoom", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "search.highlight", "content.code.annotate", "image.zoom"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

@@ -103,7 +103,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="My projects" class="md-header__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -217,13 +217,63 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="SemanticAudioNotes/" class="md-tabs__link">
+          
+  
+  
+  My projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -237,10 +287,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="My projects" class="md-nav__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -364,6 +414,9 @@
     
     
     
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -591,6 +644,59 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-short-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      My short story
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -605,17 +711,17 @@
 
 <h1 style="color:green;">WEBSITE UNDER CONSTRUCTION !</h1>
 
-<h1 id="project-from-the-world-of-data-and-artificial-intelligence">Project from the world of data and artificial intelligence</h1>
-<h2 id="introduction">Introduction</h2>
+<h1 id="project-from-the-world-of-data-and-artificial-intelligence">Project from the world of data and artificial intelligence<a class="headerlink" href="#project-from-the-world-of-data-and-artificial-intelligence" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p>Welcome to the page dedicated to projects in data analysis, machine learning, and artificial intelligence. Here you’ll find projects I’ve been working on recently.</p>
 <p>Feel free to explore—hope you discover something interesting here!</p>
 <hr>
-<h2 id="my-short-story">My short story</h2>
+<h2 id="my-short-story">My short story<a class="headerlink" href="#my-short-story" title="Permanent link">¶</a></h2>
 <p>In 2011, I earned a Master of Science in Engineering from the Faculty of Electrical Engineering at Warsaw University of Technology. My studies ignited my interest in new technologies.</p>
 <p>Over the past three years, I worked as a designer of electrical networks using AutoCAD; later I served as Senior Product Manager for lighting systems and then spent ten years in two companies as a Lighting‑Systems Designer where I honed skills in automating design processes.</p>
 <p>In 2025 I was inspired by the data industry, the role of Data Scientist, and the rapidly evolving field of artificial intelligence. An opportunity arose to further develop these skills by creating AI agents—automation that is not deterministic but can adapt far better to various process‑automation tasks, thereby reducing verification time and increasing overall efficiency.</p>
 <hr>
-<h2 id="contact">Contact</h2>
+<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">¶</a></h2>
 <p>Adam Biela<br>
 email: <a href="mailto:bielaa3@gmail.com">bielaa3@gmail.com</a><br>
 tel: +48 506 767 998</p>
@@ -638,6 +744,12 @@ tel: +48 506 767 998</p>
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -667,7 +779,7 @@ tel: +48 506 767 998</p>
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "search.highlight", "content.code.annotate", "image.zoom", "toc.integrate"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "search.highlight", "content.code.annotate", "image.zoom"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>

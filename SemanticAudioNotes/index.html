@@ -105,7 +105,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="My projects" class="md-header__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -219,13 +219,63 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  My projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -239,10 +289,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="My projects" class="md-nav__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -300,15 +350,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -651,6 +707,117 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main functionalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies &amp; skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample photos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-api-key-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get API key and addresses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configuration file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go to the application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -665,9 +832,9 @@
 
   <h1>SemanticAudioNotes</h1>
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>A Streamlit web application that records or uploads audio notes, transcribes them using OpenAI’s Whisper model, embeds the text with OpenAI embeddings, stores the notes in Qdrant for semantic search, and allows editing, downloading, and searching of notes.</p>
-<h2 id="main-functionalities">Main functionalities</h2>
+<h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>
 <li>Record audio directly from the browser.</li>
 <li>Upload existing MP3 files.</li>
@@ -677,7 +844,7 @@
 <li>Perform semantic search on stored notes using embeddings.</li>
 <li>Download notes as MP3 or TXT files.</li>
 </ul>
-<h2 id="technologies-skills">Technologies &amp; skills</h2>
+<h2 id="technologies-skills">Technologies &amp; skills<a class="headerlink" href="#technologies-skills" title="Permanent link">¶</a></h2>
 <ul>
 <li>Python  </li>
 <li>Streamlit  </li>
@@ -689,7 +856,7 @@
 <li>st_paywall for authentication  </li>
 <li>Custom modules: <code>my_package.tips</code>, <code>api_key_loader_zmiany</code>  </li>
 </ul>
-<h2 id="project-report">Project Report</h2>
+<h2 id="project-report">Project Report<a class="headerlink" href="#project-report" title="Permanent link">¶</a></h2>
 <ul>
 <li>Utilizes Streamlit session state to persist audio and text across interactions.</li>
 <li>MD5 hashing detects changes in recorded audio to reset transcriptions.</li>
@@ -697,7 +864,7 @@
 <li>Ensures the Qdrant collection exists before inserting notes.</li>
 <li>Supports both real-time recording and file upload workflows.</li>
 </ul>
-<h2 id="sample-photos">Sample photos</h2>
+<h2 id="sample-photos">Sample photos<a class="headerlink" href="#sample-photos" title="Permanent link">¶</a></h2>
 <!-- <figure markdown>
 
 ![Ładowanie pliku](../images/img1.png){ width="500px"}
@@ -723,7 +890,7 @@
 
 --- -->
 
-<h2 id="application-usage">Application usage</h2>
+<h2 id="application-usage">Application usage<a class="headerlink" href="#application-usage" title="Permanent link">¶</a></h2>
 <ul>
 <li>Open the Streamlit app in a browser.  </li>
 <li>Navigate to the “Dodaj notatkę” tab to record a new audio note or to the “Wczytaj nagranie z pliku mp3” tab to upload an existing MP3.  </li>
@@ -731,7 +898,7 @@
 <li>Edit the transcribed text if needed, then click <strong>Wyślij notatkę do twojej bazy wektorowej QDRANT</strong> to store it.  </li>
 <li>Use the “Wyszukaj notatkę w chmurze” tab to perform a semantic search by entering a query; relevant notes and similarity scores will appear.</li>
 </ul>
-<h3 id="where-to-get-api-key-and-addresses"><span style="color: #00FF00;">Where to get API key and addresses?</span></h3>
+<h3 id="where-to-get-api-key-and-addresses"><span style="color: #00FF00;">Where to get API key and addresses?</span><a class="headerlink" href="#where-to-get-api-key-and-addresses" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>OpenAI API Key (openai_api_key):</strong>  </li>
 <li>Visit the <a href="https://platform.openai.com/account/api-keys">OpenAI API Keys page</a>.  </li>
@@ -746,14 +913,14 @@
 <li><strong>QDRANT_API_KEY:</strong> The QuDanta API key (if required).  </li>
 <li>More details can be found in the <a href="https://qdrant.tech/documentation/">QuDanta documentation</a>.</li>
 </ol>
-<h3 id="example-configuration-file"><span style="color: #00FF00;">Example configuration file:</span></h3>
+<h3 id="example-configuration-file"><span style="color: #00FF00;">Example configuration file:</span><a class="headerlink" href="#example-configuration-file" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OPENAI_API_KEY=your-openai-api-key
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>QDRANT_URL=https://your-qdrant-instance.com
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>QDRANT_API_KEY=your-qdrant-api-key
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Replace your-openai-api-key, https://your-qdrant-instance.com and your-qdrant-api-key with your own values.
 </code></pre></div>
 <hr>
-<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/" target="_blank">Go to the application</a></h2>
+<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/" target="_blank">Go to the application</a><a class="headerlink" href="#go-to-the-application" title="Permanent link">¶</a></h2>
 <!-- <a href="iris.ipynb" class="md-button md-button--primary">Pobierz Notebook</a> -->
 
 <!-- <iframe
@@ -796,6 +963,12 @@ window.addEventListener('resize', function() {
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -824,7 +997,7 @@ window.addEventListener('resize', function() {
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.annotate", "image.zoom", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "search.highlight", "content.code.annotate", "image.zoom"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

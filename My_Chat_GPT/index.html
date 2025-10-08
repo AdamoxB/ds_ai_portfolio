@@ -105,7 +105,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="My projects" class="md-header__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -219,13 +219,63 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SemanticAudioNotes/" class="md-tabs__link">
+          
+  
+  
+  My projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -239,10 +289,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="My projects" class="md-nav__button md-logo" aria-label="My projects" data-md-component="logo">
       
@@ -300,15 +350,21 @@
     
     
     
+      
+        
+        
+      
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -655,6 +711,119 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-functionalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main functionalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies &amp; skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample photos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-to-get-api-key-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get API key and addresses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configuration file:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go to the application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -667,13 +836,13 @@
   
 
 
-<h1 id="my-chat-gpt">My Chat GPT</h1>
-<h2 id="overview">Overview</h2>
+<h1 id="my-chat-gpt">My Chat GPT<a class="headerlink" href="#my-chat-gpt" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>A Streamlit web application that provides an interactive chat interface with OpenAI GPT models, supporting memory management, cost tracking, and persistent conversation storage.</p>
 <!-- ## Project architecture
     in Excalidraw -->
 
-<h2 id="main-functionalities">Main functionalities</h2>
+<h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>
 <li>Interactive chat interface using Streamlit.  </li>
 <li>Selection of conversation memory size to control context length.  </li>
@@ -686,7 +855,7 @@
 <li>Ability to create new conversations or switch between existing ones.  </li>
 <li>Help section with step‑by‑step tips for using ChatGPT to build Python programs.</li>
 </ul>
-<h2 id="technologies-skills">Technologies &amp; skills</h2>
+<h2 id="technologies-skills">Technologies &amp; skills<a class="headerlink" href="#technologies-skills" title="Permanent link">¶</a></h2>
 <ul>
 <li>Python  </li>
 <li>Streamlit  </li>
@@ -695,11 +864,11 @@
 <li>requests  </li>
 <li>pathlib / json  </li>
 </ul>
-<h2 id="project-report">Project Report</h2>
+<h2 id="project-report">Project Report<a class="headerlink" href="#project-report" title="Permanent link">¶</a></h2>
 <ul>
 <li>Completed functional chat application with persistent storage and cost tracking.</li>
 </ul>
-<h2 id="sample-photos">Sample photos</h2>
+<h2 id="sample-photos">Sample photos<a class="headerlink" href="#sample-photos" title="Permanent link">¶</a></h2>
 <figure>
     <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/gpt1.png" data-title="<figcaption>Two ways of entering API_KEY</figcaption>" data-desc-position="bottom"><img src="../images/gpt1.png" alt="<figcaption>Two ways of entering API_KEY</figcaption>" width="600"></a>
 <figcaption>Two ways of entering API_KEY</figcaption>
@@ -711,7 +880,7 @@
 <figcaption>Chat memory &amp; Tips</figcaption>
 </figure>
 
-<h2 id="application-usage">Application usage</h2>
+<h2 id="application-usage">Application usage<a class="headerlink" href="#application-usage" title="Permanent link">¶</a></h2>
 <ul>
 <li>Open the Streamlit app in a browser.    </li>
 <li>Configure conversation memory, model, and role in the sidebar.  </li>
@@ -719,18 +888,18 @@
 <li>Monitor cost metrics (USD/PLN) on the sidebar.  </li>
 <li>Manage conversations: rename, create new, load existing.</li>
 </ul>
-<h3 id="where-to-get-api-key-and-addresses"><span style="color: #00FF00;">Where to get API key and addresses?</span></h3>
+<h3 id="where-to-get-api-key-and-addresses"><span style="color: #00FF00;">Where to get API key and addresses?</span><a class="headerlink" href="#where-to-get-api-key-and-addresses" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>OpenAI API Key (openai_api_key):</strong>  </li>
 <li>Visit the <a href="https://platform.openai.com/account/api-keys">OpenAI API Keys page</a>.  </li>
 <li>Log in to your account or create a new one.  </li>
 <li>Click "Create API key" and copy the key.</li>
 </ol>
-<h3 id="example-configuration-file"><span style="color: #00FF00;">Example configuration file:</span></h3>
+<h3 id="example-configuration-file"><span style="color: #00FF00;">Example configuration file:</span><a class="headerlink" href="#example-configuration-file" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OPENAI_API_KEY=your-openai-api-key
 </code></pre></div>
 <hr>
-<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://chat-gpt-adambiela.streamlit.app/" target="_blank">Go to the application</a></h2>
+<h2 id="go-to-the-application"><a class="md-button md-button--primary" href="https://chat-gpt-adambiela.streamlit.app/" target="_blank">Go to the application</a><a class="headerlink" href="#go-to-the-application" title="Permanent link">¶</a></h2>
 
 
 
@@ -750,6 +919,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -779,7 +954,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.annotate", "image.zoom", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "search.highlight", "content.code.annotate", "image.zoom"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

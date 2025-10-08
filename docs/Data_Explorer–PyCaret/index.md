@@ -38,6 +38,12 @@ A lightweight Streamlit app that lets users load built-in or custom datasets and
 <!-- <figcaption>Pic_name3</figcaption> -->
     <img src="../images/ydata4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
 <!-- <figcaption>Pic_name5</figcaption> -->
+    <img src="../images/ydata5.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
+<!-- <figcaption>Pic_name5</figcaption> -->
+    <img src="../images/ydata6.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
+    <img src="../images/ydata7.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
+<!-- <figcaption>Pic_name5</figcaption> -->
+<!-- <figcaption>Pic_name5</figcaption> -->
 </figure>
 
 ## Application usage

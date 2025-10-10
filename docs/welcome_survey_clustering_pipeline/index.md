@@ -48,4 +48,6 @@ Application usage
 
 ---
 
-<a class="md-button md-button--primary" href="https://adamo-clustering-pipeline.streamlit.app/">Go to the application</a>
+<a class="md-button md-button--primary" href="https://adamo-clustering-pipeline.streamlit.app/" target="_blank">Go to the application</a>
+
+---

@@ -28,7 +28,7 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 - The app demonstrates end‑to‑end machine learning workflow: data ingestion → preprocessing → model training → evaluation.
 - It is designed for non‑technical users to quickly assess which algorithm works best on their dataset.
 
-## Sample photos
+<!-- ## Sample photos
 
 <figure>
     <img src="../images/keyvar1.png" alt="<figcaption>Pic_name</figcaption>" width="600">
@@ -39,7 +39,7 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 <figcaption>Pic_name3</figcaption>
     <img src="../images/keyvar4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
 <figcaption>Pic_name5</figcaption>
-</figure>
+</figure> -->
 
 ## Application usage
 - Upload a dataset.

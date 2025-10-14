@@ -31,11 +31,11 @@ The Welcome Survey Clustering App is a Streamlit application that uses clusterin
 
 <figure>
     <img src="../images/surv1.png" alt="<figcaption></figcaption>" width="600">
-<!-- <figcaption>Pic_name</figcaption> -->
+<figcaption>Pic_1</figcaption>
     <img src="../images/surv2.png" alt="<figcaption></figcaption>" width="600">
-<!-- <figcaption>Pic_name2</figcaption> -->
+<figcaption>Pic_2</figcaption>
     <img src="../images/surv3.png" alt="<figcaption></figcaption>" width="600">
-<!-- <figcaption>Pic_name3</figcaption> -->
+<figcaption>Pic_3</figcaption>
 
 </figure>
 

@@ -73,10 +73,10 @@ A Streamlit web application that records or uploads audio notes, transcribes the
    - Log in to your account or create a new one.  
    - Click "Create API key" and copy the key.
 
-2. **QuDanta keys and URL:**  
-   - **QDRANT_URL:** The address of your QuDanta server, e.g., `https://your-qdrant-instance.com`.  
-   - **QDRANT_API_KEY:** The QuDanta API key (if required).  
-   - More details can be found in the [QuDanta documentation](https://qdrant.tech/documentation/).
+2. **QuDant keys and URL:**  
+   - **QDRANT_URL:** The address of your QuDant server, e.g., `https://your-qdrant-instance.com`.  
+   - **QDRANT_API_KEY:** The QuDant API key (if required).  
+   - More details can be found in the [QuDant documentation](https://qdrant.tech/documentation/).
 
 ### <span style='color: #00FF00;'>Example configuration file:</span>
 

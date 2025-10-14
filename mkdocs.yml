@@ -133,7 +133,7 @@ nav:
       - ds_toolbox: ds_toolbox/index.md
       - Data_Explorer–PyCaret: Data_Explorer–PyCaret/index.md
       - Analysis_of_Key_Variables_in_Data_Sets: Analysis_of_Key_Variables_in_Data_Sets/index.md
-      - welcome_survey_clustering_pipeline: welcome_survey_clustering_pipeline/index.md
+      - Welcome Survey Clustering App pipeline: welcome_survey_clustering_pipeline/index.md
       - Iris: iris/index.md
       - Titanic: titanic/index.md
 

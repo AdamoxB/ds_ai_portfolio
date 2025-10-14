@@ -33,8 +33,8 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 <figure>
     <img src="../images/variable1.png" alt="<figcaption>built‑in dataset</figcaption>" width="600">
 <figcaption>built‑in dataset</figcaption>
-    <img src="../images/variable2.png" alt="<figcaption>initial setup</figcaption>" width="600">
-<figcaption>initial setup</figcaption>
+    <img src="../images/variable2.png" alt="<figcaption>you can load your own data in the initial setup</figcaption>" width="600">
+<figcaption>you can load your own data in the initial setup</figcaption>
     <img src="../images/variable3.png" alt="<figcaption>preliminary data analysis</figcaption>" width="600">
 <figcaption>preliminary data analysis</figcaption>
     <img src="../images/variable4.png" alt="<figcaption>Pic_nadetection of a problemme4</figcaption>" width="600">

@@ -7,7 +7,7 @@
 
     /* Tło kodu (ciemne) – czytelność w trybie jasnym i ciemnym */
     --md-code-bg-color: #fafafa;
-    --md-code-bg-color-dark: #2d2d2d;
+    --md-code-bg-color-dark: #7b7a7a7d;
 
     /* Odstępy i maksymalna szerokość treści */
     --md-max-width: 960px;                /* ogranicza rozciąganie na szerokich ekranach */

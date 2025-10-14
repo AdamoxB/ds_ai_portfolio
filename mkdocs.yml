@@ -35,23 +35,23 @@ theme:
 
   # --- kolory i kontrast ---------------------------------------------
   palette:
-    # # Palette toggle for automatic mode
+    # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
     #     icon: material/brightness-auto
     #     name: Switch to light mode
-    - scheme: bright        # jasny tryb (domyślny)
-      primary: teal       # główny kolor
-      accent: pink          # akcent
-      toggle:
-        icon: material/weather-night
-        name: Tryb ciemny
-    - scheme: default # slate         # ciemny tryb
+    - scheme: slate         # ciemny tryb (teraz domyślny)
       primary: blue-grey
       accent: light-blue
       toggle:
         icon: material/weather-sunny
         name: Tryb jasny
+    - scheme: default        # jasny tryb
+      primary: teal       # główny kolor
+      accent: pink          # akcent
+      toggle:
+        icon: material/weather-night
+        name: Tryb ciemny
 
 
 

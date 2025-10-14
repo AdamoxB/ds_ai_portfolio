@@ -1,5 +1,7 @@
-# Streamlit Data Explorer – PyCaret + ydata‑profiling
-
+<!-- # Streamlit Data Explorer – PyCaret + ydata‑profiling -->
+---
+<a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/" target="_blank">Go to the application</a>
+---
 ## Overview
 A lightweight Streamlit app that lets users load built-in or custom datasets and generate interactive data profiling reports using PyCaret and ydata‑profiling.
 
@@ -53,3 +55,4 @@ A lightweight Streamlit app that lets users load built-in or custom datasets and
 
 ---
 <a class="md-button md-button--primary" href="https://dataexplorer-pycaret.streamlit.app/" target="_blank">Go to the application</a>
+---

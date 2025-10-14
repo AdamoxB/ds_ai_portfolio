@@ -1,3 +1,7 @@
+---
+<a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/" target="_blank">Go to the application</a>
+---
+
 ## Overview
 A Streamlit web application that records or uploads audio notes, transcribes them using OpenAI’s Whisper model, embeds the text with OpenAI embeddings, stores the notes in Qdrant for semantic search, and allows editing, downloading, and searching of notes.
 

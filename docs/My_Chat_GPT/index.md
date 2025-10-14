@@ -1,4 +1,7 @@
-# My Chat GPT
+<!-- # My Chat GPT -->
+---
+<a class="md-button md-button--primary" href="https://chat-gpt-adambiela.streamlit.app/" target="_blank">Go to the application</a>
+---
 
 ## Overview
 A Streamlit web application that provides an interactive chat interface with OpenAI GPT models, supporting memory management, cost tracking, and persistent conversation storage.

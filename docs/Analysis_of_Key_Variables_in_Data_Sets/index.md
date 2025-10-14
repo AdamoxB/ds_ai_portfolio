@@ -1,4 +1,7 @@
-# Analysis_of_Key_Variables_in_Data_Sets
+<!-- # Analysis_of_Key_Variables_in_Data_Sets -->
+---
+<a class="md-button md-button--primary" href="https://analysis-of-key-variables-in-data-sets.streamlit.app/" target="_blank">Go to the application</a>
+---
 
 ## Overview
 Interactive Streamlit app that loads a user‑supplied dataset, automatically detects whether the target column is for classification or regression, and runs PyCaret experiments to compare models, visualize feature importance, confusion matrices, and ROC curves.

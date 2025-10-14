@@ -1,4 +1,10 @@
-# Welcome Survey Clustering App
+<!-- # Welcome Survey Clustering App -->
+
+---
+
+<a class="md-button md-button--primary" href="https://adamo-clustering-pipeline.streamlit.app/" target="_blank">Go to the application</a>
+
+---
 
 *Project start: Not specified*
 

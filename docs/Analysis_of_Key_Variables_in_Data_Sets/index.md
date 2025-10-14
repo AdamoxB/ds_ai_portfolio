@@ -39,7 +39,7 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 <figcaption>preliminary data analysis</figcaption>
     <img src="../images/variable4.png" alt="<figcaption>detection of a problem and model comparison range</figcaption>" width="600">
 <figcaption>detection of a problem and model comparison range</figcaption>
-    <img src="../images/variable5.png" alt="<figcaption>Feature Importance</figcaption>" width="600">
+    <img src="../images/variable6.png" alt="<figcaption>Feature Importance</figcaption>" width="600">
 <figcaption>Feature Importance</figcaption>
     <img src="../images/variable6.png" alt="<figcaption>Confusion Matrix</figcaption>" width="600">
 <figcaption>Confusion Matrix</figcaption>

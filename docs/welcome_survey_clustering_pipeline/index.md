@@ -27,18 +27,17 @@ The Welcome Survey Clustering App is a Streamlit application that uses clusterin
 - User inputs are collected through a sidebar form, and the app predicts the user's cluster ID using the clustering model.
 - The app provides visualizations of categorical distributions within the user's group.
 
-<!-- ## Sample photos
+## Sample photos
 
 <figure>
-    <img src="../images/img1.png" alt="<figcaption>Pic_name</figcaption>" width="600">
-<figcaption>Pic_name</figcaption>
-    <img src="../images/img2.png" alt="<figcaption>Pic_name2</figcaption>" width="600">
-<figcaption>Pic_name2</figcaption>
-    <img src="../images/img3.png" alt="<figcaption>Pic_name3</figcaption>" width="600">
-<figcaption>Pic_name3</figcaption>
-    <img src="../images/img4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
-<figcaption>Pic_name5</figcaption>
-</figure> -->
+    <img src="../images/surv1.png" alt="<figcaption></figcaption>" width="600">
+<!-- <figcaption>Pic_name</figcaption> -->
+    <img src="../images/surv2.png" alt="<figcaption></figcaption>" width="600">
+<!-- <figcaption>Pic_name2</figcaption> -->
+    <img src="../images/surv3.png" alt="<figcaption></figcaption>" width="600">
+<!-- <figcaption>Pic_name3</figcaption> -->
+
+</figure>
 
 Application usage
 - Users can switch between English and Polish languages.

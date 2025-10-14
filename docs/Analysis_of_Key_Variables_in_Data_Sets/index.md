@@ -28,18 +28,22 @@ Interactive Streamlit app that loads a user‑supplied dataset, automatically de
 - The app demonstrates end‑to‑end machine learning workflow: data ingestion → preprocessing → model training → evaluation.
 - It is designed for non‑technical users to quickly assess which algorithm works best on their dataset.
 
-<!-- ## Sample photos
+## Sample photos
 
 <figure>
-    <img src="../images/keyvar1.png" alt="<figcaption>Pic_name</figcaption>" width="600">
-<figcaption>Pic_name</figcaption>
-    <img src="../images/keyvar2.png" alt="<figcaption>Pic_name2</figcaption>" width="600">
-<figcaption>Pic_name2</figcaption>
-    <img src="../images/keyvar3.png" alt="<figcaption>Pic_name3</figcaption>" width="600">
-<figcaption>Pic_name3</figcaption>
-    <img src="../images/keyvar4.png" alt="<figcaption>Pic_name4</figcaption>" width="600">
-<figcaption>Pic_name5</figcaption>
-</figure> -->
+    <img src="../images/variable1.png" alt="<figcaption>built‑in dataset</figcaption>" width="600">
+<figcaption>built‑in dataset</figcaption>
+    <img src="../images/variable2.png" alt="<figcaption>initial setup</figcaption>" width="600">
+<figcaption>initial setup</figcaption>
+    <img src="../images/variable3.png" alt="<figcaption>preliminary data analysis</figcaption>" width="600">
+<figcaption>preliminary data analysis</figcaption>
+    <img src="../images/variable4.png" alt="<figcaption>Pic_nadetection of a problemme4</figcaption>" width="600">
+<figcaption>detection of a problem</figcaption>
+    <img src="../images/variable5.png" alt="<figcaption>Pic_nadetection of a problemme4</figcaption>" width="600">
+<figcaption>detection of a problem</figcaption>
+    <img src="../images/variable6.png" alt="<figcaption>Pic_nadetection of a problemme4</figcaption>" width="600">
+<figcaption>detection of a problem</figcaption>
+</figure>
 
 ## Application usage
 - Upload a dataset.

@@ -1,12 +1,12 @@
 # Generator opowiadań 📖
 
-*Project start: 2025-04-05*
+<!-- *Project start: 2025-04-05* -->
 
 ## Overview
 A Streamlit-powered storytelling generator that creates engaging, structured short stories using OpenAI's language models, with user authentication, usage tracking, and tiered access based on subscription level.
 
-## Project architecture
-	in Excalidraw
+<!-- ## Project architecture
+	in Excalidraw -->
 
 ## Main functionalities
 - Generates creative, structured short stories (with introduction, development, twist, and moral) from user-provided prompts
@@ -38,13 +38,13 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 ## Sample photos
 
 <figure>
-    <img src="../images/img1.png" alt="<figcaption>Home page with logo and input area</figcaption>" width="600">
+    <img src="../images/ftale1.png" alt="<figcaption>Home page with logo and input area</figcaption>" width="600">
 <figcaption>Home page with logo and input area</figcaption>
-    <img src="../images/img2.png" alt="<figcaption>Story generation result with model info</figcaption>" width="600">
+    <img src="../images/ftale2.png" alt="<figcaption>Story generation result with model info</figcaption>" width="600">
 <figcaption>Story generation result with model info</figcaption>
-    <img src="../images/img3.png" alt="<figcaption>Usage stats in sidebar</figcaption>" width="600">
+    <img src="../images/ftale3.png" alt="<figcaption>Usage stats in sidebar</figcaption>" width="600">
 <figcaption>Usage stats in sidebar</figcaption>
-    <img src="../images/img4.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
+    <img src="../images/ftale4.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
 <figcaption>Subscription and account tab</figcaption>
 </figure>
 
@@ -57,4 +57,4 @@ Application usage
 
 ---
 
-<a class="md-button md-button--primary" href="https://generator-opowiadan.streamlit.app/" target="_blank">Go to the application</a>
+<a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>

@@ -1,5 +1,8 @@
 # Generator opowiadań 📖
+---
+<a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>
 
+---
 <!-- *Project start: 2025-04-05* -->
 
 ## Overview
@@ -58,3 +61,5 @@ Application usage
 ---
 
 <a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>
+
+---

@@ -1,4 +1,7 @@
 # Generator opowiadań 📖
+<figure>
+    <img src="logo.png" alt="<figcaption>Home page with logo and input area</figcaption>" width="600">
+</figure>
 ---
 <a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>
 

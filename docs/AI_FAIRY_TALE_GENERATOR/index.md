@@ -57,8 +57,7 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
     <img src="../images/story6.png" alt="<figcaption></figcaption>" width="600">
 <figcaption></figcaption>
     <img src="../images/story7.png" alt="<figcaption></figcaption>" width="600">
-<figcaption>
-</figcaption>
+<figcaption></figcaption>
 </figure>
 
 Application usage

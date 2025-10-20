@@ -1,4 +1,4 @@
-# Generator opowiadań 📖
+# Short Crime Story Generator 📖
 <figure>
     <img src="logo.png" alt="<figcaption></figcaption>" width="600">
 </figure>

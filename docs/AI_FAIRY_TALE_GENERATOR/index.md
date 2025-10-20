@@ -44,13 +44,19 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 ## Sample photos
 
 <figure>
-    <img src="../images/ftale1.png" alt="<figcaption>Home page with logo and input area</figcaption>" width="600">
+    <img src="../images/story1.png" alt="<figcaption>Home page with logo and input area</figcaption>" width="600">
 <figcaption>Home page with logo and input area</figcaption>
-    <img src="../images/ftale2.png" alt="<figcaption>Story generation result with model info</figcaption>" width="600">
+    <img src="../images/story2.png" alt="<figcaption>Story generation result with model info</figcaption>" width="600">
 <figcaption>Story generation result with model info</figcaption>
-    <img src="../images/ftale3.png" alt="<figcaption>Usage stats in sidebar</figcaption>" width="600">
+    <img src="../images/story3.png" alt="<figcaption>Usage stats in sidebar</figcaption>" width="600">
 <figcaption>Usage stats in sidebar</figcaption>
-    <img src="../images/ftale4.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
+    <img src="../images/story4.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
+<figcaption>Subscription and account tab</figcaption>
+    <img src="../images/story5.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
+<figcaption>Subscription and account tab</figcaption>
+    <img src="../images/story6.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
+<figcaption>Subscription and account tab</figcaption>
+    <img src="../images/story7.png" alt="<figcaption>Subscription and account tab</figcaption>" width="600">
 <figcaption>Subscription and account tab</figcaption>
 </figure>
 

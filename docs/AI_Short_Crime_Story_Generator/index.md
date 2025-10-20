@@ -58,7 +58,8 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 <figcaption></figcaption>
 </figure>
 
-Application usage
+## Application usage
+
 - Enter a prompt in the text area (e.g., "Zamieszkał w lesie stary człowiek...")
 - Click "Generuj" to create a story
 - View the generated story with model used and download option

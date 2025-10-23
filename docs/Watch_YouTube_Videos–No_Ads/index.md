@@ -16,7 +16,7 @@ A lightweight Streamlit app that allows users to watch YouTube videos without ad
 	in Excalidraw -->
 
 ## Main functionalities
-- Accepts YouTube URLs (from both `youtube.com` and `youtu.be`)
+- Accepts YouTube URLs `youtube.com'
 - Extracts video ID automatically
 - Embeds video in an iframe with autoplay enabled
 - Validates input to ensure only valid YouTube links are processed

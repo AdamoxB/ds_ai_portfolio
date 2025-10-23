@@ -1,4 +1,3 @@
-<!-- # Welcome Survey Clustering App -->
 
 ---
 
@@ -6,15 +5,15 @@
 
 ---
 
-*# Watch YouTube Videos (No Ads)
+# Watch YouTube Videos (No Ads)
 
 
 
 ## Overview
 A lightweight Streamlit app that allows users to watch YouTube videos without ads by embedding them directly in a clean, ad-free interface.
 
-## Project architecture
-	in Excalidraw
+<!-- ## Project architecture
+	in Excalidraw -->
 
 ## Main functionalities
 - Accepts YouTube URLs (from both `youtube.com` and `youtu.be`)

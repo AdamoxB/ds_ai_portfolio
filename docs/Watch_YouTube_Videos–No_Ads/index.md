@@ -2,7 +2,7 @@
 
 ---
 
-<a class="md-button md-button--primary" href="https://youtube-videos-no-ads-ab.streamlit.app/">Go to the application</a>
+<a class="md-button md-button--primary" href="https://youtube-videos-no-ads-ab.streamlit.app/" target="_blank">Go to the application</a>
 
 ---
 
@@ -54,6 +54,6 @@ A lightweight Streamlit app that allows users to watch YouTube videos without ad
 
 ---
 
-<a class="md-button md-button--primary" href="https://youtube-videos-no-ads-ab.streamlit.app/">Go to the application</a>
+<a class="md-button md-button--primary" href="https://youtube-videos-no-ads-ab.streamlit.app/" target="_blank">Go to the application</a>
 
 ---

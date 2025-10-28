@@ -132,10 +132,11 @@ markdown_extensions:
 
 
 
-
+repo_name: AdamoxB/ds_ai_portfolio
+# repo_url: https://github.com/AdamoxB
 nav:
   - Home Page: index.md
-  - url: https://github.com/Adamox
+  - repo_url: https://github.com/Adamox
       target: _blank
 
   - My projects: 

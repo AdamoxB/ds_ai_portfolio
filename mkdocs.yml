@@ -128,7 +128,7 @@ markdown_extensions:
 
 
 nav:
-  - Home Page: index.md
+  - Home Pagee: index.md
 
   - My projects: 
       - SemanticAudioNotes: SemanticAudioNotes/index.md

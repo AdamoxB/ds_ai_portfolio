@@ -4,7 +4,7 @@
 
 
 
-# Project from the world of data and artificial intelligence
+# Project_from the world of data and artificial intelligence
 
 
 ## Introduction

@@ -6,14 +6,8 @@ site_description: >-
     My portfolio of Data Science and AI projects!
 
 repo_name: AdamoxB/ds_ai_portfolio
-# repo_url: https://github.com/AdamoxB
-# repo_url: <a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>
-# # site_name: Moja Dokumentacja
-# nav:
-#   - Home: index.md
-#   - GitHub Repository:
-#     - url: https://github.com/Adamox
-#       target: _blank
+repo_url: https://github.com/AdamoxB
+
 
 
 <a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a>
@@ -132,12 +126,9 @@ markdown_extensions:
 
 
 
-repo_name: AdamoxB/ds_ai_portfolio
-# repo_url: https://github.com/AdamoxB
+
 nav:
   - Home Page: index.md
-  - repo_url: https://github.com/Adamox
-      target: _blank
 
   - My projects: 
       - SemanticAudioNotes: SemanticAudioNotes/index.md

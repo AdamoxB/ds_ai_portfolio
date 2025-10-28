@@ -126,7 +126,7 @@ markdown_extensions:
 
 
 nav:
-  - Home Pagee: index.md
+  - Home Page: index.md
   - GitHub Repository:
   - url: https://github.com/AdamoxB
     target: _blank

@@ -127,9 +127,7 @@ markdown_extensions:
 
 nav:
   - Home Page: index.md
-  - GitHub Repository:
-  - url: https://github.com/AdamoxB
-    target: _blank
+
   - My projects: 
       - SemanticAudioNotes: SemanticAudioNotes/index.md
       - My Chat GPT: My_Chat_GPT/index.md

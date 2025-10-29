@@ -21,6 +21,7 @@ A lightweight Streamlit app that allows users to watch YouTube videos without ad
 - Embeds video in an iframe with autoplay enabled
 - Validates input to ensure only valid YouTube links are processed
 - Displays video in a responsive, centered layout with clean UI
+- Nev wersion whit double screen to watch your faworite contents
 
 ## Technologies & skills
 - Python

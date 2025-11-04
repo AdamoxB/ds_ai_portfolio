@@ -140,10 +140,9 @@ nav:
       - 🎥 Watch YouTube Videos - No Ads : Watch_YouTube_Videos–No_Ads/index.md
   - Current projects work:
       - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
-      - AI_DATA_VISUALIZATION: 
-  # - Plans:
-  #     - Multilingual portfolio website:
-  #     - React applications:
+      - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
+  - Plans: PLANS/index.md
+
 
 
       # - Iris: iris/index.md

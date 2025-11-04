@@ -129,7 +129,7 @@ nav:
   - Home Page: index.md
 
   - Projects:
-    - Current projects:
+    - "Current projects":
       - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
       - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
     # - Previous projects: 

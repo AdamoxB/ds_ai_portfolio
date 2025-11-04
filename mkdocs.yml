@@ -128,20 +128,21 @@ markdown_extensions:
 nav:
   - Home Page: index.md
 
-  # - My projects: 
-  #     - SemanticAudioNotes: SemanticAudioNotes/index.md
-  #     - My Chat GPT: My_Chat_GPT/index.md
-  #     - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md
-  #     - ds_toolbox: ds_toolbox/index.md
-  #     - Data_Explorer–PyCaret: Data_Explorer–PyCaret/index.md
-  #     - Analysis_of_Key_Variables_in_Data_Sets: Analysis_of_Key_Variables_in_Data_Sets/index.md
-  #     - Welcome Survey Clustering App pipeline: welcome_survey_clustering_pipeline/index.md
-  #     - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
-  #     - 🎥 Watch YouTube Videos - No Ads : Watch_YouTube_Videos–No_Ads/index.md
-  # # - Current projects work:
-  #     # - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
-  #     # - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
-  # - Plans: PLANS/index.md
+  - My projects: 
+      - Current projects:
+          - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
+          - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
+      - Previous projects:
+          - SemanticAudioNotes: SemanticAudioNotes/index.md
+          - My Chat GPT: My_Chat_GPT/index.md
+          - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md
+          - ds_toolbox: ds_toolbox/index.md
+          - Data_Explorer–PyCaret: Data_Explorer–PyCaret/index.md
+          - Analysis_of_Key_Variables_in_Data_Sets: Analysis_of_Key_Variables_in_Data_Sets/index.md
+          - Welcome Survey Clustering App pipeline: welcome_survey_clustering_pipeline/index.md
+          - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
+          - 🎥 Watch YouTube Videos - No Ads : Watch_YouTube_Videos–No_Ads/index.md
+  - Plans: PLANS/index.md
 
 
 

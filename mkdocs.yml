@@ -129,9 +129,6 @@ nav:
   - Home Page: index.md
 
   - "My projects": 
-    - "Current projects":
-        - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
-        - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
     - "Previous projects":
         - SemanticAudioNotes: SemanticAudioNotes/index.md
         - My Chat GPT: My_Chat_GPT/index.md
@@ -142,6 +139,9 @@ nav:
         - Welcome Survey Clustering App pipeline: welcome_survey_clustering_pipeline/index.md
         - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
         - 🎥 Watch YouTube Videos - No Ads : Watch_YouTube_Videos–No_Ads/index.md
+    - "Current projects":
+        - "Short Crime Story Generator 📖": AI_Short_Crime_Story_Generator/index.md
+        - AI_DATA_VISUALIZATION: AI_DATA_VISUALIZATION/index.md
   - Plans: PLANS/index.md
 
 

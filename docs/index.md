@@ -20,7 +20,7 @@ Feel free to explore—hope you discover something interesting here!
 
 In 2011, I earned a Master of Science in Engineering from the Faculty of Electrical Engineering at Warsaw University of Technology. My studies ignited my interest in new technologies.
 
-Over the past three years, I worked as a designer of electrical networks using AutoCAD; later I served as Senior Product Manager for lighting systems and then spent ten years in two companies as a Lighting‑Systems Designer where I honed skills in automating design processes.
+For the past ten years, I have been gaining experience in the lighting industry, working as a lighting systems designer at two different companies. During this time, I significantly developed my skills in automating design processes. Previously, I held the position of senior product manager responsible for lighting systems. My career began after university, where I worked as an electrical network designer and successfully utilized AutoCAD.
 
 In 2025 I was inspired by the data industry, the role of Data Scientist, and the rapidly evolving field of artificial intelligence. An opportunity arose to further develop these skills by creating AI agents—automation that is not deterministic but can adapt far better to various process‑automation tasks, thereby reducing verification time and increasing overall efficiency.
 

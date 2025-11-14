@@ -27,7 +27,8 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 - Python
 - Streamlit
 - OpenAI API
-- PostgreSQL
+<!-- - PostgreSQL -->
+- Create and deploy databases PostgreSQL on Ubuntu server
 - st_paywall (for user subscription management)
 - Pandas (data handling)
 - psycopg2 (PostgreSQL connector)

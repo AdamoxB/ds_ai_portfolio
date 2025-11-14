@@ -5,4 +5,5 @@
 - Multilingual portfolio website:
 
 # done plans
-- create and deploy  databases PostgreSQL on Ubuntu server for Short Crime Story Generator
+- streamlit applications:
+- create and deploy  databases PostgreSQL on Ubuntu server insted of  for Short Crime Story Generator

@@ -28,7 +28,7 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 - Streamlit
 - OpenAI API
 <!-- - PostgreSQL -->
-- Create and deploy databases PostgreSQL on Ubuntu server
+- Create and deploy databases PostgreSQL on Ubuntu server https://cloud.digitalocean.com/droplets?i=0c32ac
 - st_paywall (for user subscription management)
 - Pandas (data handling)
 - psycopg2 (PostgreSQL connector)

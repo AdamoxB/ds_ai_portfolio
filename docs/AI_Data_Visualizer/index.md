@@ -1,7 +1,7 @@
 <!-- <h1 style="color:green;">project in progress !</h1> -->
 # AI_Data_Visualizer - visualise your verrbal data with AI
 
-*Project start: 2024-11-21*
+*Project start: 2025-11-21*
 
 ## Overview
 A Streamlit-powered web app that allows users to generate data visualizations using natural language prompts, leveraging AI models like GPT-4.1-nano to automatically produce and execute Python plotting code.

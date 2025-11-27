@@ -20,20 +20,19 @@ A Streamlit-powered web app that allows users to generate data visualizations us
 
 ## Technologies & skills
 - Python
-- Streamlit
-- OpenAI API (GPT-4.1-nano)
-<!-- - Hugging Face (for Code Llama) -->
-- Pandas
-- Matplotlib
-- dotenv
-- Jinja2 (via templates in `classes.py`)
-- HTML/CSS (for styling)
+- Streamlit (for the web interface)
+- Pandas (data handling)
+- Matplotlib (plotting)
+- OpenAI API (via GPT-4.1-nano)
+- dotenv (environment variables)
+- Secure API key management via `.streamlit/secrets.toml`
 
-<!-- ## Project Report
-- 
-- 
-- 
--  -->
+## Project Report
+- The app enables non-technical users to create data visualizations without writing code.
+- It uses a prompt engineering pipeline: primers are applied to guide AI model outputs, ensuring consistent and valid code generation.
+- The system includes error handling and user feedback (e.g., timeout warnings).
+- Model selection allows flexibility, with GPT-4.1-nano as the default due to cost efficiency.
+- Future enhancements could include model switching via Hugging Face, support for more plot types, and offline execution.
 
 ## Sample photos
 

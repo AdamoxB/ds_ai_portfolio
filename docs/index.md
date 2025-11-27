@@ -25,6 +25,9 @@ For the past ten years, I have been gaining experience in the lighting industry,
 In 2025 I was inspired by the data industry, the role of Data Scientist, and the rapidly evolving field of artificial intelligence. An opportunity arose to further develop these skills by creating AI agents—automation that is not deterministic but can adapt far better to various process‑automation tasks, thereby reducing verification time and increasing overall efficiency.
 
 
+
+<!-- 
+We live in a world of incredibly fast-paced development of artificial intelligence and the influx of data and technological solutions. -->
 ---
 ## Contact
 Adam Biela<br>

@@ -1,5 +1,3 @@
-# AI_Data_Visualizer
-
 <!-- <h1 style="color:green;">project in progress !</h1> -->
 # AI_Data_Visualizer - visualise your verrbal data with AI
 

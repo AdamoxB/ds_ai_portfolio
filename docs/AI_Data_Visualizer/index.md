@@ -40,13 +40,13 @@ A Streamlit-powered web app that allows users to generate data visualizations us
 ## Sample photos
 
 <figure>
-    <img src="../images/img1.png" alt="<figcaption>AI_Data_Visualizer_Main_Interface</figcaption>" width="600">
+    <img src="../images/Visualizer1.png" alt="<figcaption>AI_Data_Visualizer_Main_Interface</figcaption>" width="600">
 <figcaption>AI_Data_Visualizer_Main_Interface</figcaption>
-    <img src="../images/img2.png" alt="<figcaption>Dataset_Selection_Panel</figcaption>" width="600">
+    <img src="../images/Visualizer2.png" alt="<figcaption>Dataset_Selection_Panel</figcaption>" width="600">
 <figcaption>Dataset_Selection_Panel</figcaption>
-    <img src="../images/img3.png" alt="<figcaption>Generated_Plot_with_Code</figcaption>" width="600">
+    <img src="../images/Visualizer3.png" alt="<figcaption>Generated_Plot_with_Code</figcaption>" width="600">
 <figcaption>Generated_Plot_with_Code</figcaption>
-    <img src="../images/img4.png" alt="<figcaption>Model_Selection_and_Execution</figcaption>" width="600">
+    <img src="../images/Visualizer4.png" alt="<figcaption>Model_Selection_and_Execution</figcaption>" width="600">
 <figcaption>Model_Selection_and_Execution</figcaption>
 </figure>
 

@@ -14,4 +14,5 @@ These days, new plans appear every day, but they are far beyond the processing c
 
 # done plans
 - streamlit applications:
-- create and deploy databases PostgreSQL on Ubuntu server for Short Crime Story Generator on https://cloud.digitalocean.com/droplets?i=0c32ac
+- AI_Data_Visualizer first version done
+- created and deploy databases PostgreSQL on Ubuntu server for Short Crime Story Generator on https://cloud.digitalocean.com/droplets?i=0c32ac

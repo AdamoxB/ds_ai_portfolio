@@ -8,7 +8,7 @@ These days, new plans appear every day, but they are far beyond the processing c
 
 
 - AI_Data_Visualizer improvements (table DF output )
-- Short Crime Story Generator more stories, jokes ..., Others ways of saving stories option to save your story to your data base user must know that thata base stories saved can be view by app owner,  Add a rating to the story
+- Short Crime Story Generator more stories, jokes ..., Others ways of saving stories option to save your story to your data base user must know that thata base stories saved can be view by - app owner,  Add a rating to the story wreaten
 - React applications:
 - Multilingual portfolio website:
 ## LLM TOPIC: LLM.md

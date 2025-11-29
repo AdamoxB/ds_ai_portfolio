@@ -23,7 +23,7 @@ These days, new plans appear every day, but they are far beyond the processing c
 - determining progress of opreation with a slider
 - GPT realtime
 - "ingenious" window building ;) possible
-- json progres build app
+- json + progres build app
 - save your recrutation progres anonymoysly and load whenever you want
 - deploy many documents and tasks APP (any way possible )
 - jupyter LM

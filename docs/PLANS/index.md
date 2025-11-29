@@ -11,6 +11,11 @@ These days, new plans appear every day, but they are far beyond the processing c
 - Short Crime Story Generator more stories, jokes ..., Others ways of saving stories option to save your story to your data base user must know that thata base stories saved can be view by app owner,  Add a rating to the story
 - React applications:
 - Multilingual portfolio website:
+- LLM TOPIC: LLM.md
+  - Explore AI on Radeon Today
+  - https://www.amd.com/en/products/graphics/radeon-ai.html#tabs-a538c331da-item-3d078efef9-tab
+  - RAG
+  - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
 
 # done plans
 - streamlit applications:

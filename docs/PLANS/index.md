@@ -20,6 +20,13 @@ These days, new plans appear every day, but they are far beyond the processing c
 # 29.11.25
 - app to profile dyficulty fo the lesson from text
 
+- determining progress of opreation with a slider
+- GPT realtime
+- "ingenious" window building ;) possible
+- json progres build app
+- save your recrutation progres anonymoysly and load whenever you want
+- deploy many documents and tasks APP (any way possible )
+# dosument and task blaster
 
 # done plans
 - streamlit applications:

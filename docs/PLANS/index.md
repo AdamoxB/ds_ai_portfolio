@@ -1,6 +1,6 @@
 
 
-# My project plans
+# My project plans & Ideas
 
 
 <!-- the insanely dizzying pace of development of artificial intelligence and data and the influx of data

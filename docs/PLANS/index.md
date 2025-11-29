@@ -12,10 +12,13 @@ These days, new plans appear every day, but they are far beyond the processing c
 - React applications:
 - Multilingual portfolio website:
 - LLM TOPIC: LLM.md
-  - Explore AI on Radeon Today
-  - https://www.amd.com/en/products/graphics/radeon-ai.html#tabs-a538c331da-item-3d078efef9-tab
-  - RAG
-  - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
+- Explore AI on Radeon Today
+- https://www.amd.com/en/products/graphics/radeon-ai.html#tabs-a538c331da-item-3d078efef9-tab
+- RAG
+- https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
+29.11.25
+- app to profile dyficulty fo the lesson from text
+
 
 # done plans
 - streamlit applications:

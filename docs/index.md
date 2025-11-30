@@ -37,7 +37,7 @@ In 2025 I was inspired by the data industry, the role of Data Scientist, and the
 
 </figure> -->
 
-Here's my certificate: [Certificate](../images/certificate.pdf)
+Here's my certificate: [Certificate](images/certificate.pdf)
 
 <figure>
     <figcaption>Certificate</figcaption>
@@ -45,7 +45,7 @@ Here's my certificate: [Certificate](../images/certificate.pdf)
 
 
 <figure>
-    <iframe src="../docs/images/certificate.pdf" width="600" height="500"></iframe>
+    <iframe src="images/certificate.pdf" width="600" height="500"></iframe>
     <figcaption>Certificate</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ Here's my certificate: [Certificate](../images/certificate.pdf)
 
 ## Certificate of Completion
 
-I'm proud to have completed this course!  You can download my certificate here: [Certificate](../images/certificate.pdf)
+I'm proud to have completed this course!  You can download my certificate here: [Certificate](images/certificate.pdf)
 
 <figure>
     <figcaption>Certificate of Completion</figcaption>
@@ -68,7 +68,7 @@ I'm proud to have completed this course!  You can download my certificate here: 
 Here's my certificate:
 
 <figure>
-    <iframe src="../docs/images/certificate.pdf" width="600" height="500"></iframe>
+    <iframe src="images/certificate.pdf" width="600" height="500"></iframe>
     <figcaption>Certificate of Completion</figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ Here's my certificate:
 Here's my certificate:
 
 <figure>
-    <img src="../docs/images/certificate.jpg" alt="Certificate of Completion" width="600">
+    <img src="images/certificate.jpg" alt="Certificate of Completion" width="600">
     <figcaption>Certificate of Completion</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ Here's my certificate:
 
 
 <figure>
-    <img src="../docs/images/certificate.pdf" alt="<figcaption>Certificate</figcaption>" width="600">
+    <img src="images/certificate.pdf" alt="<figcaption>Certificate</figcaption>" width="600">
     <figcaption>Certificate</figcaption>
 </figure>
 

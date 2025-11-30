@@ -59,7 +59,65 @@ A Streamlit web application that records or uploads audio notes, transcribes the
     <img src="../images/certificate.pdf" alt="<figcaption>Transkrypcja</figcaption>" width="600">
     <figcaption>Transkrypcja</figcaption>
 </figure
-certificate.pdf
+
+
+Here's my certificate: [Certificate](../images/certificate.pdf)
+
+<figure>
+    <figcaption>Certificate</figcaption>
+</figure>
+
+
+<figure>
+    <iframe src="../images/certificate.pdf" width="600" height="500"></iframe>
+    <figcaption>Certificate</figcaption>
+</figure>
+
+# My Achievements
+
+## Certificate of Completion
+
+I'm proud to have completed this course!  You can download my certificate here: [Certificate](../images/certificate.pdf)
+
+<figure>
+    <figcaption>Certificate of Completion</figcaption>
+</figure>
+
+
+
+# My Achievements
+
+## Certificate of Completion
+
+Here's my certificate:
+
+<figure>
+    <iframe src="../images/certificate.pdf" width="600" height="500"></iframe>
+    <figcaption>Certificate of Completion</figcaption>
+</figure>
+
+
+
+# My Achievements
+
+## Certificate of Completion
+
+Here's my certificate:
+
+<figure>
+    <img src="../images/certificate.jpg" alt="Certificate of Completion" width="600">
+    <figcaption>Certificate of Completion</figcaption>
+</figure>
+
+
+
+
+
+<figure>
+    <img src="../images/certificate.pdf" alt="<figcaption>Certificate</figcaption>" width="600">
+    <figcaption>Certificate</figcaption>
+</figure>
+
 
 <!-- ---  -->
 <!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>

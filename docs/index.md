@@ -29,45 +29,20 @@ In 2025 I was inspired by the data industry, the role of Data Scientist, and the
 
 ## Certificate of Completion
 
-I'm proud to have completed this course!  You can download my certificate here: [Certificate](../images/certificate.pdf)
-
-<figure>
-    <figcaption>Certificate of Completion</figcaption>
-</figure>
-
-
-
-# My Achievements
-
-## Certificate of Completion
+I'm proud to have completed this course!  
 
 Here's my certificate:
 
-<figure>
-    <iframe src="/images/certificate.pdf" width="600" height="500"></iframe>
-    <figcaption>Certificate of Completion</figcaption>
-</figure>
 <figure>
     <iframe src="images/certificate.pdf" width="600" height="500"></iframe>
     <figcaption>Certificate of Completion</figcaption>
 </figure>
 
-<figure>
-    <iframe src="../docs/images/certificate.pdf" width="600" height="500"></iframe>
-    <figcaption>Certificate of Completion</figcaption>
-</figure>
+You can download my certificate here: [Certificate](images/certificate.pdf)
 
 <figure>
-    <iframe src="../images/certificate.pdf" width="600" height="500"></iframe>
     <figcaption>Certificate of Completion</figcaption>
 </figure>
-
-<figure>
-    <iframe src="../images/certificate.pdf" width="600" height="500"></iframe>
-    <figcaption>Certificate of Completion</figcaption>
-</figure>
-
-
 
 
 <!-- <figure markdown>

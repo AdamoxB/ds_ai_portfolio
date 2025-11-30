@@ -34,7 +34,7 @@ I'm proud to have completed this course!
 Here's my certificate:
 
 <figure>
-    <iframe src="images/Certyfikat ENG.pdf" width="600" height="500"></iframe>
+    <iframe src="images/Certyfikat ENG.pdf" width="900" height="750"></iframe>
     <figcaption>Certificate of Completion</figcaption>
 </figure>
 

@@ -34,11 +34,11 @@ I'm proud to have completed this course!
 Here's my certificate:
 
 <figure>
-    <iframe src="images/certificate.pdf" width="600" height="500"></iframe>
+    <iframe src="images/Certyfikat ENG.pdf" width="600" height="500"></iframe>
     <figcaption>Certificate of Completion</figcaption>
 </figure>
 
-You can download my certificate here: [Certificate](images/certificate.pdf)
+You can download my certificate here: [Certificate](images/Certyfikat ENG.pdf)
 
 <figure>
     <figcaption>Certificate of Completion</figcaption>

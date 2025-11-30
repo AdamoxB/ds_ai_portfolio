@@ -25,6 +25,23 @@ For the past ten years, I have been gaining experience in the lighting industry,
 In 2025 I was inspired by the data industry, the role of Data Scientist, and the rapidly evolving field of artificial intelligence. An opportunity arose to further develop these skills by creating AI agents—automation that is not deterministic but can adapt far better to various process‑automation tasks, thereby reducing verification time and increasing overall efficiency.
 
 
+## Certificate
+
+<!-- <figure markdown>
+
+![Ładowanie pliku](../images/img1.png){ width="500px"}
+<figcaption>Ładowanie pliku</figcaption>
+
+![Transkrypcja](../images/img2.png){ width="500px"}
+<figcaption>Transkrypcja</figcaption>
+
+</figure> -->
+
+
+<figure>
+    <img src="../images/certificate.pdf" alt="<figcaption>Certificate</figcaption>" width="600">
+    <figcaption>Certificate</figcaption>
+</figure>
 
 <!-- 
 We live in a world of incredibly fast-paced development of artificial intelligence and the influx of data and technological solutions. -->

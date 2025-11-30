@@ -55,7 +55,11 @@ A Streamlit web application that records or uploads audio notes, transcribes the
     <figcaption>Transkrypcja</figcaption>
 </figure>
 
-
+<figure>
+    <img src="../images/certificate.pdf" alt="<figcaption>Transkrypcja</figcaption>" width="600">
+    <figcaption>Transkrypcja</figcaption>
+</figure
+certificate.pdf
 
 <!-- ---  -->
 <!-- <a class="md-button md-button--primary" href="https://semanticaudionotes.streamlit.app/">Go to the application</a>

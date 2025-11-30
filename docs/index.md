@@ -40,10 +40,6 @@ Here's my certificate:
 
 You can download my certificate here: [Certificate](images/Certyfikat ENG.pdf)
 
-<figure>
-    <figcaption>Certificate of Completion</figcaption>
-</figure>
-
 
 <!-- <figure markdown>
 

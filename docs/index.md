@@ -37,6 +37,13 @@ In 2025 I was inspired by the data industry, the role of Data Scientist, and the
 
 </figure> -->
 
+Here's my certificate: [Certificate](../images/certificate.pdf)
+
+<figure>
+    <figcaption>Certificate</figcaption>
+</figure>
+
+
 
 <figure>
     <img src="../images/certificate.pdf" alt="<figcaption>Certificate</figcaption>" width="600">

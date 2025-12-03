@@ -191,9 +191,9 @@ nav:
             - "Short Crime Story Generator 📖": AI_Short_Crime_Story_Generator/index.md
             - "AI_Data_Visualizer" : AI_Data_Visualizer/index.md
   - Plans: PLANS/index.md
-  - Other_topics:
-    - Example_to deploy_nice_pojects_Visualization_&_architecture...: Others/Project_visuals.md
-    - Mermaid_Examples : Others/Mermaid_Examples.md
+  # - Other_topics:
+  #   - Example_to deploy_nice_pojects_Visualization_&_architecture...: Others/Project_visuals.md
+  #   - Mermaid_Examples : Others/Mermaid_Examples.md
       # - Iris: iris/index.md
       # - Titanic: titanic/index.md
   # - LLM TOPIC: LLM.md

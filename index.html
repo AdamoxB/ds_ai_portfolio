@@ -395,10 +395,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="mermaid-test">Mermaid Test<a class="headerlink" href="#mermaid-test" title="Permanent link">¶</a></h1>
-<pre class="mermaid"><code>graph LR
+<p>```mermaid
+graph LR
     A --&gt; B
-    B --&gt; C
-</code></pre>
+    B --&gt; C</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -430,11 +430,7 @@
 <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
 <script src="js/secondary.js"></script>
 <script src="js/zoom.js"></script>
-<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
-window.mermaidConfig = {default: {
-    securitylevel: "loose",
-    startOnLoad: false
-}};</script>
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
 </script></body></html>

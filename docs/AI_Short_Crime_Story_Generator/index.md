@@ -8,7 +8,7 @@
 ---
 <!-- *Project start: 2025-04-05* -->
 
-## Overview_
+## Overview
 A Streamlit-powered storytelling generator that creates engaging, structured short stories using OpenAI's language models, with user authentication, usage tracking, and tiered access based on subscription level.
 
 <!-- ## Project architecture

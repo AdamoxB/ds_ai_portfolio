@@ -34,6 +34,10 @@ theme:
     - content.code.annotate
     - image.zoom          # Material’s built‑in zoom feature
 
+    - content.code.annotate
+    - content.code.copy
+
+
 
 
   # --- kolory i kontrast ---------------------------------------------
@@ -112,13 +116,13 @@ extra_javascript:
   - js/secondary.js            # logika przełączania
   - js/zoom.js
 markdown_extensions:
-  - toc:
-      permalink: true
+  # - toc:
+  #     permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  # - pymdownx.superfences
   - pymdownx.details
   # - pymdownx.blocks.caption  # optional, for captions
   - attr_list        # → add HTML attributes to Markdown elements
@@ -127,6 +131,18 @@ markdown_extensions:
   - admonition
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 
+  - pymdownx.superfences
+  - pymdownx.mermaid
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.arithmatex
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - admonition
+  - toc:
+      permalink: true
 
 
 
@@ -162,7 +178,20 @@ nav:
       # - RAG
       # - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
 
-
-
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.mermaid
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.arithmatex
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - admonition
+  - toc:
+      permalink: true
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
 
 

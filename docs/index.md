@@ -2,7 +2,7 @@
 
 <!-- <h1 style="color:green;">WEBSITE UNDER CONSTRUCTION !</h1> -->
 
-Deployed on: {{ now.strftime('%Y-%m-%d %H:%M:%S') }}
+<!-- Deployed on: {{ now.strftime('%Y-%m-%d %H:%M:%S') }} -->
 
 # Project_from the world of data and artificial intelligence
 

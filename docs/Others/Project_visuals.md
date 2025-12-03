@@ -21,6 +21,12 @@
 ### Diagram Sekwencyjny (Sequence Diagram)
 
 ```mermaid
+flowchart LR
+    A --> B
+```
+
+
+```mermaid
 sequenceDiagram
     participant Użytkownik
     participant Aplikacja

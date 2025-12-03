@@ -81,34 +81,33 @@ graph TD
 
 ### ✅ 3. **Flowchart – Monthly Usage Approval Decision Logic**
 
-This shows how the app checks if a user can generate a new story based on token usage limits.
+This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).
 
 ```mermaid
-flowchart TD
-    A[User submits new story] --> B{Is user logged in?}
-    B -- No --> C[Redirect to login]
-    B -- Yes --> D{Is user premium?}
-    D -- No --> E[Check free user limits]
-    E --> F[Sum input & output tokens from DB]
-    F --> G{Input ≥ 2500? OR Output ≥ 3000?}
-    G -- Yes --> H[Block request: "Usage limit exceeded"]
-    G -- No --> I[Proceed to generate story]
-    D -- Yes --> J[Check premium limits: 100k tokens]
-    J --> K{Input ≥ 100k? OR Output ≥ 100k?}
-    K -- Yes --> H
-    K -- No --> I
+graph TD
+    A[User Clicks "Become Premium"] --> B[Check Current Subscription]
+    B -- Not Subscribed --> C[Redirect to Payment Gateway]
+    C --> D[User Pays via Stripe / PayPal]
+    D --> E{Payment Successful?}
+    E -- Yes --> F[Mark as Premium User]
+    E -- No --> G[Show Error: Payment Failed]
+    F --> H[Update DB: user_subscribed = True]
+    H --> I[Show Premium Status in Sidebar]
+    I --> J[Allow Unlimited Tokens]
+    G --> K[Display Error Message]
 
     style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
     style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style C fill:#10B981,color:#fff
-    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style F fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
-    style G fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
-    style H fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
-    style I fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
-    style J fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style K fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style F fill:#10B981,color:#fff
+    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style I fill:#10B981,color:#fff
+    style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style K fill:#10B981,color:#fff
+
 ```
 <!-- *Project start: 2025-04-05* -->
 

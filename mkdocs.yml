@@ -178,19 +178,7 @@ nav:
       # - RAG
       # - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
 
-markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.mermaid
-  - pymdownx.highlight
-  - pymdownx.details
-  - pymdownx.tabbed
-  - pymdownx.emoji
-  - pymdownx.arithmatex
-  - pymdownx.tasklist
-  - pymdownx.mark
-  - admonition
-  - toc:
-      permalink: true
+
 extra_javascript:
   - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
 

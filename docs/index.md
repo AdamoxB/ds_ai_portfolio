@@ -1,6 +1,16 @@
 # Mermaid TEST
 
 ```mermaid
+graph LR
+    A --> B
+    B --> C
+
+
+
+
+# Mermaid TEST
+
+```mermaid
 flowchart LR
     TEST1 --> TEST2
 ```

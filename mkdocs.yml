@@ -74,7 +74,8 @@ theme:
 
 
 plugins:
-  - mermaid:
+  # - mermaid:
+    - mermaid2
   - search                 # core search plugin
   - glightbox:
       touchNavigation: true
@@ -113,8 +114,8 @@ extra_css:
 
 extra_javascript:
   # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
-  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
-  - js/mermaid-init.js 
+  # - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  # - js/mermaid-init.js 
   - js/secondary.js            # logika przełączania
   - js/zoom.js
 

@@ -305,21 +305,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-component-diagram-application-architecture">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 2. Component Diagram: Application Architecture
+      ✅ 2. Component Diagram – App Architecture
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-approval-process-decision-logic-for-usage-limits">
+<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart: Approval Process (Decision Logic for Usage Limits)
+      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
     </span>
 </a>
 </li>
@@ -423,21 +423,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-component-diagram-application-architecture">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 2. Component Diagram: Application Architecture
+      ✅ 2. Component Diagram – App Architecture
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-approval-process-decision-logic-for-usage-limits">
+<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart: Approval Process (Decision Logic for Usage Limits)
+      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
     </span>
 </a>
 </li>
@@ -562,21 +562,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-component-diagram-application-architecture">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 2. Component Diagram: Application Architecture
+      ✅ 2. Component Diagram – App Architecture
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-approval-process-decision-logic-for-usage-limits">
+<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart: Approval Process (Decision Logic for Usage Limits)
+      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
     </span>
 </a>
 </li>
@@ -636,125 +636,96 @@
 <hr>
 <p><a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a></p>
 <hr>
-<h2 id="1-sequence-diagram-user-login-story-generation-flow">✅ 1. <strong>Sequence Diagram: User Login &amp; Story Generation Flow</strong><a class="headerlink" href="#1-sequence-diagram-user-login-story-generation-flow" title="Permanent link">¶</a></h2>
-<p>This shows the key user flow — from login to generating a story.</p>
+<h3 id="1-sequence-diagram-user-login-story-generation-flow">✅ 1. <strong>Sequence Diagram – User Login &amp; Story Generation Flow</strong><a class="headerlink" href="#1-sequence-diagram-user-login-story-generation-flow" title="Permanent link">¶</a></h3>
+<p>This shows the key user flow: login → language selection → input story → generate story → display result.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant User
-    participant App
-    participant Database
-    participant OpenAI
-    participant AuthSystem
+    participant "User" 
+    participant "Streamlit App" 
+    participant "Authentication Service" 
+    participant "OpenAI API" 
+    participant "Database" 
 
-    User-&gt;&gt;App: Clicks "Login" (via sidebar)
-    App-&gt;&gt;AuthSystem: Validate credentials
-    AuthSystem--&gt;&gt;App: Returns success/failure
-    alt Login successful
-        App-&gt;&gt;App: Set user session (email, language, subscription)
-        App-&gt;&gt;App: Load translations (languages.json)
-        User-&gt;&gt;App: Enters text in input box
-        App-&gt;&gt;App: Check usage limits (input/output tokens)
-        alt Free user
-            App-&gt;&gt;App: Validate monthly limits
-            User-&gt;&gt;App: Clicks "Generate Story"
-            App-&gt;&gt;App: Select next model (gpt-4.1-nano)
-            App-&gt;&gt;OpenAI: Send prompt to generate story
-            OpenAI--&gt;&gt;App: Returns generated story with usage data
-            App-&gt;&gt;Database: Log input/output tokens
-            App--&gt;&gt;User: Display story and download button
-        else Premium user
-            App-&gt;&gt;App: Allow full token usage
-            User-&gt;&gt;App: Clicks "Generate Story"
-            App-&gt;&gt;OpenAI: Send prompt to generate story
-            OpenAI--&gt;&gt;App: Returns generated story with usage data
-            App-&gt;&gt;Database: Log input/output tokens
-            App--&gt;&gt;User: Display story and download button
+    User-&gt;&gt;Streamlit App: Select language (e.g., Polish) 
+    User-&gt;&gt;Streamlit App: Enter story prompt 
+    User-&gt;&gt;Streamlit App: Click "Generate Story" 
+    Streamlit App-&gt;&gt;Authentication Service: Validate login status 
+    Authentication Service--&gt;&gt;Streamlit App: Returns login status 
+    alt User is logged in
+        Streamlit App-&gt;&gt;Streamlit App: Check monthly usage limits
+        Streamlit App-&gt;&gt;Database: Query usage history (input/output tokens)
+        Streamlit App-&gt;&gt;OpenAI API: Send prompt to model (e.g., gpt-4.1-nano)
+        OpenAI API--&gt;&gt;Streamlit App: Returns generated story + token usage
+        Streamlit App-&gt;&gt;Database: Log usage (input/output tokens)
+        Streamlit App-&gt;&gt;User: Display story &amp; download button
     end
-    User-&gt;&gt;App: Clicks "Logout"
-    App-&gt;&gt;App: Clear session
+    User-&gt;&gt;Streamlit App: View story and download
+</code></pre>
+<p><strong>Styles (as requested):</strong>
+</p><pre class="mermaid"><code>style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style "Authentication Service" fill:#10B981,color:#fff
+style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+</code></pre><p></p>
+<hr>
+<h3 id="2-component-diagram-app-architecture">✅ 2. <strong>Component Diagram – App Architecture</strong><a class="headerlink" href="#2-component-diagram-app-architecture" title="Permanent link">¶</a></h3>
+<p>This shows the core components of your app with clear relationships and responsibilities.</p>
+<pre class="mermaid"><code>graph TD
+    A[Streamlit App] --&gt;|UI Layer| B[User Interface]
+    B --&gt; C[Language Selector]
+    B --&gt; D[Login/Logout System]
+    B --&gt; E[Story Input &amp; Output]
+    B --&gt; F[Usage Limits Manager]
+
+    A --&gt;|Backend Logic| G[Authentication Service]
+    A --&gt;|AI Engine| H[OpenAI API]
+    A --&gt;|Data Persistence| I[PostgreSQL Database]
+    A --&gt;|Config &amp; Secrets| J[Configuration Manager]
+
+    G --&gt;|Validate User| B
+    H --&gt;|Generate Story| B
+    I --&gt;|Store Usage| F
+    J --&gt;|Load Translations| B
+
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style G fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
+    style H fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style I fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style J fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
 </code></pre>
 <hr>
-<h2 id="2-component-diagram-application-architecture">✅ 2. <strong>Component Diagram: Application Architecture</strong><a class="headerlink" href="#2-component-diagram-application-architecture" title="Permanent link">¶</a></h2>
-<p>This shows the modular components and their relationships.</p>
-<pre class="mermaid"><code>componentDiagram
-    [Streamlit App] --&gt; [User Interface]
-    [User Interface] --&gt; [Authentication Layer]
-    [User Interface] --&gt; [Translation Manager]
-    [User Interface] --&gt; [Usage Limit Checker]
-    [User Interface] --&gt; [OpenAI API Client]
-    [User Interface] --&gt; [Database Layer (PostgreSQL)]
-    [Database Layer] --&gt; [usages table]
-    [Database Layer] --&gt; [user_profiles table]
-
-    [Authentication Layer] --&gt; [Google OAuth]
-    [Translation Manager] --&gt; [languages.json]
-    [OpenAI API Client] --&gt; [OpenAI API]
-    [Usage Limit Checker] --&gt; [FREE / PREMIUM limits]
-    [OpenAI API Client] --&gt; [Model Rotation (gpt-4.1-nano)]
-
-    note right of [User Interface]
-        Main entry point for users
-        Handles routing, UI, state management
-    end
-
-    note right of [Authentication Layer]
-        Manages login/logout and user session
-        Uses Google OAuth
-    end
-
-    note right of [Translation Manager]
-        Loads and switches between languages (en/pl)
-        Uses JSON config file
-    end
-
-    note right of [Usage Limit Checker]
-        Tracks monthly token usage
-        Blocks free users at 2500 input / 3000 output
-    end
-
-    note right of [OpenAI API Client]
-        Dynamically selects model (cycle through list)
-        Sends prompts and receives responses
-    end
-
-    note right of [Database Layer]
-        Stores user sessions, usage logs
-        Ensures audit trail and quota tracking
-    end
-</code></pre>
-<hr>
-<h2 id="3-flowchart-approval-process-decision-logic-for-usage-limits">✅ 3. <strong>Flowchart: Approval Process (Decision Logic for Usage Limits)</strong><a class="headerlink" href="#3-flowchart-approval-process-decision-logic-for-usage-limits" title="Permanent link">¶</a></h2>
-<p>This illustrates how the app decides whether to allow or block a story generation based on user type and usage.</p>
+<h3 id="3-flowchart-monthly-usage-approval-decision-logic">✅ 3. <strong>Flowchart – Monthly Usage Approval Decision Logic</strong><a class="headerlink" href="#3-flowchart-monthly-usage-approval-decision-logic" title="Permanent link">¶</a></h3>
+<p>This shows how the app checks if a user can generate a new story based on token usage limits.</p>
 <pre class="mermaid"><code>flowchart TD
-    A[User logs in] --&gt; B{Is user logged in?}
+    A[User submits new story] --&gt; B{Is user logged in?}
     B -- No --&gt; C[Redirect to login]
     B -- Yes --&gt; D{Is user premium?}
-    D -- No --&gt; E[Check monthly input tokens]
-    E --&gt; F{≥ 2500 input tokens?}
-    F -- Yes --&gt; G[Block request: Usage limit exceeded]
-    F -- No --&gt; H{≥ 3000 output tokens?}
-    H -- Yes --&gt; I[Block request: Usage limit exceeded]
-    H -- No --&gt; J[Allow generation]
-    D -- Yes --&gt; K[Check monthly input/output tokens]
-    K --&gt; L{≥ 100k input/output tokens?}
-    L -- Yes --&gt; M[Block request: Premium limit exceeded]
-    L -- No --&gt; J[Allow generation]
+    D -- No --&gt; E[Check free user limits]
+    E --&gt; F[Sum input &amp; output tokens from DB]
+    F --&gt; G{Input ≥ 2500? OR Output ≥ 3000?}
+    G -- Yes --&gt; H[Block request: "Usage limit exceeded"]
+    G -- No --&gt; I[Proceed to generate story]
+    D -- Yes --&gt; J[Check premium limits: 100k tokens]
+    J --&gt; K{Input ≥ 100k? OR Output ≥ 100k?}
+    K -- Yes --&gt; H
+    K -- No --&gt; I
 
-    style A fill:#f9f,stroke:#333
-    style C fill:#f9f,stroke:#333
-    style D fill:#f9f,stroke:#333
-    style E fill:#cfc,stroke:#333
-    style F fill:#cfc,stroke:#333
-    style G fill:#f9f,stroke:#333
-    style H fill:#cfc,stroke:#333
-    style I fill:#f9f,stroke:#333
-    style J fill:#cfc,stroke:#333
-    style K fill:#cfc,stroke:#333
-    style L fill:#cfc,stroke:#333
-    style M fill:#f9f,stroke:#333
-
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef warning fill:#f9f,stroke:#333;
-    classDef allowed fill:#cfc,stroke:#333;
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
+    style G fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+    style H fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
+    style I fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style J fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style K fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
 </code></pre>
 <!-- *Project start: 2025-04-05* -->
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>

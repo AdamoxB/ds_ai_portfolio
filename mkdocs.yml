@@ -132,17 +132,25 @@ markdown_extensions:
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 
   - pymdownx.superfences
-  - pymdownx.mermaid
-  - pymdownx.highlight
-  - pymdownx.details
-  - pymdownx.tabbed
-  - pymdownx.emoji
-  - pymdownx.arithmatex
-  - pymdownx.tasklist
-  - pymdownx.mark
   - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.tabbed
   - toc:
       permalink: true
+  # - pymdownx.superfences
+  # - pymdownx.mermaid
+  # - pymdownx.highlight
+  # - pymdownx.details
+  # - pymdownx.tabbed
+  # - pymdownx.emoji
+  # - pymdownx.arithmatex
+  # - pymdownx.tasklist
+  # - pymdownx.mark
+  # - admonition
+  # - toc:
+  #     permalink: true
 
 
 

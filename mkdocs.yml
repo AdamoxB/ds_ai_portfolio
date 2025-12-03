@@ -132,7 +132,7 @@ markdown_extensions:
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 
   - pymdownx.superfences
-  # - pymdownx.mermaid
+  - pymdownx.mermaid
   - pymdownx.highlight
   - pymdownx.details
   - pymdownx.tabbed

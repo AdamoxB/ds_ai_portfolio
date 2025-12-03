@@ -683,32 +683,31 @@ graph TD
 </code></pre>
 <hr>
 <h3 id="3-flowchart-monthly-usage-approval-decision-logic">✅ 3. <strong>Flowchart – Monthly Usage Approval Decision Logic</strong><a class="headerlink" href="#3-flowchart-monthly-usage-approval-decision-logic" title="Permanent link">¶</a></h3>
-<p>This shows how the app checks if a user can generate a new story based on token usage limits.</p>
-<pre class="mermaid"><code>flowchart TD
-    A[User submits new story] --&gt; B{Is user logged in?}
-    B -- No --&gt; C[Redirect to login]
-    B -- Yes --&gt; D{Is user premium?}
-    D -- No --&gt; E[Check free user limits]
-    E --&gt; F[Sum input &amp; output tokens from DB]
-    F --&gt; G{Input ≥ 2500? OR Output ≥ 3000?}
-    G -- Yes --&gt; H[Block request: "Usage limit exceeded"]
-    G -- No --&gt; I[Proceed to generate story]
-    D -- Yes --&gt; J[Check premium limits: 100k tokens]
-    J --&gt; K{Input ≥ 100k? OR Output ≥ 100k?}
-    K -- Yes --&gt; H
-    K -- No --&gt; I
+<p>This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).</p>
+<pre class="mermaid"><code>graph TD
+    A[User Clicks "Become Premium"] --&gt; B[Check Current Subscription]
+    B -- Not Subscribed --&gt; C[Redirect to Payment Gateway]
+    C --&gt; D[User Pays via Stripe / PayPal]
+    D --&gt; E{Payment Successful?}
+    E -- Yes --&gt; F[Mark as Premium User]
+    E -- No --&gt; G[Show Error: Payment Failed]
+    F --&gt; H[Update DB: user_subscribed = True]
+    H --&gt; I[Show Premium Status in Sidebar]
+    I --&gt; J[Allow Unlimited Tokens]
+    G --&gt; K[Display Error Message]
 
     style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
     style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style C fill:#10B981,color:#fff
-    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style F fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
-    style G fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
-    style H fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
-    style I fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
-    style J fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style K fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style F fill:#10B981,color:#fff
+    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style I fill:#10B981,color:#fff
+    style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style K fill:#10B981,color:#fff
+
 </code></pre>
 <!-- *Project start: 2025-04-05* -->
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>

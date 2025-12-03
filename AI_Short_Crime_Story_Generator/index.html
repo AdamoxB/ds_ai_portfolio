@@ -1217,113 +1217,20 @@
 <p>A Streamlit-powered storytelling generator that creates engaging, structured short stories using OpenAI's language models, with user authentication, usage tracking, and tiered access based on subscription level.</p>
 <!-- ## Project architecture
     in Excalidraw -->
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart LR
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A[Start] --&gt; B{User Login?}
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B -- No --&gt; C[Redirect to Login]
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    B -- Yes --&gt; D[Load User Preferences]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    D --&gt; E[Load Language Settings]
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    E --&gt; F[Language Selector in Sidebar]
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    F --&gt; G{Language Changed?}
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    G -- Yes --&gt; H[Update Session Language]
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    G -- No --&gt; I[Proceed with Current Language]
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    I --&gt; J[Load Translations from languages.json]
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    J --&gt; K[Set Default Language: 'pl' if not set]
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    K --&gt; L[Initialize Model Cycle: gpt-4.1-nano]
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    L --&gt; M[Database Connection Setup]
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    M --&gt; N[Usage Limits Configuration]
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    N --&gt; O[Check Monthly Usage Limits]
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    O --&gt; P{Free User?}
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    P -- Yes --&gt; Q{Input/Output Tokens Exceeded?}
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    P -- No --&gt; R{Premium User?}
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    Q -- Yes --&gt; S[Show Usage Exceeded Error]
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    Q -- No --&gt; T[Proceed to Generate Story]
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    R -- Yes --&gt; U[Check Token Limits]
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    U -- Yes --&gt; V[Show Premium Usage Limit Error]
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    U -- No --&gt; W[Proceed to Generate Story]
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    T --&gt; X[Get User Input Text]
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    W --&gt; X
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    X --&gt; Y[Validate Input (Non-empty)]
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    Y --&gt; Z{Input Valid?}
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    Z -- No --&gt; AA[Disable Generate Button]
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    Z -- Yes --&gt; AB[Generate Story with Dynamic Model Selection]
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    AB --&gt; AC[Call OpenAI API with System Prompt]
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    AC --&gt; AD[Extract Usage Tokens: Prompt &amp; Completion]
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    AD --&gt; AE[Store Usage in Database]
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    AE --&gt; AF[Display Generated Story]
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    AF --&gt; AG[Show Download Button]
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    AF --&gt; AH[Show Account &amp; Stats in Sidebar]
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    AH --&gt; AI[Display Subscription Status]
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    AI --&gt; AJ[Show Monthly Token Metrics]
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    AJ --&gt; AK[Show Input/Output Usage vs Limits]
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    AK --&gt; AL[End]
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    style A fill:#f9f,stroke:#333
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    style B fill:#bbf,stroke:#333
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    style C fill:#f9f,stroke:#333
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    style D fill:#bbf,stroke:#333
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    style E fill:#bbf,stroke:#333
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    style F fill:#bbf,stroke:#333
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    style G fill:#bbf,stroke:#333
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    style H fill:#bbf,stroke:#333
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    style I fill:#bbf,stroke:#333
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    style J fill:#bbf,stroke:#333
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    style K fill:#bbf,stroke:#333
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    style L fill:#bbf,stroke:#333
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    style M fill:#bbf,stroke:#333
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    style N fill:#bbf,stroke:#333
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    style O fill:#bbf,stroke:#333
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    style P fill:#bbf,stroke:#333
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    style Q fill:#bbf,stroke:#333
-<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    style R fill:#bbf,stroke:#333
-<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    style S fill:#f9f,stroke:#333
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    style T fill:#bbf,stroke:#333
-<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    style U fill:#bbf,stroke:#333
-<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    style V fill:#f9f,stroke:#333
-<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    style W fill:#bbf,stroke:#333
-<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    style X fill:#bbf,stroke:#333
-<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    style Y fill:#bbf,stroke:#333
-<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    style Z fill:#bbf,stroke:#333
-<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    style AB fill:#bbf,stroke:#333
-<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    style AC fill:#bbf,stroke:#333
-<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    style AD fill:#bbf,stroke:#333
-<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    style AE fill:#bbf,stroke:#333
-<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    style AF fill:#bbf,stroke:#333
-<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>    style AG fill:#bbf,stroke:#333
-<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    style AH fill:#bbf,stroke:#333
-<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    style AI fill:#bbf,stroke:#333
-<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    style AJ fill:#bbf,stroke:#333
-<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    style AK fill:#bbf,stroke:#333
-<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>    style AL fill:#f9f,stroke:#333
-<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
-<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>    classDef process fill:#bbf,stroke:#333;
-<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>    classDef error fill:#f9f,stroke:#333;
-<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>    classDef decision fill:#f9f,stroke:#333;
-<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>    classDef action fill:#bbf,stroke:#333;
-<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>    classDef conditional fill:#bbf,stroke:#333;
-<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
-<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    subgraph "User Flow"
-<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>        B C D E F G H I J K L M N O P Q R S T U W X Y Z AB AC AD AE AF AG AH AI AJ AK AL
-<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>    end
-<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>
-<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>    subgraph "Authentication &amp; Security"
-<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>        B C D
-<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>    end
-<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>
-<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>    subgraph "Language &amp; UI"
-<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>        E F G H I J K
-<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>    end
-<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>
-<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>    subgraph "Model &amp; API"
-<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>        L M N O P Q R S T U W
-<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    end
-<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>
-<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>    subgraph "Story Generation"
-<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>        X Y Z AB AC AD AE AF
-<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>    end
-<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>
-<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>    subgraph "User Experience"
-<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>        AG AH AI AJ AK AL
-<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>    end
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart TD
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A[User Input] --&gt;|App description,&lt;br/&gt;diagram, or&lt;br/&gt;GitHub repo| B[Prompt Builder]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B --&gt;|threat_model.py&lt;br/&gt;mitigations.py&lt;br/&gt;etc.| C{LLM Provider}
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C --&gt;|OpenAI| D[JSON Response]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    C --&gt;|Anthropic| D
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    C --&gt;|Google/Mistral/Groq| D
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    C --&gt;|Ollama/LM Studio| D
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    D --&gt; E[Markdown Converter]
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    E --&gt; F[Display Results]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    G[Organizational&lt;br/&gt;Context] -.-&gt;|Inject here| B
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
 </code></pre></div>
 <h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>

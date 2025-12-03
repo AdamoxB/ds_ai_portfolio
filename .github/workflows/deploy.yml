@@ -1,0 +1,39 @@
+# .github/workflows/deploy.yml
+
+name: Deploy MkDocs Site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  # Optional: Also trigger on pull requests (for preview)
+  # pull_request:
+  #   branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install MkDocs and dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-mermaid
+
+      - name: Build the site
+        run: |
+          mkdocs build --config mkdocs.yml --site-dir ./site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          # Optional: Add a custom message
+          # commit_message: "Deploying MkDocs site with Mermaid diagram"

@@ -1,13 +1,8 @@
-# .github/workflows/deploy.yml
-
 name: Deploy MkDocs Site to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-  # Optional: Also trigger on pull requests (for preview)
-  # pull_request:
-  #   branches: [ main ]
 
 jobs:
   deploy:
@@ -22,11 +17,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install MkDocs and dependencies
+      - name: Install MkDocs and Mermaid
         run: |
           pip install mkdocs mkdocs-material mkdocs-mermaid
 
-      - name: Build the site
+      - name: Build site
         run: |
           mkdocs build --config mkdocs.yml --site-dir ./site
 
@@ -35,5 +30,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          # Optional: Add a custom message
-          # commit_message: "Deploying MkDocs site with Mermaid diagram"

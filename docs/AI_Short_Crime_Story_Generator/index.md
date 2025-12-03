@@ -14,7 +14,7 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 <!-- ## Project architecture
 	in Excalidraw -->
 ```mermaid
-flowchart TD
+flowchart LR
     A[User Input] -->|App description,<br/>diagram, or<br/>GitHub repo| B[Prompt Builder]
     B -->|threat_model.py<br/>mitigations.py<br/>etc.| C{LLM Provider}
     C -->|OpenAI| D[JSON Response]

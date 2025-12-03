@@ -33,16 +33,13 @@ sequenceDiagram
         Streamlit App->>User: Display story & download button
     end
     User->>Streamlit App: View story and download
-```
-
-**Styles (as requested):**
-```mermaid
-style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style "Authentication Service" fill:#10B981,color:#fff
-style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-```
+   
+    style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style "Authentication Service" fill:#10B981,color:#fff
+    style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    ```
 
 ---
 

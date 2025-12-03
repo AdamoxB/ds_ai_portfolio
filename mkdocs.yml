@@ -89,6 +89,9 @@ plugins:
       background: white
       shadow: true
       manual: false
+  - mermaid:
+  # Optional: configure Mermaid settings
+  # e.g., enable theme, etc.
 
   # pip install mkdocs-image-zoom   # or pipx, poetry, etc.#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # - image-zoom             # <— this plugin does the heavy lifting

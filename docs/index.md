@@ -1,3 +1,9 @@
+# TEST MERMAID
+
+```mermaid
+flowchart LR
+    X[Test] --> Y[Works?]
+```
 
 
 <!-- <h1 style="color:green;">WEBSITE UNDER CONSTRUCTION !</h1> -->

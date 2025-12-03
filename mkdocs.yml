@@ -75,7 +75,7 @@ theme:
 
 plugins:
   # - mermaid:
-    - mermaid2
+  - mermaid2
   - search                 # core search plugin
   - glightbox:
       touchNavigation: true

@@ -10,48 +10,37 @@
 ### ✅ 1. **Sequence Diagram: User Login & Story Generation Flow**
 
 ```mermaid
-graph TD
-    A[User Opens App] --> B{Is User Logged In?}
-    B -- No --> C[Show Login Button]
-    B -- Yes --> D[Show Sidebar: Language & Subscription]
-    D --> E[User Selects Language]
-    E --> F[User Enters Prompt Text]
-    F --> G[User Clicks "Generate"]
-    G --> H[App Validates Usage Limits]
-    H --> I{Free User?}
-    I -- Yes --> J[Check Monthly Token Limits]
-    I -- No --> K[Premium User: Unlimited (Premium Tier)]
-    J --> L{Exceeded Limits?}
-    L -- Yes --> M[Show Error: Usage Exceeded]
-    L -- No --> N[App Selects Next Model (gpt-4.1-nano)]
-    N --> O[Send Prompt to OpenAI via API]
-    O --> P[Receive Generated Story]
-    P --> Q[Save Usage to Database]
-    Q --> R[Display Story + Download Button]
-    R --> S[User Can Download or Exit]
-```
+sequenceDiagram
+    participant "User" as User
+    participant "Streamlit App" as App
+    participant "Authentication Service" as Auth
+    participant "OpenAI API" as OpenAI
+    participant "PostgreSQL DB" as DB
 
-**Styles (as per your example):**
-```mermaid
-style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style C fill:#10B981,color:#fff
-style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style F fill:#10B981,color:#fff
-style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style I fill:#10B981,color:#fff
-style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style K fill:#10B981,color:#fff
-style L fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style M fill:#10B981,color:#fff
-style N fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style O fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style P fill:#10B981,color:#fff
-style Q fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-style R fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-style S fill:#10B981,color:#fff
+    User->>App: Clicks "Login" button
+    App->>Auth: Validate credentials (email/password)
+    Auth-->>App: Returns login status (success/failure)
+    alt User is logged in
+        App->>App: Set session state: user_subscribed, email, lang
+        App->>App: Load translations (languages.json)
+        App->>App: Show sidebar & main interface
+        User->>App: Enters story prompt in text area
+        App->>App: Validate input (non-empty)
+        App->>App: Check monthly usage limits (DB)
+        App->>DB: Query monthly usage (input/output tokens)
+        DB-->>App: Returns usage stats
+        alt Free User Exceeded Limit
+            App-->>User: Show "Usage limit exceeded" error
+        else Within Limits
+            App->>OpenAI: Generate story using dynamic model (gpt-4.1-nano)
+            OpenAI-->>App: Returns story content + token usage
+            App->>DB: Log usage (input/output tokens)
+            App-->>User: Display generated story
+            App->>App: Offer download button
+        end
+    end
+    User->>App: Clicks "Download" button
+    App-->>User: Downloads .txt file of story
 ```
 
 ---
@@ -59,7 +48,7 @@ style S fill:#10B981,color:#fff
 ### ✅ 2. **Component Diagram: App Architecture**
 
 ```mermaid
-graph LR
+graph TD
     A[User Interface] --> B[Streamlit App]
     B --> C[Language Selector]
     B --> D[Login/Logout System]
@@ -98,38 +87,66 @@ graph LR
     style P fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
     style Q fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
 ```
-
 ---
 
-### ✅ 3. **Flowchart: Approval Process (for Premium Upgrade)**
-
-> This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).
+### ✅ 2. **Component Diagram: Application Architecture**
 
 ```mermaid
-graph TD
-    A[User Clicks "Become Premium"] --> B[Check Current Subscription]
-    B -- Not Subscribed --> C[Redirect to Payment Gateway]
-    C --> D[User Pays via Stripe / PayPal]
-    D --> E{Payment Successful?}
-    E -- Yes --> F[Mark as Premium User]
-    E -- No --> G[Show Error: Payment Failed]
-    F --> H[Update DB: user_subscribed = True]
-    H --> I[Show Premium Status in Sidebar]
-    I --> J[Allow Unlimited Tokens]
-    G --> K[Display Error Message]
+graph LR
+    A[User Interface] --> B[Streamlit App]
+    B --> C[Authentication Service]
+    B --> D[OpenAI API]
+    B --> E[PostgreSQL Database]
+    B --> F[Translation Manager]
 
     style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
     style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style C fill:#10B981,color:#fff
-    style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-    style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style F fill:#10B981,color:#fff
-    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-    style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style I fill:#10B981,color:#fff
-    style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style K fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+
+    classDef component fill:#1E293B,stroke:#334155,stroke-width:2px,color:#fff;
+    classDef service fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff;
+    classDef ui fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff;
+
+    A[User Interface] -->|Uses| B[Streamlit App]
+    B -->|Calls| C[Authentication Service]
+    B -->|Calls| D[OpenAI API]
+    B -->|Saves| E[PostgreSQL Database]
+    B -->|Loads| F[Translation Manager]
 ```
+
+---
+### ✅ 3. **Flowchart: Approval Process (Subscription Upgrade)**
+
+```mermaid
+graph TD
+    A[User clicks "Become Premium"] --> B{Is user logged in?}
+    B -- No --> C[Redirect to Login]
+    B -- Yes --> D{Is user already premium?}
+    D -- No --> E[Show subscription modal]
+    E --> F[User confirms payment]
+    F --> G{Payment successful?}
+    G -- No --> H[Show error: Payment failed]
+    G -- Yes --> I[Update user status to Premium]
+    I --> J[Refresh usage limits: Unlimited tokens]
+    J --> K[Display success message: "Premium access granted!"]
+
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+    style G fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style H fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
+    style I fill:#10B981,color:#fff
+    style J fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style K fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+```
+
+---
 <!-- *Project start: 2025-04-05* -->
 
 ## Overview

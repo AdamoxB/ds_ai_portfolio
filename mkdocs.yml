@@ -129,7 +129,7 @@ markdown_extensions:
   # - pymdownx.blocks.caption  # optional, for captions
   - attr_list        # → add HTML attributes to Markdown elements
   - meta
-  - md_in_html
+  # - md_in_html# blokuje mermaid
   - admonition
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 

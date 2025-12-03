@@ -7,81 +7,103 @@
 
 ---
 
-### ✅ 1. **Sequence Diagram – User Login & Story Generation Flow**
-
-This shows the key user flow: login → language selection → input story → generate story → display result.
-
-```mermaid
-sequenceDiagram
-    participant "User" 
-    participant "Streamlit App" 
-    participant "Authentication Service" 
-    participant "OpenAI API" 
-    participant "Database" 
-
-    User->>Streamlit App: Select language (e.g., Polish) 
-    User->>Streamlit App: Enter story prompt 
-    User->>Streamlit App: Click "Generate Story" 
-    Streamlit App->>Authentication Service: Validate login status 
-    Authentication Service-->>Streamlit App: Returns login status 
-    alt User is logged in
-        Streamlit App->>Streamlit App: Check monthly usage limits
-        Streamlit App->>Database: Query usage history (input/output tokens)
-        Streamlit App->>OpenAI API: Send prompt to model (e.g., gpt-4.1-nano)
-        OpenAI API-->>Streamlit App: Returns generated story + token usage
-        Streamlit App->>Database: Log usage (input/output tokens)
-        Streamlit App->>User: Display story & download button
-    end
-    User->>Streamlit App: View story and download
-   
-    style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-    style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style "Authentication Service" fill:#10B981,color:#fff
-    style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    ```
-
----
-
-### ✅ 2. **Component Diagram – App Architecture**
-
-This shows the core components of your app with clear relationships and responsibilities.
+### ✅ 1. **Sequence Diagram: User Login & Story Generation Flow**
 
 ```mermaid
 graph TD
-    A[Streamlit App] -->|UI Layer| B[User Interface]
-    B --> C[Language Selector]
-    B --> D[Login/Logout System]
-    B --> E[Story Input & Output]
-    B --> F[Usage Limits Manager]
+    A[User Opens App] --> B{Is User Logged In?}
+    B -- No --> C[Show Login Button]
+    B -- Yes --> D[Show Sidebar: Language & Subscription]
+    D --> E[User Selects Language]
+    E --> F[User Enters Prompt Text]
+    F --> G[User Clicks "Generate"]
+    G --> H[App Validates Usage Limits]
+    H --> I{Free User?}
+    I -- Yes --> J[Check Monthly Token Limits]
+    I -- No --> K[Premium User: Unlimited (Premium Tier)]
+    J --> L{Exceeded Limits?}
+    L -- Yes --> M[Show Error: Usage Exceeded]
+    L -- No --> N[App Selects Next Model (gpt-4.1-nano)]
+    N --> O[Send Prompt to OpenAI via API]
+    O --> P[Receive Generated Story]
+    P --> Q[Save Usage to Database]
+    Q --> R[Display Story + Download Button]
+    R --> S[User Can Download or Exit]
+```
 
-    A -->|Backend Logic| G[Authentication Service]
-    A -->|AI Engine| H[OpenAI API]
-    A -->|Data Persistence| I[PostgreSQL Database]
-    A -->|Config & Secrets| J[Configuration Manager]
-
-    G -->|Validate User| B
-    H -->|Generate Story| B
-    I -->|Store Usage| F
-    J -->|Load Translations| B
-
-    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style C fill:#10B981,color:#fff
-    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style F fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
-    style G fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
-    style H fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style I fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style J fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+**Styles (as per your example):**
+```mermaid
+style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style C fill:#10B981,color:#fff
+style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style F fill:#10B981,color:#fff
+style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style I fill:#10B981,color:#fff
+style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style K fill:#10B981,color:#fff
+style L fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style M fill:#10B981,color:#fff
+style N fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style O fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style P fill:#10B981,color:#fff
+style Q fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style R fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style S fill:#10B981,color:#fff
 ```
 
 ---
 
-### ✅ 3. **Flowchart – Monthly Usage Approval Decision Logic**
+### ✅ 2. **Component Diagram: App Architecture**
 
-This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).
+```mermaid
+graph LR
+    A[User Interface] --> B[Streamlit App]
+    B --> C[Language Selector]
+    B --> D[Login/Logout System]
+    B --> E[Subscription Manager]
+    B --> F[Input/Output Text Area]
+    B --> G[Story Generation Engine]
+
+    G --> H[Model Rotation Logic]
+    H --> I[OpenAI API Client]
+    I --> J[Token Usage Tracker]
+
+    G --> K[Usage Database]
+    K --> L[PostgreSQL Database]
+    L --> M[Monthly Usage Records]
+
+    B --> N[Translation System]
+    N --> O[languages.json]
+
+    B --> P[Download & Display Module]
+    P --> Q[Text Output + Download Button]
+
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style F fill:#10B981,color:#fff
+    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style I fill:#10B981,color:#fff
+    style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style K fill:#10B981,color:#fff
+    style L fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style M fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style N fill:#10B981,color:#fff
+    style P fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style Q fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+```
+
+---
+
+### ✅ 3. **Flowchart: Approval Process (for Premium Upgrade)**
+
+> This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).
 
 ```mermaid
 graph TD
@@ -107,7 +129,6 @@ graph TD
     style I fill:#10B981,color:#fff
     style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style K fill:#10B981,color:#fff
-
 ```
 <!-- *Project start: 2025-04-05* -->
 

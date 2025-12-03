@@ -15,6 +15,7 @@ repo_url: https://github.com/AdamoxB
 theme:
   # Wybierz swój motyw (np. material, readthedocs …)
   name: material            # ← możesz zmienić na inny
+  custom_dir: custom
   logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
   favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
 

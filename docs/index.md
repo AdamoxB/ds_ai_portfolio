@@ -1,9 +1,10 @@
-# TEST MERMAID
+# Mermaid TEST
 
 ```mermaid
 flowchart LR
-    X[Test] --> Y[Works?]
+    TEST1 --> TEST2
 ```
+
 
 
 <!-- <h1 style="color:green;">WEBSITE UNDER CONSTRUCTION !</h1> -->

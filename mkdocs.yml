@@ -113,10 +113,11 @@ extra_css:
 
 extra_javascript:
   # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  - js/mermaid-init.js 
   - js/secondary.js            # logika przełączania
   - js/zoom.js
-  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
-  - js/mermaid-init.js
+
 markdown_extensions:
   # - toc:
   #     permalink: true
@@ -125,18 +126,18 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   # - pymdownx.superfences
-  - pymdownx.details
+  # - pymdownx.details
   # - pymdownx.blocks.caption  # optional, for captions
   - attr_list        # → add HTML attributes to Markdown elements
   - meta
   # - md_in_html# blokuje mermaid
-  - admonition
+  # - admonition
   - tables           # → GitHub‑style tables (and a few optional tweaks)
 
   - pymdownx.superfences
   - admonition
   - pymdownx.details
-  - pymdownx.highlight
+  # - pymdownx.highlight
   - pymdownx.emoji
   - pymdownx.tabbed
   - toc:

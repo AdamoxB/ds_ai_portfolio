@@ -1,0 +1,208 @@
+site_name: My projects
+site_author: Adam Biela
+
+site_url: https://AdamoxB.github.io/ds_ai_portfolio/
+site_description: >-
+    My portfolio of Data Science and AI projects!
+docs_dir: docs # indispensable or readthedocs will fail
+repo_name: AdamoxB/ds_ai_portfolio
+repo_url: https://github.com/AdamoxB
+
+
+
+
+# -- Theme ------------------------------------------------------------------
+theme:
+  # Wybierz swój motyw (np. material, readthedocs …)
+  name: material            # ← możesz zmienić na inny
+  # custom_dir: custom
+    # icon:
+  #   logo: fontawesome/solid/diagram-project
+  logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
+  favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
+
+
+  features:
+
+    - toc.follow
+    # - toc.integrate 
+    - navigation.top
+
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+    - navigation.instant   # optional extras you already have
+    - search.highlight
+    - content.code.annotate
+    - image.zoom          # Material’s built‑in zoom feature
+
+    - content.code.annotate
+    - content.code.copy
+
+
+
+
+  # --- kolory i kontrast ---------------------------------------------
+  language: en
+  palette:
+    # primary: red
+    # accent: pink
+    # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
+    - scheme: slate         # ciemny tryb (teraz domyślny)
+      primary: blue-grey
+      accent: light-blue
+      toggle:
+        icon: material/weather-sunny
+        name: Tryb jasny
+    - scheme: default        # jasny tryb
+      primary: teal       # główny kolor
+      accent: pink          # akcent
+      toggle:
+        icon: material/weather-night
+        name: Tryb ciemny
+
+
+
+
+  # --- czcionki -------------------------------------------------------
+  font:
+    text: Roboto
+    code: Fira Code
+
+  # --- ikona i logo (opcjonalne) --------------------------------------
+  icon:
+    repo: material/github   # w zakładce „repo” pojawi się GitHub
+ 
+
+
+plugins:
+  # - mermaid:
+  - search                 # core search plugin
+  - mermaid2:
+      arguments:
+        securitylevel: loose
+      version: '10.9.0'
+      # version: '9.4.3' # only works with version < 10
+      # arguments:
+      #   theme: 'dark'
+      #   themeVariables:
+      #     primaryColor: '#BB2528'
+      #     primaryTextColor: '#fff'
+      #     primaryBorderColor: '#7C0000'
+      #     lineColor: '#F8B229'
+      #     secondaryColor: '#006100'
+      #     tertiaryColor: '#fff'
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      autoplay: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        # - custom-skip-class-name
+        - skip-lightbox
+      auto_themed: true
+      auto_caption: true
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
+
+  # Optional: configure Mermaid settings
+  # e.g., enable theme, etc.
+
+  # pip install mkdocs-image-zoom   # or pipx, poetry, etc.#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  # - image-zoom             # <— this plugin does the heavy lifting
+
+
+# --- dodatkowe zasoby -------------------------------------------------
+extra_css:
+  # - css/extra.css          # własne reguły CSS
+  # - css/style.cs
+  - css/custom.css
+  - css/secondary.css          # styl przycisku i zmiany tematu
+  - css/centered-captions.css   # ścieżka względna od katalogu głównego projektu
+
+extra_javascript:
+  # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
+  # - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  # - js/mermaid-init.js 
+  - js/secondary.js            # logika przełączania
+  - js/zoom.js
+
+markdown_extensions:
+  # - toc:
+  #     permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # - pymdownx.superfences
+  # - pymdownx.details
+  # - pymdownx.blocks.caption  # optional, for captions
+  - meta
+  # - md_in_html# blokuje mermaid
+  - tables           # → GitHub‑style tables (and a few optional tweaks)
+  - attr_list        # → add HTML attributes to Markdown elements
+  - admonition
+  - footnotes
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.details
+  # - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+
+
+
+nav:
+  - Home Page: index.md
+
+  - "My projects": 
+    - "Previous projects":
+        - SemanticAudioNotes: SemanticAudioNotes/index.md
+        - My Chat GPT: My_Chat_GPT/index.md
+        - Gapmind_Data_Dashboard: Gapmind_Data_Dashboard/index.md
+        - ds_toolbox: ds_toolbox/index.md
+        - Data_Explorer–PyCaret: Data_Explorer–PyCaret/index.md
+        - Analysis_of_Key_Variables_in_Data_Sets: Analysis_of_Key_Variables_in_Data_Sets/index.md
+        - Welcome Survey Clustering App pipeline: welcome_survey_clustering_pipeline/index.md
+        - Short Crime Story Generator 📖: AI_Short_Crime_Story_Generator/index.md
+        - 🎥 Watch YouTube Videos - No Ads : Watch_YouTube_Videos–No_Ads/index.md
+        - "AI_Data_Visualizer" : AI_Data_Visualizer/index.md
+        - "Current projects":
+            - "Short Crime Story Generator 📖": AI_Short_Crime_Story_Generator/index.md
+            - "AI_Data_Visualizer" : AI_Data_Visualizer/index.md
+  - Plans: PLANS/index.md
+  - Other_topics:
+    - Example_to deploy_nice_pojects_Visualization_&_architecture...: Others/Project_visuals.md
+
+      # - Iris: iris/index.md
+      # - Titanic: titanic/index.md
+  # - LLM TOPIC: LLM.md
+      # - Explore AI on Radeon Today
+      # - https://www.amd.com/en/products/graphics/radeon-ai.html#tabs-a538c331da-item-3d078efef9-tab
+      
+      
+      # - RAG
+      # - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
+
+
+

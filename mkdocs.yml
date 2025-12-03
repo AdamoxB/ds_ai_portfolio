@@ -4,7 +4,7 @@ site_author: Adam Biela
 site_url: https://AdamoxB.github.io/ds_ai_portfolio/
 site_description: >-
     My portfolio of Data Science and AI projects!
-
+docs_dir: docs # indispensable or readthedocs will fail
 repo_name: AdamoxB/ds_ai_portfolio
 repo_url: https://github.com/AdamoxB
 
@@ -16,6 +16,8 @@ theme:
   # Wybierz swój motyw (np. material, readthedocs …)
   name: material            # ← możesz zmienić na inny
   # custom_dir: custom
+    # icon:
+  #   logo: fontawesome/solid/diagram-project
   logo: images/logo_portfolio.png # podaj własny plik PNG/JPG
   favicon: images/logo_portfolio.png   # logo w zakładce przeglądarki 
 
@@ -41,7 +43,10 @@ theme:
 
 
   # --- kolory i kontrast ---------------------------------------------
+  language: en
   palette:
+    # primary: red
+    # accent: pink
     # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
@@ -62,6 +67,7 @@ theme:
 
 
 
+
   # --- czcionki -------------------------------------------------------
   font:
     text: Roboto
@@ -75,8 +81,21 @@ theme:
 
 plugins:
   # - mermaid:
-  - mermaid2
   - search                 # core search plugin
+  - mermaid2:
+      arguments:
+        securitylevel: loose
+      version: '10.9.0'
+      # version: '9.4.3' # only works with version < 10
+      # arguments:
+      #   theme: 'dark'
+      #   themeVariables:
+      #     primaryColor: '#BB2528'
+      #     primaryTextColor: '#fff'
+      #     primaryBorderColor: '#7C0000'
+      #     lineColor: '#F8B229'
+      #     secondaryColor: '#006100'
+      #     tertiaryColor: '#fff'
   - glightbox:
       touchNavigation: true
       loop: false
@@ -129,14 +148,20 @@ markdown_extensions:
   # - pymdownx.superfences
   # - pymdownx.details
   # - pymdownx.blocks.caption  # optional, for captions
-  - attr_list        # → add HTML attributes to Markdown elements
   - meta
   # - md_in_html# blokuje mermaid
-  # - admonition
   - tables           # → GitHub‑style tables (and a few optional tweaks)
-
-  - pymdownx.superfences
+  - attr_list        # → add HTML attributes to Markdown elements
   - admonition
+  - footnotes
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.details
   # - pymdownx.highlight
   - pymdownx.emoji

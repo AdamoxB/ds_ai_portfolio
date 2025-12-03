@@ -395,10 +395,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="mermaid-test">Mermaid TEST<a class="headerlink" href="#mermaid-test" title="Permanent link">¶</a></h1>
-<p>```mermaid
-graph LR
+<pre class="mermaid"><code>graph LR
     A --&gt; B
-    B --&gt; C</p>
+    B --&gt; C
+</code></pre>
 <!-- <h1 style="color:green;">WEBSITE UNDER CONSTRUCTION !</h1> -->
 <!-- Deployed on: {{ now.strftime('%Y-%m-%d %H:%M:%S') }} -->
 <h1 id="project_from-the-world-of-data-and-artificial-intelligence">Project_from the world of data and artificial intelligence<a class="headerlink" href="#project_from-the-world-of-data-and-artificial-intelligence" title="Permanent link">¶</a></h1>
@@ -466,7 +466,11 @@ tel: +48 506 767 998</p>
 <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
 <script src="js/secondary.js"></script>
 <script src="js/zoom.js"></script>
-
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+window.mermaidConfig = {default: {
+    securitylevel: "loose",
+    startOnLoad: false
+}};</script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
 </script></body></html>

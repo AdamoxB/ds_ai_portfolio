@@ -115,6 +115,8 @@ extra_javascript:
   # - js/custom.js           # jeśli potrzebujesz JS (np. scrollspy)
   - js/secondary.js            # logika przełączania
   - js/zoom.js
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  - js/mermaid-init.js
 markdown_extensions:
   # - toc:
   #     permalink: true
@@ -139,18 +141,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - toc:
       permalink: true
-  # - pymdownx.superfences
-  # - pymdownx.mermaid
-  # - pymdownx.highlight
-  # - pymdownx.details
-  # - pymdownx.tabbed
-  # - pymdownx.emoji
-  # - pymdownx.arithmatex
-  # - pymdownx.tasklist
-  # - pymdownx.mark
-  # - admonition
-  # - toc:
-  #     permalink: true
+
 
 
 
@@ -186,9 +177,5 @@ nav:
       # - RAG
       # - https://www.amd.com/en/blogs/2024/how-to-enable-rag-retrieval-augmented-generation-.html
 
-
-extra_javascript:
-  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
-  - js/mermaid-init.js
 
 

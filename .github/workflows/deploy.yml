@@ -1,32 +1,32 @@
-name: Deploy MkDocs Site to GitHub Pages
+# name: Deploy MkDocs Site to GitHub Pages
 
-on:
-  push:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+#       - name: Setup Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.11'
 
-      - name: Install MkDocs and Mermaid
-        run: |
-          pip install mkdocs mkdocs-material mkdocs-mermaid
+#       - name: Install MkDocs and Mermaid
+#         run: |
+#           pip install mkdocs mkdocs-material mkdocs-mermaid
 
-      - name: Build site
-        run: |
-          mkdocs build --config mkdocs.yml --site-dir ./site
+#       - name: Build site
+#         run: |
+#           mkdocs build --config mkdocs.yml --site-dir ./site
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./site

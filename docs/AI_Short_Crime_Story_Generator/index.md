@@ -7,138 +7,111 @@
 
 ---
 
-## ✅ 1. **Sequence Diagram: User Login & Story Generation Flow**
+### ✅ 1. **Sequence Diagram – User Login & Story Generation Flow**
 
-This shows the key user flow — from login to generating a story.
+This shows the key user flow: login → language selection → input story → generate story → display result.
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant App
-    participant Database
-    participant OpenAI
-    participant AuthSystem
+    participant "User" 
+    participant "Streamlit App" 
+    participant "Authentication Service" 
+    participant "OpenAI API" 
+    participant "Database" 
 
-    User->>App: Clicks "Login" (via sidebar)
-    App->>AuthSystem: Validate credentials
-    AuthSystem-->>App: Returns success/failure
-    alt Login successful
-        App->>App: Set user session (email, language, subscription)
-        App->>App: Load translations (languages.json)
-        User->>App: Enters text in input box
-        App->>App: Check usage limits (input/output tokens)
-        alt Free user
-            App->>App: Validate monthly limits
-            User->>App: Clicks "Generate Story"
-            App->>App: Select next model (gpt-4.1-nano)
-            App->>OpenAI: Send prompt to generate story
-            OpenAI-->>App: Returns generated story with usage data
-            App->>Database: Log input/output tokens
-            App-->>User: Display story and download button
-        else Premium user
-            App->>App: Allow full token usage
-            User->>App: Clicks "Generate Story"
-            App->>OpenAI: Send prompt to generate story
-            OpenAI-->>App: Returns generated story with usage data
-            App->>Database: Log input/output tokens
-            App-->>User: Display story and download button
+    User->>Streamlit App: Select language (e.g., Polish) 
+    User->>Streamlit App: Enter story prompt 
+    User->>Streamlit App: Click "Generate Story" 
+    Streamlit App->>Authentication Service: Validate login status 
+    Authentication Service-->>Streamlit App: Returns login status 
+    alt User is logged in
+        Streamlit App->>Streamlit App: Check monthly usage limits
+        Streamlit App->>Database: Query usage history (input/output tokens)
+        Streamlit App->>OpenAI API: Send prompt to model (e.g., gpt-4.1-nano)
+        OpenAI API-->>Streamlit App: Returns generated story + token usage
+        Streamlit App->>Database: Log usage (input/output tokens)
+        Streamlit App->>User: Display story & download button
     end
-    User->>App: Clicks "Logout"
-    App->>App: Clear session
+    User->>Streamlit App: View story and download
+```
+
+**Styles (as requested):**
+```mermaid
+style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style "Authentication Service" fill:#10B981,color:#fff
+style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
 ```
 
 ---
 
-## ✅ 2. **Component Diagram: Application Architecture**
+### ✅ 2. **Component Diagram – App Architecture**
 
-This shows the modular components and their relationships.
+This shows the core components of your app with clear relationships and responsibilities.
 
 ```mermaid
-componentDiagram
-    [Streamlit App] --> [User Interface]
-    [User Interface] --> [Authentication Layer]
-    [User Interface] --> [Translation Manager]
-    [User Interface] --> [Usage Limit Checker]
-    [User Interface] --> [OpenAI API Client]
-    [User Interface] --> [Database Layer (PostgreSQL)]
-    [Database Layer] --> [usages table]
-    [Database Layer] --> [user_profiles table]
+graph TD
+    A[Streamlit App] -->|UI Layer| B[User Interface]
+    B --> C[Language Selector]
+    B --> D[Login/Logout System]
+    B --> E[Story Input & Output]
+    B --> F[Usage Limits Manager]
 
-    [Authentication Layer] --> [Google OAuth]
-    [Translation Manager] --> [languages.json]
-    [OpenAI API Client] --> [OpenAI API]
-    [Usage Limit Checker] --> [FREE / PREMIUM limits]
-    [OpenAI API Client] --> [Model Rotation (gpt-4.1-nano)]
+    A -->|Backend Logic| G[Authentication Service]
+    A -->|AI Engine| H[OpenAI API]
+    A -->|Data Persistence| I[PostgreSQL Database]
+    A -->|Config & Secrets| J[Configuration Manager]
 
-    note right of [User Interface]
-        Main entry point for users
-        Handles routing, UI, state management
-    end
+    G -->|Validate User| B
+    H -->|Generate Story| B
+    I -->|Store Usage| F
+    J -->|Load Translations| B
 
-    note right of [Authentication Layer]
-        Manages login/logout and user session
-        Uses Google OAuth
-    end
-
-    note right of [Translation Manager]
-        Loads and switches between languages (en/pl)
-        Uses JSON config file
-    end
-
-    note right of [Usage Limit Checker]
-        Tracks monthly token usage
-        Blocks free users at 2500 input / 3000 output
-    end
-
-    note right of [OpenAI API Client]
-        Dynamically selects model (cycle through list)
-        Sends prompts and receives responses
-    end
-
-    note right of [Database Layer]
-        Stores user sessions, usage logs
-        Ensures audit trail and quota tracking
-    end
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style G fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
+    style H fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style I fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style J fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
 ```
 
 ---
 
-## ✅ 3. **Flowchart: Approval Process (Decision Logic for Usage Limits)**
+### ✅ 3. **Flowchart – Monthly Usage Approval Decision Logic**
 
-This illustrates how the app decides whether to allow or block a story generation based on user type and usage.
+This shows how the app checks if a user can generate a new story based on token usage limits.
 
 ```mermaid
 flowchart TD
-    A[User logs in] --> B{Is user logged in?}
+    A[User submits new story] --> B{Is user logged in?}
     B -- No --> C[Redirect to login]
     B -- Yes --> D{Is user premium?}
-    D -- No --> E[Check monthly input tokens]
-    E --> F{≥ 2500 input tokens?}
-    F -- Yes --> G[Block request: Usage limit exceeded]
-    F -- No --> H{≥ 3000 output tokens?}
-    H -- Yes --> I[Block request: Usage limit exceeded]
-    H -- No --> J[Allow generation]
-    D -- Yes --> K[Check monthly input/output tokens]
-    K --> L{≥ 100k input/output tokens?}
-    L -- Yes --> M[Block request: Premium limit exceeded]
-    L -- No --> J[Allow generation]
+    D -- No --> E[Check free user limits]
+    E --> F[Sum input & output tokens from DB]
+    F --> G{Input ≥ 2500? OR Output ≥ 3000?}
+    G -- Yes --> H[Block request: "Usage limit exceeded"]
+    G -- No --> I[Proceed to generate story]
+    D -- Yes --> J[Check premium limits: 100k tokens]
+    J --> K{Input ≥ 100k? OR Output ≥ 100k?}
+    K -- Yes --> H
+    K -- No --> I
 
-    style A fill:#f9f,stroke:#333
-    style C fill:#f9f,stroke:#333
-    style D fill:#f9f,stroke:#333
-    style E fill:#cfc,stroke:#333
-    style F fill:#cfc,stroke:#333
-    style G fill:#f9f,stroke:#333
-    style H fill:#cfc,stroke:#333
-    style I fill:#f9f,stroke:#333
-    style J fill:#cfc,stroke:#333
-    style K fill:#cfc,stroke:#333
-    style L fill:#cfc,stroke:#333
-    style M fill:#f9f,stroke:#333
-
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef warning fill:#f9f,stroke:#333;
-    classDef allowed fill:#cfc,stroke:#333;
+    style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style C fill:#10B981,color:#fff
+    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
+    style F fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
+    style G fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+    style H fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
+    style I fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    style J fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style K fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
 ```
 <!-- *Project start: 2025-04-05* -->
 

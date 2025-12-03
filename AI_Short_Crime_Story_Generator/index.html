@@ -305,14 +305,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
+      ✅ 2. Component Diagram: App Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-flowchart-approval-process-for-premium-upgrade">
+<span class="md-ellipsis">
+      ✅ 3. Flowchart: Approval Process (for Premium Upgrade)
     </span>
 </a>
 </li>
@@ -416,14 +423,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
+      ✅ 2. Component Diagram: App Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-flowchart-approval-process-for-premium-upgrade">
+<span class="md-ellipsis">
+      ✅ 3. Flowchart: Approval Process (for Premium Upgrade)
     </span>
 </a>
 </li>
@@ -548,14 +562,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-sequence-diagram-user-login-story-generation-flow">
 <span class="md-ellipsis">
-      ✅ 1. Sequence Diagram – User Login &amp; Story Generation Flow
+      ✅ 1. Sequence Diagram: User Login &amp; Story Generation Flow
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-flowchart-monthly-usage-approval-decision-logic">
+<a class="md-nav__link" href="#2-component-diagram-app-architecture">
 <span class="md-ellipsis">
-      ✅ 3. Flowchart – Monthly Usage Approval Decision Logic
+      ✅ 2. Component Diagram: App Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-flowchart-approval-process-for-premium-upgrade">
+<span class="md-ellipsis">
+      ✅ 3. Flowchart: Approval Process (for Premium Upgrade)
     </span>
 </a>
 </li>
@@ -615,75 +636,94 @@
 <hr>
 <p><a class="md-button md-button--primary" href="https://fairy-tale-generator-ab.streamlit.app/" target="_blank">Go to the application</a></p>
 <hr>
-<h3 id="1-sequence-diagram-user-login-story-generation-flow">✅ 1. <strong>Sequence Diagram – User Login &amp; Story Generation Flow</strong><a class="headerlink" href="#1-sequence-diagram-user-login-story-generation-flow" title="Permanent link">¶</a></h3>
-<p>This shows the key user flow: login → language selection → input story → generate story → display result.</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant "User" 
-    participant "Streamlit App" 
-    participant "Authentication Service" 
-    participant "OpenAI API" 
-    participant "Database" 
-
-    User-&gt;&gt;Streamlit App: Select language (e.g., Polish) 
-    User-&gt;&gt;Streamlit App: Enter story prompt 
-    User-&gt;&gt;Streamlit App: Click "Generate Story" 
-    Streamlit App-&gt;&gt;Authentication Service: Validate login status 
-    Authentication Service--&gt;&gt;Streamlit App: Returns login status 
-    alt User is logged in
-        Streamlit App-&gt;&gt;Streamlit App: Check monthly usage limits
-        Streamlit App-&gt;&gt;Database: Query usage history (input/output tokens)
-        Streamlit App-&gt;&gt;OpenAI API: Send prompt to model (e.g., gpt-4.1-nano)
-        OpenAI API--&gt;&gt;Streamlit App: Returns generated story + token usage
-        Streamlit App-&gt;&gt;Database: Log usage (input/output tokens)
-        Streamlit App-&gt;&gt;User: Display story &amp; download button
-    end
-    User-&gt;&gt;Streamlit App: View story and download
-
-    style "User" fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
-    style "Streamlit App" fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
-    style "Authentication Service" fill:#10B981,color:#fff
-    style "OpenAI API" fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style "Database" fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    ```
-
----
-
-### ✅ 2. **Component Diagram – App Architecture**
-
-This shows the core components of your app with clear relationships and responsibilities.
-
-```mermaid
-graph TD
-    A[Streamlit App] --&gt;|UI Layer| B[User Interface]
+<h3 id="1-sequence-diagram-user-login-story-generation-flow">✅ 1. <strong>Sequence Diagram: User Login &amp; Story Generation Flow</strong><a class="headerlink" href="#1-sequence-diagram-user-login-story-generation-flow" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[User Opens App] --&gt; B{Is User Logged In?}
+    B -- No --&gt; C[Show Login Button]
+    B -- Yes --&gt; D[Show Sidebar: Language &amp; Subscription]
+    D --&gt; E[User Selects Language]
+    E --&gt; F[User Enters Prompt Text]
+    F --&gt; G[User Clicks "Generate"]
+    G --&gt; H[App Validates Usage Limits]
+    H --&gt; I{Free User?}
+    I -- Yes --&gt; J[Check Monthly Token Limits]
+    I -- No --&gt; K[Premium User: Unlimited (Premium Tier)]
+    J --&gt; L{Exceeded Limits?}
+    L -- Yes --&gt; M[Show Error: Usage Exceeded]
+    L -- No --&gt; N[App Selects Next Model (gpt-4.1-nano)]
+    N --&gt; O[Send Prompt to OpenAI via API]
+    O --&gt; P[Receive Generated Story]
+    P --&gt; Q[Save Usage to Database]
+    Q --&gt; R[Display Story + Download Button]
+    R --&gt; S[User Can Download or Exit]
+</code></pre>
+<p><strong>Styles (as per your example):</strong>
+</p><pre class="mermaid"><code>style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style C fill:#10B981,color:#fff
+style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style F fill:#10B981,color:#fff
+style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style I fill:#10B981,color:#fff
+style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style K fill:#10B981,color:#fff
+style L fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style M fill:#10B981,color:#fff
+style N fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style O fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style P fill:#10B981,color:#fff
+style Q fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+style R fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+style S fill:#10B981,color:#fff
+</code></pre><p></p>
+<hr>
+<h3 id="2-component-diagram-app-architecture">✅ 2. <strong>Component Diagram: App Architecture</strong><a class="headerlink" href="#2-component-diagram-app-architecture" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[User Interface] --&gt; B[Streamlit App]
     B --&gt; C[Language Selector]
     B --&gt; D[Login/Logout System]
-    B --&gt; E[Story Input &amp; Output]
-    B --&gt; F[Usage Limits Manager]
+    B --&gt; E[Subscription Manager]
+    B --&gt; F[Input/Output Text Area]
+    B --&gt; G[Story Generation Engine]
 
-    A --&gt;|Backend Logic| G[Authentication Service]
-    A --&gt;|AI Engine| H[OpenAI API]
-    A --&gt;|Data Persistence| I[PostgreSQL Database]
-    A --&gt;|Config &amp; Secrets| J[Configuration Manager]
+    G --&gt; H[Model Rotation Logic]
+    H --&gt; I[OpenAI API Client]
+    I --&gt; J[Token Usage Tracker]
 
-    G --&gt;|Validate User| B
-    H --&gt;|Generate Story| B
-    I --&gt;|Store Usage| F
-    J --&gt;|Load Translations| B
+    G --&gt; K[Usage Database]
+    K --&gt; L[PostgreSQL Database]
+    L --&gt; M[Monthly Usage Records]
+
+    B --&gt; N[Translation System]
+    N --&gt; O[languages.json]
+
+    B --&gt; P[Download &amp; Display Module]
+    P --&gt; Q[Text Output + Download Button]
 
     style A fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
     style B fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style C fill:#10B981,color:#fff
-    style D fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style E fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style F fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
-    style G fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff
-    style H fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
-    style I fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style J fill:#EC4899,stroke:#DB2777,stroke-width:2px,color:#fff
+    style D fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style E fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style F fill:#10B981,color:#fff
+    style G fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style H fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style I fill:#10B981,color:#fff
+    style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style K fill:#10B981,color:#fff
+    style L fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style M fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    style N fill:#10B981,color:#fff
+    style P fill:#A855F7,stroke:#9333EA,stroke-width:2px,color:#fff
+    style Q fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
 </code></pre>
 <hr>
-<h3 id="3-flowchart-monthly-usage-approval-decision-logic">✅ 3. <strong>Flowchart – Monthly Usage Approval Decision Logic</strong><a class="headerlink" href="#3-flowchart-monthly-usage-approval-decision-logic" title="Permanent link">¶</a></h3>
+<h3 id="3-flowchart-approval-process-for-premium-upgrade">✅ 3. <strong>Flowchart: Approval Process (for Premium Upgrade)</strong><a class="headerlink" href="#3-flowchart-approval-process-for-premium-upgrade" title="Permanent link">¶</a></h3>
+<blockquote>
 <p>This simulates a simplified "user requests premium" approval flow (e.g., via subscription button).</p>
+</blockquote>
 <pre class="mermaid"><code>graph TD
     A[User Clicks "Become Premium"] --&gt; B[Check Current Subscription]
     B -- Not Subscribed --&gt; C[Redirect to Payment Gateway]
@@ -707,7 +747,6 @@ graph TD
     style I fill:#10B981,color:#fff
     style J fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style K fill:#10B981,color:#fff
-
 </code></pre>
 <!-- *Project start: 2025-04-05* -->
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>

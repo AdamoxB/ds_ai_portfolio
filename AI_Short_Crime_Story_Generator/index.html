@@ -297,6 +297,26 @@
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Others/Project_visuals/" class="md-tabs__link">
+          
+  
+  
+  Other_topics
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -1014,6 +1034,77 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other_topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other_topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Others/Project_visuals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example_to deploy_nice_pojects_Visualization_&amp;_architecture...
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1127,6 +1218,113 @@
 <!-- ## Project architecture
     in Excalidraw -->
 
+<p>flowchart LR
+    A[Start] --&gt; B{User Login?}
+    B -- No --&gt; C[Redirect to Login]
+    B -- Yes --&gt; D[Load User Preferences]
+    D --&gt; E[Load Language Settings]
+    E --&gt; F[Language Selector in Sidebar]
+    F --&gt; G{Language Changed?}
+    G -- Yes --&gt; H[Update Session Language]
+    G -- No --&gt; I[Proceed with Current Language]
+    I --&gt; J[Load Translations from languages.json]
+    J --&gt; K[Set Default Language: 'pl' if not set]
+    K --&gt; L[Initialize Model Cycle: gpt-4.1-nano]
+    L --&gt; M[Database Connection Setup]
+    M --&gt; N[Usage Limits Configuration]
+    N --&gt; O[Check Monthly Usage Limits]
+    O --&gt; P{Free User?}
+    P -- Yes --&gt; Q{Input/Output Tokens Exceeded?}
+    P -- No --&gt; R{Premium User?}
+    Q -- Yes --&gt; S[Show Usage Exceeded Error]
+    Q -- No --&gt; T[Proceed to Generate Story]
+    R -- Yes --&gt; U[Check Token Limits]
+    U -- Yes --&gt; V[Show Premium Usage Limit Error]
+    U -- No --&gt; W[Proceed to Generate Story]
+    T --&gt; X[Get User Input Text]
+    W --&gt; X
+    X --&gt; Y[Validate Input (Non-empty)]
+    Y --&gt; Z{Input Valid?}
+    Z -- No --&gt; AA[Disable Generate Button]
+    Z -- Yes --&gt; AB[Generate Story with Dynamic Model Selection]
+    AB --&gt; AC[Call OpenAI API with System Prompt]
+    AC --&gt; AD[Extract Usage Tokens: Prompt &amp; Completion]
+    AD --&gt; AE[Store Usage in Database]
+    AE --&gt; AF[Display Generated Story]
+    AF --&gt; AG[Show Download Button]
+    AF --&gt; AH[Show Account &amp; Stats in Sidebar]
+    AH --&gt; AI[Display Subscription Status]
+    AI --&gt; AJ[Show Monthly Token Metrics]
+    AJ --&gt; AK[Show Input/Output Usage vs Limits]
+    AK --&gt; AL[End]</p>
+<div class="highlight"><pre><span></span><code>style A fill:#f9f,stroke:#333
+style B fill:#bbf,stroke:#333
+style C fill:#f9f,stroke:#333
+style D fill:#bbf,stroke:#333
+style E fill:#bbf,stroke:#333
+style F fill:#bbf,stroke:#333
+style G fill:#bbf,stroke:#333
+style H fill:#bbf,stroke:#333
+style I fill:#bbf,stroke:#333
+style J fill:#bbf,stroke:#333
+style K fill:#bbf,stroke:#333
+style L fill:#bbf,stroke:#333
+style M fill:#bbf,stroke:#333
+style N fill:#bbf,stroke:#333
+style O fill:#bbf,stroke:#333
+style P fill:#bbf,stroke:#333
+style Q fill:#bbf,stroke:#333
+style R fill:#bbf,stroke:#333
+style S fill:#f9f,stroke:#333
+style T fill:#bbf,stroke:#333
+style U fill:#bbf,stroke:#333
+style V fill:#f9f,stroke:#333
+style W fill:#bbf,stroke:#333
+style X fill:#bbf,stroke:#333
+style Y fill:#bbf,stroke:#333
+style Z fill:#bbf,stroke:#333
+style AB fill:#bbf,stroke:#333
+style AC fill:#bbf,stroke:#333
+style AD fill:#bbf,stroke:#333
+style AE fill:#bbf,stroke:#333
+style AF fill:#bbf,stroke:#333
+style AG fill:#bbf,stroke:#333
+style AH fill:#bbf,stroke:#333
+style AI fill:#bbf,stroke:#333
+style AJ fill:#bbf,stroke:#333
+style AK fill:#bbf,stroke:#333
+style AL fill:#f9f,stroke:#333
+
+classDef process fill:#bbf,stroke:#333;
+classDef error fill:#f9f,stroke:#333;
+classDef decision fill:#f9f,stroke:#333;
+classDef action fill:#bbf,stroke:#333;
+classDef conditional fill:#bbf,stroke:#333;
+
+subgraph "User Flow"
+    B C D E F G H I J K L M N O P Q R S T U W X Y Z AB AC AD AE AF AG AH AI AJ AK AL
+end
+
+subgraph "Authentication &amp; Security"
+    B C D
+end
+
+subgraph "Language &amp; UI"
+    E F G H I J K
+end
+
+subgraph "Model &amp; API"
+    L M N O P Q R S T U W
+end
+
+subgraph "Story Generation"
+    X Y Z AB AC AD AE AF
+end
+
+subgraph "User Experience"
+    AG AH AI AJ AK AL
+end
+</code></pre></div>
 <h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>
 <li>Generates creative, structured short stories (with introduction, development, twist, and moral) from user-provided prompts</li>

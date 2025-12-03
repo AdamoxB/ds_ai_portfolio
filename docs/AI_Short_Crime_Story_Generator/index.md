@@ -13,7 +13,7 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 
 <!-- ## Project architecture
 	in Excalidraw -->
-
+```mermaid
 flowchart LR
     A[Start] --> B{User Login?}
     B -- No --> C[Redirect to Login]
@@ -121,7 +121,7 @@ flowchart LR
     subgraph "User Experience"
         AG AH AI AJ AK AL
     end
-
+```
 
 ## Main functionalities
 - Generates creative, structured short stories (with introduction, development, twist, and moral) from user-provided prompts

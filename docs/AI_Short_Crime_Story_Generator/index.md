@@ -48,9 +48,9 @@ A Streamlit-powered storytelling generator that creates engaging, structured sho
 
 ## Main functionalities
 - Generates creative, structured short stories (with introduction, development, twist, and moral) from user-provided prompts
-- Implements dynamic model rotation among multiple GPT models (e.g., `gpt-4o-mini`, `gpt-4.1-mini`)
+- Implements dynamic model rotation among multiple GPT model (`gpt-4.1-mini`)
 - Tracks token usage per user and month with PostgreSQL
-- Enforces usage limits: free users (1k input / 10k output tokens), premium users (10k input / 100k output tokens)
+- Enforces usage limits: free users (2.5k input / 3k output tokens), premium users (100k input / 100k output tokens)
 - Supports Google OAuth login and subscription management via `st_paywall`
 - Provides real-time usage statistics and current model tracking in sidebar
 - Allows downloading generated stories as plain text files

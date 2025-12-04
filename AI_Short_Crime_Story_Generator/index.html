@@ -586,9 +586,9 @@
 <h2 id="main-functionalities">Main functionalities<a class="headerlink" href="#main-functionalities" title="Permanent link">¶</a></h2>
 <ul>
 <li>Generates creative, structured short stories (with introduction, development, twist, and moral) from user-provided prompts</li>
-<li>Implements dynamic model rotation among multiple GPT models (e.g., <code>gpt-4o-mini</code>, <code>gpt-4.1-mini</code>)</li>
+<li>Implements dynamic model rotation among multiple GPT model (<code>gpt-4.1-mini</code>)</li>
 <li>Tracks token usage per user and month with PostgreSQL</li>
-<li>Enforces usage limits: free users (1k input / 10k output tokens), premium users (10k input / 100k output tokens)</li>
+<li>Enforces usage limits: free users (2.5k input / 3k output tokens), premium users (100k input / 100k output tokens)</li>
 <li>Supports Google OAuth login and subscription management via <code>st_paywall</code></li>
 <li>Provides real-time usage statistics and current model tracking in sidebar</li>
 <li>Allows downloading generated stories as plain text files</li>
